@@ -1,12 +1,38 @@
 $(document).ready(function () {
 
+  $(".js-slider").slick({
+    dots: true,
+    autoPlay: true,
+    autoplaySpeed: 5000,
+    adaptiveHeight: true
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $(".new-carousel__item").css("opacity", "1");
 
 
-  $(".new-card__rating_line").each(function(){
-    var el = $(this).parents(".new-card__rating").find(".new-card__rating_num");
-    $(this).css("width", parseFloat($(el).text())*20 + "%");
-    $(this).parents(".new-card").find(".new-card__header_temp").text($(el).text());
+  $(".new-card__rating").each(function(){
+    $(this).find(".new-card__rating_line").css("width", parseFloat($(this).find(".new-card__rating_num").text())*20 + 2 + "%");
   });
 
   $(".js-new-carousel").slick({
