@@ -791,15 +791,6 @@ REVIEWS
 END reviews
 */
 
-
-
-
-
-
-
-
-
-
 /*
 BOTTOM
 */
@@ -950,6 +941,47 @@ FOOTER
 /*
 END footer
 */
+
+/*
+TOP
+*/
+.top {
+  padding: 25px 0 40px;
+}
+.breadcrumbs {
+  margin-bottom: 20px;
+}
+.breadcrumbs__item {
+  display: inline-block;
+  white-space: nowrap;
+  
+}
+
+/*
+END top
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

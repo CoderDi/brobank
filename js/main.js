@@ -19,6 +19,7 @@ $(document).ready(function () {
     $(this).toggleClass("butter-active");
     $(".mobile").toggleClass("mobile-active");
   });
+  $(".breadcrumbs__item--current").removeAttr('href');
 
 
 
