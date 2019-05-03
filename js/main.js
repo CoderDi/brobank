@@ -4,9 +4,21 @@ $(document).ready(function () {
     dots: true,
     autoPlay: true,
     autoplaySpeed: 5000,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
 
+  $(".butter").click(function(){
+    $(this).toggleClass("butter-active");
+    $(".mobile").toggleClass("mobile-active");
+  });
 
 
 
@@ -40,28 +52,11 @@ $(document).ready(function () {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1124,
-        settings: {
-          arrows: false,
-          dots: true,
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 740,
-        settings: {
-          arrows: false,
-          dots: true,
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 500,
+        breakpoint: 980,
         settings: {
           variableWidth: true,
           arrows: false,
           dots: true,
-          slidesToShow: 2
         }
       }
     ]
