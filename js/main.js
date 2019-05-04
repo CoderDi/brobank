@@ -82,6 +82,14 @@ $(document).ready(function () {
     $(this).parent(".pickup__popup").removeClass("pickup__popup--open");
   });
 
+  $(".tab__item_link").click(function(){
+    var index = $(this).parents(".tabs-parent").find(".tab__item_link").index($(this));
+    $(this).parents(".tabs-parent").find(".tab__item_link").removeClass("active");
+    $(this).addClass("active");
+    $(this).parents(".tabs-parent").find(".tab__item").hide();
+    $(this).parents(".tabs-parent").find(".tab__item:eq(" + index + ")").show();
+  });
+
 
 
 
