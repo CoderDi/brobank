@@ -62,9 +62,11 @@
   <section class="article-page">
     <div class="wrapper">
       <div class="breadcrumbs">
-        <a href="#" class="breadcrumbs__item">Главная</a>
-        <a href="#" class="breadcrumbs__item">Советы для кредитной карты Тинькофф Платинум</a>
-        <a href="#" class="breadcrumbs__item breadcrumbs__item--current">Кредитная карта Тинькофф 120 дней без процентов</a>
+        <div class="breadcrumbs__container">
+          <a href="#" class="breadcrumbs__item">Главная</a>
+          <a href="#" class="breadcrumbs__item">Советы для кредитной карты Тинькофф Платинум</a>
+          <a href="#" class="breadcrumbs__item breadcrumbs__item--current">Кредитная карта Тинькофф 120 дней без процентов</a>
+        </div>
       </div>
       <div class="page-flex">
         <div class="article-main">
@@ -197,7 +199,7 @@
             </div> 
             
             <footer class="article__footer">
-              <div class="article__footer_top">
+              <div class="socials_and_rating article__footer_top">
                 <div class="article__socials flex">
                   <a href="" class="article__socials_item article__socials_item--vk"><i></i><span>286</span></a>
                   <a href="" class="article__socials_item article__socials_item--ok"><i></i><span>148</span></a>
@@ -592,13 +594,76 @@
 
           <section class="articles__section comments">
             <h2 class="section__title">276 комментариев</h2>
-            
+            <input type="text" class="comments__top-input" placeholder="Написать комментарий">
 
+            <div class="comments__list">
+              <div class="comment">
+                <div class="review__top flex">
+                  <div class="review__img"><img src="images/review2.png" alt=""></div>
+                  <div class="review-top__content">
+                    <strong class="review__name">Александр</strong>
+                    <span class="review__date">01.03.2019 в 12:05</span>
+                  </div>
+                </div>
+                <p class="review__text">Здравствуйте!
+                    Расскажите на примере:
+                    Сколько денег будет списано за снятие 50 т.р. наличными с карты?</p>
+                <span class="comment__reply">Ответить</span>
+
+                <div class="comment">
+                  <div class="review__top flex">
+                    <div class="review__img"><img src="images/review1.png" alt=""></div>
+                    <div class="review-top__content">
+                      <strong class="review__name">Специалист Бробанк</strong>
+                      <span class="review__date">01.03.2019 в 12:05</span>
+                    </div>
+                  </div>
+                  <p class="review__text">Добрый день. Комиссия за снятие наличных 2.9% от суммы снятия + 290 рублей. На вашем примере получается 50000*2.9%=1450+290=1740 будет списана комиссия сразу во время снятия наличных. Помимо комиссии, на сумму снятия наличных начисляется иная процентная ставка, выше чем по операциям покупок. Не рекомендуем снимать наличные с кредитной карты без острой необходимости.</p>
+                  <span class="comment__reply">Ответить</span>
+                </div>
+              </div>
+
+              <div class="comment">
+                <div class="review__top flex">
+                  <div class="review__img"><img src="images/review1.png" alt=""></div>
+                  <div class="review-top__content">
+                    <strong class="review__name">Администратор</strong>
+                    <span class="review__date">01.03.2019 в 12:05</span>
+                  </div>
+                </div>
+                <p class="review__text">Напишите нам в комментариях если обнаружили неточность в размещенных данных или документах. Мы внесем исправления максимально быстро.</p>
+                <span class="comment__reply">Ответить</span>
+              </div>
+
+              <div class="comment">
+                <div class="review__top flex">
+                  <div class="review__img"><img src="images/review2.png" alt=""></div>
+                  <div class="review-top__content">
+                    <strong class="review__name">Александр</strong>
+                    <span class="review__date">01.03.2019 в 12:05</span>
+                  </div>
+                </div>
+                <p class="review__text">Мошенники и спамеры. Повелся я на хвалебные слюнявые отзывы взахлеб на профильных сайтах, дай думаю закажу сиё счастье. Ага заказал. Теперь с утра до ночи сыпется спам на телефон и почту от быстроденьги, мигом деньги и прочих шаражконтор. Подлецы и наглецы!!!</p>
+                <span class="comment__reply">Ответить</span>
+
+                <div class="comment">
+                  <div class="review__top flex">
+                    <div class="review__img"><img src="images/review1.png" alt=""></div>
+                    <div class="review-top__content">
+                      <strong class="review__name">Администратор</strong>
+                      <span class="review__date">01.03.2019 в 12:05</span>
+                    </div>
+                  </div>
+                  <p class="review__text">Александр, а саму карту вам одобрили? Вы оставляли заявку на карту Квику именно на официальном сайте?</p>
+                  <span class="comment__reply">Ответить</span>
+                </div>
+              </div>
+            </div>
 
             <form class="comments__form">
               <span class="comments__form_title">Ваш комментарий:</span>
               <div class="comments__form_flex">
-                <textarea name="" class="comments__form_textarea"></textarea>
+                <textarea name="" class="comments__form_input comments__form_textarea"></textarea>
                 <label class="comments__form_label">
                   <span>Имя</span>
                   <input type="text" class="comments__form_input">
@@ -629,6 +694,53 @@
               <a href="" class="rubrics__item rubrics__item--one"><i></i>Ипотека</a>
               <a href="" class="rubrics__item rubrics__item--one"><i></i>Вклады</a>
             </div>
+          </div>
+
+          <div class="offer sidebar__offer">
+            <h3 class="offer__title">Кредитная карта УБРиР 120 дней без процентов</h3>
+            <div class="offer__flex">
+              <div class="offer__img">
+                <div class="offer__img_container">
+                  <img src="images/tinkoff-platinum.png" alt="">
+                  <span class="offer__label"><i></i>Предложение дня</span>
+                </div>
+              </div>
+              <div class="offer__content">
+                <div class="offer__table"> 
+                  <table> 
+                    <tbody> 
+                      <tr> 
+                        <td>Кред. лимит</td> 
+                        <td>300 000 ₽</td> 
+                      </tr> 
+                      <tr> 
+                        <td>Проц. ставка</td> 
+                        <td>От 12%</td> 
+                      </tr> 
+                      <tr> 
+                        <td>Без процентов</td> 
+                        <td>До 55 дней </td> 
+                      </tr> 
+                      <tr>
+                        <td>Плата/мес.</td> 
+                        <td>590 руб./год</td> 
+                      </tr> 
+                      <tr>
+                        <td>Кэшбек</td> 
+                        <td>От 1 до 30%</td> 
+                      </tr> 
+                      <tr> 
+                        <td>Решение</td> 
+                        <td>За 10 минут</td> 
+                      </tr> 
+                    </tbody> 
+                  </table>
+                </div>
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>              
+            </div>            
           </div>
         </aside>
       </div>

@@ -91,6 +91,24 @@ $(document).ready(function () {
   });
 
 
+  if ($("#map").length != 0) {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+            center: [55.031232, 82.918227],
+            zoom: 17,
+            controls: []
+          });
+          
+      myMap.geoObjects.add(new ymaps.Placemark([55.031232, 82.918227], {
+        balloonContent: 'Карта AlfaBank'
+      }, {
+          preset: 'islands#icon',
+          iconColor: '#0095b6'
+      }));
+    });
+  }  
+
+
 
 
 
