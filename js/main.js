@@ -112,19 +112,115 @@ $(document).ready(function () {
     $(this).parent(".chavo__item").toggleClass("chavo__item--open");
   });
 
-  $(".article-sidebar").stickySidebar({
-    topSpacing: 20,
-    bottomSpacing: 60
+
+  function fixedSidebar(){
+    var sidebar;
+    if ($(window).width() >= 1050) {
+      if ($(".fixed-sidebar").hasClass("is-affixed")) {
+        
+      } else {
+        $(".fixed-sidebar").stickySidebar({
+          topSpacing: 20,
+          bottomSpacing: 0
+        });
+      }
+    } else {
+      if ($(".fixed-sidebar").hasClass("is-affixed")) {
+        $(".fixed-sidebar").stickySidebar('destroy');
+      } else {
+
+      }
+        
+    }
+
+    
+  }
+  fixedSidebar();
+
+  $(window).resize(function(){
+    fixedSidebar();
+  });
+  
+  
+
+  if ($(".article__rating").length > 0) {
+    $(".article__rating").each(function(i, el1){
+      var count = parseInt($(this).find(".article__rating--value").text());
+      if ($(this).hasClass("article__rating--with")) {
+        $(this).find(".article__rating_star").each(function(j, el2){
+          if (j == count) {
+            return false;
+          } else {
+            $(this).addClass("article__rating_star--yellow");
+          }
+        });
+      }
+    })    
+  }
+
+  $(".article__rating_star").hover(function(){
+    var num = $(this).index();
+    $(this).parent(".article__rating_stars").find(".article__rating_star").each(function(i, el){
+      if (i <= num) {
+        $(this).addClass("article__rating_star--yellow");
+      } else {
+        $(this).removeClass("article__rating_star--yellow");
+      }
+    })
+  });
+  $(".article__rating_star").mouseleave(function(){
+    if ($(this).parents(".article__rating").hasClass("article__rating--with")) {
+      var count = parseInt($(this).parent(".article__rating_stars").find(".article__rating--value").text());
+      $(this).parent(".article__rating_stars").find(".article__rating_star").each(function(j, el2){
+        if (j >= count) {
+          $(this).removeClass("article__rating_star--yellow");
+        } else {
+          $(this).addClass("article__rating_star--yellow");
+        }
+      });
+    } else {
+      $(this).parent(".article__rating_stars").find(".article__rating_star").each(function(i, el){
+        $(this).removeClass("article__rating_star--yellow");
+      })
+    }
+  })
+
+  $(".article__rating_star").click(function(){
+    $(this).parents(".article__rating").addClass("article__rating--with");
+    $(this).parent(".article__rating_stars").find(".article__rating_text--default").hide();
+    $(this).parent(".article__rating_stars").find(".article__rating_text--thanks").show();
+    var num = $(this).index();
+    $(this).parent(".article__rating_stars").find(".article__rating--value").text(num + 1);
+    $(this).parent(".article__rating_stars").find(".article__rating_star").each(function(i, el){
+      if (i <= num) {
+        $(this).addClass("article__rating_star--yellow");
+      } else {
+        $(this).removeClass("article__rating_star--yellow");
+      }
+    })
   });
 
 
+  if ($(".lead__range").length > 0) {
+    $("#polzunokLimit").slider({
+      animate: "slow",
+      range: "min",    
+      value: 200000,
+      min: 30000,
+      max: 300000,
+      step: 500,
+      slide : function(event, ui) {    
+          $("#leadRangeVal").text(ui.value);        
+      }
+    });
+    $( "#leadRangeVal" ).text($( "#polzunokLimit" ).slider( "value" )); 
+  }
 
 
-
-
-
-
-
+  /*Рассчитать лимит */
+  $(".calc-limit-rasschet").click(function(){
+    $(this).parents(".calc-limit").addClass("calc-limit--ready");
+  });
 
 
 
