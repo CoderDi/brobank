@@ -108,7 +108,14 @@ $(document).ready(function () {
     });
   }  
 
+  $(".chavo__item_quest").click(function(){
+    $(this).parent(".chavo__item").toggleClass("chavo__item--open");
+  });
 
+  $(".article-sidebar").stickySidebar({
+    topSpacing: 20,
+    bottomSpacing: 60
+  });
 
 
 
