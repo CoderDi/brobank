@@ -214,6 +214,20 @@ $(document).ready(function () {
       }
     });
     $( "#leadRangeVal" ).text($( "#polzunokLimit" ).slider( "value" )); 
+    
+
+    $("#polzunokLimitAge").slider({
+      animate: "slow",
+      range: "min",    
+      value: 68,
+      min: 20,
+      max: 75,
+      step: 1,
+      slide : function(event, ui) {    
+          $("#leadRangeValAge").text(ui.value);        
+      }
+    });
+    $( "#leadRangeValAge" ).text($( "#polzunokLimitAge" ).slider( "value" )); 
   }
 
 

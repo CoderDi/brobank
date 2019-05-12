@@ -42,6 +42,9 @@ HEADER
   background: #FFFFFF;
   box-shadow: 0px 5px 5px rgba(136, 145, 157, 0.1), 0px 1px 0px #E6EAED;
 }
+.logo img {
+  height: 35px;
+}
 .header-top {
   padding: 15px 0;
   box-shadow: 0px 1px 0px #E6EAED;
@@ -1009,6 +1012,7 @@ REVIEWS
   padding: 0 15px;
   margin-bottom: 30px;
 }
+
 .journal__item_container {
   height: 100%;
   padding: 20px;
@@ -1398,6 +1402,9 @@ SIDEBAR
 }
 .page-flex .journal__item {
   width: 33.333%;
+}
+.article .journal__item {
+  width: 50%;
 }
 .rubrics {
   background: #FFFFFF;
@@ -2082,6 +2089,15 @@ OFFER PAGE
   background: #528CAA;
   padding: 60px 0;
 }
+.lead--black {
+  background: #444444;
+}
+.lead--green {
+  background: #00833C;
+}
+.lead--braun {
+  background: #8B5B5A;
+}
 .lead-top {
   display: flex;
   align-items: center;
@@ -2319,6 +2335,30 @@ OFFER PAGE
 }
 .methods__table_icon--pochta i {
   background-position: -150px -80px;
+}
+.methods__table_icon--wildberries i {
+  background-position: -220px -150px;
+}
+.methods__table_icon--shatura i {
+  background-position: -150px -150px;
+}
+.methods__table_icon--585 i {
+  background-position: -10px -10px;
+}
+.methods__table_icon--tele2 i {
+  background-position: -220px -10px;
+}
+.methods__table_icon--westfalika i {
+  background-position: -220px -80px;
+}
+.methods__table_icon--samsung i {
+  background-position: -80px -150px;
+}
+.methods__table_icon--kari i {
+  background-position: -150px -10px;
+}
+.methods__table_icon--biglion i {
+  background-position: -80px -10px;
 }
 
 
