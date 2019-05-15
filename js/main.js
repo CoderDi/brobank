@@ -72,6 +72,7 @@ $(document).ready(function () {
   $(".butter").click(function(){
     $(this).toggleClass("butter-active");
     $(".mobile").toggleClass("mobile-active");
+    $(".header-fixed").toggleClass("header-fixed-without");
   });
   $(".breadcrumbs__item--current").removeAttr('href');
 
@@ -375,6 +376,12 @@ $(document).ready(function () {
       } else {
         $(".s-item--fixed").removeClass("s-item--fixed--show");
       }
+    }
+
+    if ($(window).scrollTop() > 0) {
+      $(".header-fixed").addClass("header-fixed-scroll");
+    } else {
+      $(".header-fixed").removeClass("header-fixed-scroll");
     }
   });
 

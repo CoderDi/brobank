@@ -40,9 +40,10 @@ HEADER
   position: relative;
   z-index: 10;
   background: #FFFFFF;
-  box-shadow: 0px 5px 5px rgba(136, 145, 157, 0.1), 0px 1px 0px #E6EAED;
+  
 }
 .logo img {
+  display: block;
   height: 35px;
 }
 .header-top {
@@ -99,6 +100,7 @@ HEADER
   background-image: url(../images/svg-icons.svg#jour-active);
 }
 .menu {
+  position: relative;
   overflow: hidden;
   height: 55px;
 }
@@ -1042,6 +1044,9 @@ REVIEWS
   font-weight: 700;
   line-height: 1.4;
 }
+.journal__item_link:hover {
+  color: #0a2c4b;
+}
 /*
 END reviews
 */
@@ -1316,7 +1321,7 @@ TOP
   white-space: nowrap;
   font-size: 13px;
   line-height: 15px;
-  color: #528CAA;
+  color: #88919D;
 }
 .breadcrumbs__item::after {
   content: '-';
@@ -1326,7 +1331,7 @@ TOP
   display: none;
 }
 .breadcrumbs__item:hover {
-  color: #3D697F;
+  color: #444;
 }
 .breadcrumbs__item:last-child,
 .breadcrumbs__item--current {
@@ -1604,6 +1609,9 @@ ARTICLE
   line-height: 1.4;
   color: #528CAA;
 }
+.article ol.oglavlenie__main > li > a:hover {
+  color: #0a2c4b;
+}
 .article ul.oglavlenie__sub {
   list-style-type: none;
   padding: 5px 0 0;
@@ -1620,6 +1628,9 @@ ARTICLE
   font-size: 15px;
   line-height: 2;
   color: #444444;
+}
+.article ul.oglavlenie__sub li a:hover {
+  color: #88919D
 }
 .article h2 {
   font-size: 29px;
@@ -1705,6 +1716,9 @@ ARTICLE
   color: #528CAA;
   font-weight: 700;
   margin: 0 0 15px;
+}
+.article__card .article__card_title:hover {
+  color: #0a2c4b;
 }
 .article__card .card__table td {
   font-size: 15px;
@@ -2029,7 +2043,12 @@ COMMENTS
   padding-left: 15px;
   color: #88919D;
   font-size: 15px;
+  line-height: 53px;
   margin: 30px 0;
+}
+.comments__top-input:hover {
+  border-color: #444;
+  color: #444444;
 }
 .comment .comment {
   margin-left: 20px;
@@ -2390,7 +2409,10 @@ OFFER PAGE
 }
 .offer-home__btn {
   width: 100%;
-  margin: 10px 0 20px;
+  margin: 10px 0;
+}
+.tariffs__btn.offer-home__btn {
+  margin-bottom: 20px;
 }
 .offer .article__socials_item {
   flex-shrink: 1;
@@ -3346,7 +3368,7 @@ MEDIA
   }
   .mobile {
     position: fixed;
-    top: 50px;
+    top: 45px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -3369,6 +3391,31 @@ MEDIA
   }
   .menu__item, .menu {
     height: 45px;
+  }
+  .menu::before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  }
+  .menu::after {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 35px;
+    height: 100%;
+    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .menu__item,
+  .menu--section .menu__item {
+    font-size: 13px;
+    margin-right: 15px;
   }
   .mobile-menu {
     display: block;
@@ -3407,18 +3454,31 @@ MEDIA
     justify-content: flex-start;
   }
   .header {
-    height: 94px;
+    height: auto;
   }
   .header-fixed {
     position: fixed;
+    z-index: 92;
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: none;
+    padding: 0 20px;
+  }
+  .header-fixed-scroll {
+    box-shadow: 0px 5px 5px rgba(136, 145, 157, 0.1), 0px 1px 0px #E6EAED;
+  }
+  .header-fixed-without {
+    box-shadow: 0px 1px 0px #E6EAED;
+  }
+  .header-fixed-scroll .header-top {
+    box-shadow: none;
   }
   .slick-dots {
     bottom: 10px;
   }
   .main-menu {
+    margin-top: 46px;
     margin-right: -20px;
     margin-left: -20px;
   }
