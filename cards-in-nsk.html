@@ -13,33 +13,35 @@
 
   <header class="header">
     <div class="wrapper">
-      <div class="header-fixed">
+      <div class="header-fixed flex">
         <div class="header-top flex">
           <a href="/" class="logo">
             <img src="images/logo_svg.svg" alt="">
           </a>
           <div class="butter"><i></i></div>
-        </div>
-      </div>
-      <div class="mobile">
-        <div class="mobile-menu">
-          <a href="/kreditnye-karty.html" class="mobile-menu__item">Кредитные карты</a>
-          <a href="#" class="mobile-menu__item">Кредиты</a>
-          <a href="#" class="mobile-menu__item">Дебетовые карты</a>
-          <a href="#" class="mobile-menu__item">Займы</a>
-          <a href="#" class="mobile-menu__item">Карты рассрочки</a>
-          <a href="#" class="mobile-menu__item">Рефинансирование</a>
-          <a href="#" class="mobile-menu__item">Кредитная история</a>
-          <a href="#" class="mobile-menu__item">Страхование</a>
-          <a href="#" class="mobile-menu__item">Для бизнеса</a>
-        </div>
+          <div class="mobile">
+            <div class="mobile-menu">
+              <a href="/kreditnye-karty.html" class="mobile-menu__item">Кредитные карты</a>
+              <a href="#" class="mobile-menu__item">Кредиты</a>
+              <a href="#" class="mobile-menu__item">Дебетовые карты</a>
+              <a href="#" class="mobile-menu__item">Займы</a>
+              <a href="#" class="mobile-menu__item">Карты рассрочки</a>
+              <a href="#" class="mobile-menu__item">Рефинансирование</a>
+              <a href="#" class="mobile-menu__item">Кредитная история</a>
+              <a href="#" class="mobile-menu__item">Страхование</a>
+              <a href="#" class="mobile-menu__item">Для бизнеса</a>
+            </div>
 
-        <div class="header-top__menu flex">
-          <a href="#" class="header-top__menu_item header-top__menu_item--vo flex active"><i></i>50 руб. за 1 мин!</a>
-          <a href="#" class="header-top__menu_item header-top__menu_item--calc flex"><i></i>Калькулятор</a>
-          <a href="#" class="header-top__menu_item header-top__menu_item--jour flex"><i></i>Журнал</a>
+            <div class="header-top__menu flex">
+              <a href="#" class="header-top__menu_item header-top__menu_item--vo flex active"><i></i>50 руб. за 1 мин!</a>
+              <a href="#" class="header-top__menu_item header-top__menu_item--calc flex"><i></i>Калькулятор</a>
+              <a href="#" class="header-top__menu_item header-top__menu_item--jour flex"><i></i>Журнал</a>
+            </div>
+          </div>
         </div>
+        
       </div>
+      
       <div class="menu main-menu">
         <div class="menu__container">
           <div class="menu__block">
@@ -499,7 +501,7 @@
         <div class="bottom__flex_content">
           <section class="articles__section comments">
             <h2 class="section__title">Лучшие кредитные карты - 28 отзывов</h2>
-            <input type="text" class="comments__top-input" placeholder="Написать отзыв">
+            <a href="#comments-form" class="comments__top-input">Написать комментарий</a>
 
             <div class="comments__list">
               <div class="comment">
@@ -565,7 +567,7 @@
               </div>
             </div>
 
-            <form class="comments__form">
+            <form class="comments__form" id="comments-form">
               <span class="comments__form_title">Ваш отзыв:</span>
               <div class="comments__form_flex">
                 <textarea name="" class="comments__form_input comments__form_textarea"></textarea>
