@@ -110,6 +110,7 @@ $(document).ready(function () {
   }  
 
   $(".chavo__item_quest").click(function(){
+    $(".chavo__item").removeClass("chavo__item--open");
     $(this).parent(".chavo__item").toggleClass("chavo__item--open");
   });
 
