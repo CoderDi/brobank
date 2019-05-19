@@ -3510,6 +3510,35 @@ CALCULATORS
 }
 
 
+.calculator {
+  padding: 40px 0 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -3518,8 +3547,36 @@ END calculators
 
 
 
-
-
+.section-carousel-top {
+  padding: 50px 0 0;
+  margin-bottom: -10px;
+}
+.section-carousel-top .new-carousel__item_container {
+  margin-bottom: 0;
+}
+.sub-cities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: .2s ease-in-out;
+}
+.city__block--open .sub-cities {
+  max-height: 1200px;
+}
+.sub-cities a {
+  display: block;
+  font-size: 15px;
+  color: #528CAA;
+  padding: 3px 0 3px 10px;
+}
+.sub-cities a:hover {
+  color: #0a2c4b;
+}
+.sub-cities li:last-child a {
+  padding-bottom: 15px;
+}
 
 
 
@@ -4382,6 +4439,9 @@ MEDIA
     text-align: center;
     border: 1px solid transparent;
   }
+  .section-carousel-top .section__more-link_mobile {
+    margin-top: 25px;
+  }
   .new-carousel__item_container {
     margin-bottom: 15px;
   }
@@ -4959,6 +5019,10 @@ MEDIA
   }
   .offer-page-section {
     padding-top: 35px;
+  }
+  
+  .section-carousel-top {
+    padding-top: 30px;
   }
   .tariffs__table tr {
     display: -webkit-box;

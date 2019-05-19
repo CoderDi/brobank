@@ -123,7 +123,7 @@ $(document).ready(function () {
         } else {
           $(".fixed-sidebar").stickySidebar({
             topSpacing: 20,
-            bottomSpacing: 0
+            bottomSpacing: 50
           });
         }
       } else {
@@ -139,6 +139,10 @@ $(document).ready(function () {
     fixedSidebar();
   });
   
+  $(".city__block").click(function(){
+    $(".city__block").removeClass("city__block--open");
+    $(this).toggleClass("city__block--open");
+  });
   
 
   if ($(".article__rating").length > 0) {
