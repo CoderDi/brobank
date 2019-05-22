@@ -110,8 +110,13 @@ $(document).ready(function () {
   }  
 
   $(".chavo__item_quest").click(function(){
+    var has = $(this).parent(".chavo__item").hasClass("chavo__item--open");
     $(".chavo__item").removeClass("chavo__item--open");
-    $(this).parent(".chavo__item").toggleClass("chavo__item--open");
+    $(".chavo__item_answer").slideUp("slow");
+    if (!has) {
+      $(this).parent(".chavo__item").addClass("chavo__item--open");
+      $(this).next().slideDown("slow");
+    }
   });
 
 
@@ -132,7 +137,7 @@ $(document).ready(function () {
         } else {}
       }
     }    
-  }
+  } 
   fixedSidebar();
 
   $(window).resize(function(){
