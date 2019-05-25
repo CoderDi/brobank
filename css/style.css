@@ -3569,7 +3569,7 @@ CALCULATORS
   font-size: 15px;
   line-height: 1.4;
   color: #88919D;
-  display: block;
+  display: flex;
   margin-bottom: 15px;
 }
 .calculator__line_change {
@@ -3617,7 +3617,7 @@ CALCULATORS
           border-radius: 0 4px 4px 0;
 }
 .calculator__method-pay:nth-child(2):hover::before,
-.calculator__method-pay:nth-child(2):hover::after {
+.calculator__method-pay--three:nth-child(2):hover::after {
   position: absolute;
   content: '';
   top: -1px;
@@ -3629,12 +3629,15 @@ CALCULATORS
 .calculator__method-pay:nth-child(2):hover::before {
   left: -1px;
 }
-.calculator__method-pay:nth-child(2):hover::after {
+.calculator__method-pay--three:nth-child(2):hover::after {
   right: -1px;
 }
-.calculator__method-pay:nth-child(3) {
+.calculator__method-pay:last-child {
   -webkit-border-radius: 0 4px 4px 0;
           border-radius: 0 4px 4px 0;
+}
+.calculator__method-pay--half:hover {
+  border-right: 1px solid #C4CAD0;
 }
 .calculator__method-pay input {
   display: none;
@@ -3649,6 +3652,19 @@ CALCULATORS
 }
 .calculator__method-pay--active .calculator__method-pay_text { 
   color: #528CAA;
+}
+
+.calculator__method-pay--radio:nth-child(n) {
+  width: 46.8%;
+  border-radius: 4px;
+  border-right: 1px solid #E6EAED;
+  border-left: 1px solid #E6EAED;
+}
+.calculator__method-pay--radio:nth-child(n):hover::before {
+  display: none;
+}
+.calculator__method-pay--radio:nth-child(n):hover {
+  border: 1px solid #C4CAD0;
 }
 .calculator__input,
 .calculator__select {
@@ -3671,6 +3687,12 @@ CALCULATORS
      -moz-appearance: none;
           appearance: none;
   font-size: 15px;
+  cursor: pointer;
+  background: url(../images/svg-icons.svg#select) no-repeat 90% center;
+  background-size: 15px 15px;
+}
+.calculator__select--active {
+  background-image: url(../images/svg-icons.svg#select-rotate);
 }
 .input-slider {
   margin-top: -2px;
@@ -3700,6 +3722,7 @@ CALCULATORS
 }
 .calculator__btn {
   width: 100%;
+  padding: 0;
 }
 
 .grafik {
@@ -3748,6 +3771,36 @@ CALCULATORS
 .grafik__table table td {
   color: #444444;
 }
+
+.calculator__line_ps-price {
+  font-size: 13px;
+  color: #88919D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
