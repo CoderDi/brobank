@@ -91,34 +91,34 @@
   <section class="calculator">
     <div class="wrapper">
       <div class="calculator__container">
-        <div class="calculator__form" data-type="card">
+        <div class="calculator__form" data-type="zaym">
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption">Сумма займа</span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-credit-summ">
+              <input type="text" class="calculator__input js-zaym-summ">
               <div class="input-slider" data-max="30000" data-min="1000" data-value="10000" data-step="500" data-suffix="₽"></div>
             </div>
           </div>
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption">Срок займа</span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-credit-summ">
+              <input type="text" class="calculator__input js-zaym-period">
               <div class="input-slider" data-max="60" data-min="10" data-value="30" data-step="1" data-suffix="дней"></div>
             </div>
           </div>
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption flex">Процентная ставка в день</span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-credit-summ">
+              <input type="text" class="calculator__input js-zaym-percent">
               <div class="input-slider" data-max="5" data-min="1" data-value="2" data-step="1" data-suffix="%"></div>
             </div>
           </div>
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption">Дата взятия займа</span>
             <div class="calculator__flex flex">
-              <select name="day" id="day" class="calculator__select">
+              <select name="day" id="day" class="calculator__select js-zaym-day">
               </select>
-              <select name="month" id="month" class="calculator__select">
+              <select name="month" id="month" class="calculator__select js-zaym-month">
               </select>
             </div>
           </div>

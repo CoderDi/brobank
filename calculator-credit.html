@@ -91,7 +91,7 @@
   <section class="calculator">
     <div class="wrapper">
       <div class="calculator__container">
-        <div class="calculator__form" data-type="card">
+        <div class="calculator__form" data-type="credit">
           <div class="calculator__line calculator__line--full">
             <span class="calculator__line_caption">Выберите способ расчета</span>
             <div class="calculator__flex flex">
@@ -115,7 +115,7 @@
           <div class="calculator__line calculator__line--half calculator__line_change calculator__line_1">
             <span class="calculator__line_caption">Стоимость покупки</span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-credit-summ">
+              <input type="text" class="calculator__input js-purchase-summ">
               <div class="input-slider" data-max="300000" data-min="10000" data-value="50000" data-step="1000" data-suffix="₽"></div>
             </div>
           </div>
@@ -125,14 +125,14 @@
               <span class="calculator__line_ps-price">(80 000 ₽ в кредит)</span>
             </span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-credit-summ">
+              <input type="text" class="calculator__input js-initial-pay">
               <div class="input-slider" data-max="50000" data-min="5000" data-value="20000" data-step="1000" data-suffix="₽"></div>
             </div>
           </div>
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption">Срок кредита</span>
             <div class="calculator__block">
-              <input type="text" class="calculator__input js-your-period">
+              <input type="text" class="calculator__input js-period">
               <div class="input-slider" data-max="18" data-min="3" data-value="6" data-step="1" data-suffix="мес."></div>
             </div>
           </div>
@@ -146,7 +146,7 @@
           <div class="calculator__line calculator__line--half">
             <span class="calculator__line_caption">Начало выплат</span>
             <div class="calculator__flex flex">
-              <select name="" id="" class="calculator__select">
+              <select name="month" id="" class="calculator__select js-month">
                 <option value="">Январь</option> 
                 <option value="">Февраль</option>
                 <option value="">Март</option>
@@ -160,7 +160,7 @@
                 <option value="">Ноябрь</option>
                 <option value="">Декабрь</option>
               </select>
-              <select name="" id="" class="calculator__select">
+              <select name="year" id="" class="calculator__select js-year">
                 <option value="">2018</option>
                 <option value="">2019</option>
                 <option value="">2020</option>

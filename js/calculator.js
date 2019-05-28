@@ -112,6 +112,31 @@ $(document).ready(function () {
           calcCardYourPeriod(cardYourPeriod,cardCreditSumm,cardMaxLimit,cardPercents);
         }
         break;
+
+      case "credit":
+        var creditPercents = $(then).find(".js-percents").val(),
+            creditPeriod = $(then).find(".js-period").val(),
+            creditMethod = $(then).find("input[name='method']:checked").val(),
+            creditDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='year']").val(),
+            creditVidPay = $(then).find("input[name='vid-pay']:checked").val();
+        console.log("creditMethod = " + creditMethod);
+        if (creditMethod == 0) {
+          var creditSumm = $(then).find(".js-credit-summ").val();
+          calcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay)
+        } else if (creditMethod == 1) {
+          var creditPurchaseSumm = $(then).find(".js-purchase-summ").val(),
+              creditInitialPay = $(then).find(".js-initial-pay").val();
+          calcCreditPurchase(creditPurchaseSumm,creditInitialPay,creditPercents,creditPeriod,creditDateStart,creditVidPay)
+        }
+        break;
+
+      case "zaym":
+        var zaymSumm = $(then).find(".js-zaym-summ").val(),
+            zaymPeriod = $(then).find(".js-zaym-period").val(),
+            zaymPercent = $(then).find(".js-zaym-percent").val(),
+            zaymDateStart = $(then).find("select[name='day']").val() + '.' + $(then).find("select[name='month']").val();
+        calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart)
+        break;
       
       default:
         return;
@@ -126,7 +151,20 @@ $(document).ready(function () {
   function calcCardMonthAmount(cardMonthAmount,cardCreditSumm,cardMaxLimit,cardPercents) {
     
   }
+  
   function calcCardYourPeriod(cardYourPeriod,cardCreditSumm,cardMaxLimit,cardPercents) {
+    
+  }
+
+  function calcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay) {
+    
+  }
+
+  function calcCreditPurchase(creditPurchaseSumm,creditInitialPay,creditPercents,creditPeriod,creditDateStart, creditVidPay) {
+    
+  }
+
+  function calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart) {
     
   }
 
