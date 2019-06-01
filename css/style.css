@@ -3710,6 +3710,9 @@ CALCULATORS
   font-size: 15px;
   line-height: 1.66;
 }
+.calculator__res-line0 {
+  display: none;
+}
 .calculator__res-line span {
   color: #88919D;
   width: 140px;
@@ -3728,7 +3731,7 @@ CALCULATORS
 .grafik {
   width: 100%;
   margin-bottom: 40px;
-  /* display: none; */
+  display: none;
 }
 .grafik__title {
   display: block;
@@ -3771,17 +3774,53 @@ CALCULATORS
 .grafik__table table td {
   color: #444444;
 }
+.th-mobile, .td-mobile {
+  display: none;
+}
 
 .calculator__line_ps-price {
   font-size: 13px;
   color: #88919D;
 }
 
-
-
-
-
-
+.purchase {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e6eaed;
+  margin-bottom: 40px;
+}
+.purchase:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.purchase__title {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 25px;
+}
+.purchase__caption {
+  margin: 0 30px 0 0;
+  font-size: 23px;
+  line-height: 1;
+  color: #000000;
+}
+.purchase__control {
+  display: block;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #528CAA;
+  cursor: pointer;
+  padding-right: 20px;
+}
+.purchase__control:hover {
+  color: #444444;
+}
+.purchase:first-child .purchase-remove {
+  display: none;
+}
 
 
 
@@ -5153,6 +5192,9 @@ MEDIA
   .calculator__line {
     padding-bottom: 30px;
   }
+  .calculator__line--pb0 {
+    padding: 0;
+  }
   .calculator__line_caption {
     margin-bottom: 10px;
   }
@@ -5174,6 +5216,11 @@ MEDIA
   }
   .calculator__method-pay:last-child {
     border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid #e6eaed;
+  }
+  .calculator__method-pay--radio:nth-child(n) {
+    border-radius: 4px;
+    border-top: 1px solid #e6eaed;
   }
 }
 
@@ -5545,8 +5592,54 @@ MEDIA
   .calculator__line--pb30 {
     width: 100%;
   }
+  .calculator__line--pb30 {
+    padding-bottom: 20px;
+  }
   .calculator__line--pb30-first {
     padding-bottom: 0;
+  }
+
+  .calculator__line--pb0 {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .th-desktop {
+    display: none;
+  }
+  .th-mobile {
+    display: block;
+  }
+  .grafik__title {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .grafik__table th:nth-child(3),
+  .grafik__table td:nth-child(3) {
+    display: none;
+  }
+  .grafik__table td {
+    vertical-align: top;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .td-mobile {
+    display: block;
+    font-size: 9px;
+    line-height: 14px;
+    color: #88919D;
+  }
+  .grafik {
+    margin-bottom: 20px;
+  }
+  .calculator__method-pay--radio:nth-child(n) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .calculator__select {
+    width: 100%;
+    margin-bottom: 10px;
+    background-position: 96% center;
   }
 }
 

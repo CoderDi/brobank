@@ -66,12 +66,12 @@
       <div class="breadcrumbs">
         <div class="breadcrumbs__container">
           <a href="#" class="breadcrumbs__item">Главная</a>
-          <a href="#" class="breadcrumbs__item">Кредитные карты</a>
+          <a href="#" class="breadcrumbs__item">Рефинансирование</a>
           <a href="#" class="breadcrumbs__item breadcrumbs__item--current">Калькулятор</a>
         </div>
       </div>
       <div class="page-title">
-        <h1>Калькулятор займа</h1>
+        <h1>Калькулятор рефинансирования кредита</h1>
       </div>
       <div class="menu menu--section">
         <div class="menu__container">
@@ -91,55 +91,68 @@
   <section class="calculator">
     <div class="wrapper">
       <div class="calculator__container">
-        <div class="calculator__form" data-type="zaym">
-          <div class="calculator__line calculator__line--half calculator__line_input">
-            <span class="calculator__line_caption">Сумма займа</span>
-            <div class="calculator__block">
-              <input type="text" class="calculator__input js-zaym-summ">
-              <div class="input-slider" data-max="30000" data-min="1000" data-value="10000" data-step="500" data-suffix="₽"></div>
-            </div>
-          </div>
-          <div class="calculator__line calculator__line--half calculator__line_input">
-            <span class="calculator__line_caption">Срок займа</span>
-            <div class="calculator__block">
-              <input type="text" class="calculator__input js-zaym-period">
-              <div class="input-slider" data-max="60" data-min="10" data-value="30" data-step="1" data-suffix="дней"></div>
-            </div>
-          </div>
-          <div class="calculator__line calculator__line--half calculator__line_input">
-            <span class="calculator__line_caption flex">Процентная ставка в день</span>
-            <div class="calculator__block">
-              <input type="text" class="calculator__input js-zaym-percent">
-              <div class="input-slider" data-max="5" data-min="1" data-value="2" data-step="1" data-suffix="%"></div>
-            </div>
-          </div>
-          <div class="calculator__line calculator__line--half calculator__line_input">
-            <span class="calculator__line_caption">Дата взятия займа</span>
+        <div class="calculator__form" data-type="refin">
+          <div class="calculator__line calculator__line--full">
+            <span class="calculator__line_caption">Я хочу уменьшить</span>
             <div class="calculator__flex flex">
-              <select name="day" id="day" class="calculator__select js-zaym-day">
-              </select>
-              <select name="month" id="month" class="calculator__select js-zaym-month">
-              </select>
+              <label class="calculator__method-pay calculator__method-pay--half calculator__method-pay--active">
+                <input type="radio" name="method" value="0" checked>
+                <span class="calculator__method-pay_text">Срок и переплату</span>
+              </label>
+              <label class="calculator__method-pay calculator__method-pay--half">
+                <input type="radio" name="method" value="1">
+                <span class="calculator__method-pay_text">Платеж</span>
+              </label>
             </div>
           </div>
+          <div class="calculator__line calculator__line--half calculator__line_input">
+            <span class="calculator__line_caption">Остаток долга</span>
+            <div class="calculator__block">
+              <input type="text" class="calculator__input js-credit-summ">
+              <div class="input-slider" data-max="300000" data-min="10000" data-value="100000" data-step="1000" data-suffix="₽"></div>
+            </div>
+          </div>
+          <div class="calculator__line calculator__line--half calculator__line_input">
+            <span class="calculator__line_caption">Осталось платить <span id="calc-refin-srok">(5 лет 4 мес.)</span>></span>
+            <div class="calculator__block">
+              <input type="text" class="calculator__input js-period">
+              <div class="input-slider" data-max="120" data-min="3" data-value="64" data-step="1" data-suffix="мес."></div>
+            </div>
+          </div>
+          <div class="calculator__line calculator__line--half calculator__line_input">
+            <span class="calculator__line_caption">Текущая процентная ставка</span>
+            <div class="calculator__block">
+              <input type="text" class="calculator__input js-percents">
+              <div class="input-slider" data-max="25" data-min="8" data-value="15" data-step="1" data-suffix="%"></div>
+            </div>
+          </div>
+          <div class="calculator__line calculator__line--half calculator__line_input">
+            <span class="calculator__line_caption">Новая процентная ставка</span>
+            <div class="calculator__block">
+              <input type="text" class="calculator__input js-percents-new">
+              <div class="input-slider" data-max="25" data-min="8" data-value="10" data-step="1" data-suffix="%"></div>
+            </div>
+          </div>
+
           <div class="calculator__line calculator__line--half calculator__line--pb30 calculator__line--pb30-first">
             <span class="calculator__res-line">
-              <span>Вы берете</span>
-              <strong class="calczaim_result1">10 000 ₽</strong>
+              <span>Платеж в месяц</span>
+              <strong class="js-monthly-payment">4 500 ₽</strong>
             </span>
             <span class="calculator__res-line">
-              <span>На срок</span>
-              <strong class="calczaim_result4">30 дней</strong>
+              <span>Переплата</span>
+              <strong class="js-overpayment">36 000 ₽</strong>
             </span>
           </div>
           <div class="calculator__line calculator__line--half calculator__line--pb30">
             <span class="calculator__res-line">
-              <span>Отдаете</span>
-              <strong class="calczaim_result2">16 000 ₽</strong>
+              <span>Переплата уменьшится на <span class="js-overpayment-decrease">19 122 ₽</span></span>
             </span>
-            <span class="calculator__res-line">
-              <span>Вернуть до</span>
-              <strong class="calczaim_result3">16.05.2019</strong>
+            <span class="calculator__res-line calculator__res-line1">
+              <span>Срок кредита уменьшится на <span class="js-years-decrease">1 год</span></span>
+            </span>
+            <span class="calculator__res-line calculator__res-line0">
+              <span>Ежемесячный платеж уменьшится на <span class="js-montlypay-decrease">19 122 ₽</span></span>
             </span>
           </div>
 
@@ -147,7 +160,7 @@
             <span class="btn calculator__btn">Рассчитать</span>
           </div>
           <div class="calculator__line calculator__line--half calculator__line--pb0">
-            <button class="btn tariffs__btn calculator__btn">Подобрать займ</button>
+            <button class="btn tariffs__btn calculator__btn">Подобрать рефинансирование</button>
           </div>
         </div>
       </div>

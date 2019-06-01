@@ -105,69 +105,69 @@
               </label>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_0">
+          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_0 calculator__line_input">
             <span class="calculator__line_caption">Сумма кредита</span>
             <div class="calculator__block">
               <input type="text" class="calculator__input js-credit-summ">
               <div class="input-slider" data-max="300000" data-min="10000" data-value="50000" data-step="1000" data-suffix="₽"></div>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_1">
+          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_1 calculator__line_input">
             <span class="calculator__line_caption">Стоимость покупки</span>
             <div class="calculator__block">
               <input type="text" class="calculator__input js-purchase-summ">
               <div class="input-slider" data-max="300000" data-min="10000" data-value="50000" data-step="1000" data-suffix="₽"></div>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_1">
+          <div class="calculator__line calculator__line--half calculator__line_change calculator__line_1 calculator__line_input">
             <span class="calculator__line_caption flex">
               Первоначальный взнос
-              <span class="calculator__line_ps-price">(80 000 ₽ в кредит)</span>
+              <span class="calculator__line_ps-price">(<span class="calccredit_diff">80 000</span> ₽ в кредит)</span>
             </span>
             <div class="calculator__block">
               <input type="text" class="calculator__input js-initial-pay">
               <div class="input-slider" data-max="50000" data-min="5000" data-value="20000" data-step="1000" data-suffix="₽"></div>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half">
+          <div class="calculator__line calculator__line--half calculator__line_input">
             <span class="calculator__line_caption">Срок кредита</span>
             <div class="calculator__block">
               <input type="text" class="calculator__input js-period">
-              <div class="input-slider" data-max="18" data-min="3" data-value="6" data-step="1" data-suffix="мес."></div>
+              <div class="input-slider" data-max="60" data-min="3" data-value="12" data-step="1" data-suffix="мес."></div>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half">
+          <div class="calculator__line calculator__line--half calculator__line_input">
             <span class="calculator__line_caption">Процентная ставка</span>
             <div class="calculator__block">
               <input type="text" class="calculator__input js-percents">
               <div class="input-slider" data-max="25" data-min="8" data-value="12" data-step="1" data-suffix="%"></div>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half">
+          <div class="calculator__line calculator__line--half calculator__line_input">
             <span class="calculator__line_caption">Начало выплат</span>
             <div class="calculator__flex flex">
               <select name="month" id="" class="calculator__select js-month">
-                <option value="">Январь</option> 
-                <option value="">Февраль</option>
-                <option value="">Март</option>
-                <option value="">Апрель</option>
-                <option value="">Май</option>
-                <option value="">Июнь</option>
-                <option value="">Июль</option>
-                <option value="">Август</option>
-                <option value="">Сентябрь</option>
-                <option value="">Октябрь</option>
-                <option value="">Ноябрь</option>
-                <option value="">Декабрь</option>
+                <option value="1">Январь</option> 
+                <option value="2">Февраль</option>
+                <option value="3">Март</option>
+                <option value="4">Апрель</option>
+                <option value="5">Май</option>
+                <option value="6">Июнь</option>
+                <option value="7">Июль</option>
+                <option value="8">Август</option>
+                <option value="9">Сентябрь</option>
+                <option value="10">Октябрь</option>
+                <option value="11">Ноябрь</option>
+                <option value="12">Декабрь</option>
               </select>
               <select name="year" id="" class="calculator__select js-year">
-                <option value="">2018</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
               </select>
             </div>
           </div>
-          <div class="calculator__line calculator__line--half">
+          <div class="calculator__line calculator__line--half calculator__line_input">
             <span class="calculator__line_caption">Вид платежей</span>
             <div class="calculator__flex flex">
               <label class="calculator__method-pay calculator__method-pay--radio calculator__method-pay--half calculator__method-pay--active">
@@ -181,25 +181,57 @@
             </div>
           </div>
 
+          <div class="calculator__line--full calculator__flex flex">
+            <div class="calculator__line calculator__line--res calculator__line--half calculator__line--pb30 calculator__line--pb30-first">
+              <span class="calculator__res-line">
+                <span>Платеж в месяц</span>
+                <strong class="js-monthPay">4 500 ₽</strong>
+              </span>
+              <span class="calculator__res-line">
+                <span>Срок выплат</span>
+                <strong class="js-periodPay">36 мес.</strong>
+              </span>
+            </div>
+            <div class="calculator__line calculator__line--res calculator__line--half calculator__line--pb30">
+              <span class="calculator__res-line">
+                <span>Сумма выплат</span>
+                <strong class="js-totalPay">55 811 ₽</strong>
+              </span>
+              <span class="calculator__res-line">
+                <span>Переплата</span>
+                <strong class="js-morePay">5 811 ₽</strong>
+              </span>
+            </div>
+          </div>
+
           <div class="grafik">
             <span class="grafik__title">График платежей</span>
             <div class="grafik__table">
               <table>
                 <tr>
                   <th>№, Месяц</th>
-                  <th>Сумма платежа</th>
+                  <th>
+                    <span class="th-desktop">Сумма платежа</span>
+                    <span class="th-mobile">Платеж</span>
+                  </th>
                   <th>Проценты + долг</th>
                   <th>Остаток долга</th>
                 </tr>
                 <tr>
                   <td>1. 10.04.2019</td>
-                  <td>61 811.94</td>
+                  <td>
+                    <span class="td-desktop">61 811.94</span>
+                    <span class="td-mobile">3 000.00 + 58 811.94</span>
+                  </td>
                   <td>3 000.00 + 58 811.94</td>
                   <td>241 188.06</td>
                 </tr>
                 <tr>
                   <td>1. 10.04.2019</td>
-                  <td>61 811.94</td>
+                  <td>
+                    <span class="td-desktop">61 811.94</span>
+                    <span class="td-mobile">3 000.00 + 58 811.94</span>
+                  </td>
                   <td>3 000.00 + 58 811.94</td>
                   <td>241 188.06</td>
                 </tr>
@@ -207,12 +239,15 @@
             </div>
           </div>
 
-          <div class="calculator__line calculator__line--half calculator__line--pb0 js-calculate">
-            <span class="btn calculator__btn">Рассчитать</span>
+          <div class="calculator__line calculator__line--full calculator__flex flex">
+            <div class="calculator__line calculator__line--half calculator__line--pb0 js-calculate">
+              <span class="btn calculator__btn">Рассчитать</span>
+            </div>
+            <div class="calculator__line calculator__line--half calculator__line--pb0">
+              <button class="btn tariffs__btn calculator__btn">Подобрать карту</button>
+            </div>
           </div>
-          <div class="calculator__line calculator__line--half calculator__line--pb0">
-            <button class="btn tariffs__btn calculator__btn">Подобрать карту</button>
-          </div>
+          
         </div>
       </div>
     </div>
