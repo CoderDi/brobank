@@ -115,17 +115,14 @@ $(document).ready(function () {
       .find(".purchase__caption span").text(purchaseCount);
     
     uiSlider(selector);
-    console.log($(".purchase").length);
 
     var scTop = $('#' + newId).offset().top - 100;
-    console.log(scTop);
     $("html, body").animate({scrollTop: scTop})
   });
   $(".purchase__list").on("click",".purchase-remove", function(){
     purchaseCount--;
     newId = "purchase" + purchaseCount;
     var scTop = $('#' + newId).offset().top - 100;
-    console.log(scTop);
     $("html, body").animate({scrollTop: scTop})
     $(this).parents(".purchase").remove();
   });
@@ -138,76 +135,108 @@ $(document).ready(function () {
 
 
   $(".js-calculate").click(function(){
-    //Определяем тип калькулятора
-    var then = $(this).parents(".calculator__form");
-    var calcType = $(then).data("type");
-    console.log("calcType = " + calcType);
+    if ($(this).hasClass("table--open")) {
+      $(this).removeClass("table--open");
+      $(this).find('span').text('Рассчитать');
+      $(".grafik").hide();
+    } else {
+      $(this).addClass("table--open");
+      $(this).find('span').text('Скрыть график');
+      //Определяем тип калькулятора
+      var then = $(this).parents(".calculator__form");
+      var calcType = $(then).data("type");
+      console.log("calcType = " + calcType);
 
-    switch (calcType) {
-      case "card":
-        var cardPercents = $(then).find(".js-percents").val(),
-            cardMaxLimit = $(then).find(".js-max-limit").val(),
-            cardCreditSumm = $(then).find(".js-credit-summ").val(),
-            cardMethod = $(then).find("input[name='method']:checked").val();
-        console.log("cardMethod = " + cardMethod);
-        if (cardMethod == 0) {
-          var cardMinAmount = $(then).find(".js-min-amount").val();
-          calcCardMinAmount(cardMinAmount,cardCreditSumm,cardMaxLimit,cardPercents);
-        } else if (cardMethod == 1) {
-          var cardMonthAmount = $(then).find(".js-month-amount").val();
-          calcCardMonthAmount(cardMonthAmount,cardCreditSumm,cardMaxLimit,cardPercents);
-        } else {
-          var cardYourPeriod = $(then).find(".js-your-period").val();
-          calcCardYourPeriod(cardYourPeriod,cardCreditSumm,cardMaxLimit,cardPercents);
-        }
-        break;
+      switch (calcType) {
+        case "card":
+          var cardPercents = normaleNum($(then).find(".js-percents").val()),
+              cardMaxLimit = normaleNum($(then).find(".js-max-limit").val()),
+              cardCreditSumm = normaleNum($(then).find(".js-credit-summ").val()),
+              cardMethod = normaleNum($(then).find("input[name='method']:checked").val());
+          if (cardCreditSumm > cardMaxLimit) {
+            alert('Максимальная сумма кредита не может превышать ' + cardMaxLimit + ' рублей!');
+            return;
+          }
+          if (cardMethod == 0) {
+            var cardMinAmount = normaleNum($(then).find(".js-min-amount").val());
+            calcCardMinAmount(cardMinAmount,cardCreditSumm,cardMaxLimit,cardPercents);
+          } else if (cardMethod == 1) {
+            var cardMonthAmount = normaleNum($(then).find(".js-month-amount").val());
+            calcCardMonthAmount(cardMonthAmount,cardCreditSumm,cardMaxLimit,cardPercents);
+          } else {
+            var cardYourPeriod = normaleNum($(then).find(".js-your-period").val());
+            calcCardYourPeriod(cardYourPeriod,cardCreditSumm,cardMaxLimit,cardPercents);
+          }
+          break;
 
-      case "credit":
-        var creditPercents = normaleNum($(then).find(".js-percents").val()),
-            creditPeriod = normaleNum($(then).find(".js-period").val()),
-            creditMethod = normaleNum($(then).find("input[name='method']:checked").val()),
-            creditDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='year']").val(),
-            creditVidPay = $(then).find("input[name='vid-pay']:checked").val();
-        if (creditMethod == 0) {
-          var creditSumm = normaleNum($(then).find(".js-credit-summ").val());
-          calcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay)
-        } else if (creditMethod == 1) {
-          var creditPurchaseSumm = normaleNum($(then).find(".js-purchase-summ").val()),
-              creditInitialPay = normaleNum($(then).find(".js-initial-pay").val());
-          $('.calccredit_diff').text(numSpacing(creditPurchaseSumm - creditInitialPay)); 
-          calcCreditSumm(creditPurchaseSumm - creditInitialPay,creditPercents,creditPeriod,creditDateStart,creditVidPay);
-        }
-        $('.js-periodPay').text(numSpacing(creditPeriod) + " мес."); 
+        case "credit":
+          var creditPercents = normaleNum($(then).find(".js-percents").val()),
+              creditPeriod = normaleNum($(then).find(".js-period").val()),
+              creditMethod = normaleNum($(then).find("input[name='method']:checked").val()),
+              creditDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='year']").val(),
+              creditVidPay = $(then).find("input[name='vid-pay']:checked").val();
+          if (creditMethod == 0) {
+            var creditSumm = normaleNum($(then).find(".js-credit-summ").val());
+            calcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay)
+          } else if (creditMethod == 1) {
+            var creditPurchaseSumm = normaleNum($(then).find(".js-purchase-summ").val()),
+                creditInitialPay = normaleNum($(then).find(".js-initial-pay").val());
+            $('.calccredit_diff').text(numSpacing(creditPurchaseSumm - creditInitialPay)); 
+            calcCreditSumm(creditPurchaseSumm - creditInitialPay,creditPercents,creditPeriod,creditDateStart,creditVidPay);
+          }
+          $('.js-periodPay').text(numSpacing(creditPeriod) + " мес."); 
+            
+          break;
+
+        case "zaym":
+          var zaymSumm = normaleNum($(then).find(".js-zaym-summ").val()),
+              zaymPeriod = normaleNum($(then).find(".js-zaym-period").val()),
+              zaymPercent = normaleNum($(then).find(".js-zaym-percent").val()),
+              zaymDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='day']").val();
+          calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart);
+          break;
+        
+        case "refin":
+          var refinSumm = normaleNum($(then).find(".js-credit-summ").val()), 
+              refinPeriod = normaleNum($(then).find(".js-period").val()), 
+              refinPercent = normaleNum($(then).find(".js-percents").val()), 
+              refinPercentNew = normaleNum($(then).find(".js-percents-new").val()), 
+              refinType = normaleNum($(then).find("input[name='method']:checked").val());
+          if (refinType == 0) {
+            $(".calculator__res-line0").hide();
+            $(".calculator__res-line1").show();
+          } else {
+            $(".calculator__res-line1").hide();
+            $(".calculator__res-line0").show();
+          }
+
+          calcRefin(refinSumm,refinPeriod,refinPercent,refinPercentNew,refinType)
+          break;
+
+        case "rassrochka":
+          var rassSumm,
+              rassPeriod,
+              rassPercent,
+              rassDateStart,
+              rassArray = new Array();
           
-        break;
+          $(".purchase").each(function (i, b) {
+            var arrayOnePurchase = new Array();
+            rassSumm = normaleNum($(b).find(".js-rass-summ").val());
+            rassPeriod = normaleNum($(b).find(".js-rass-period").val());
+            rassPercent = normaleNum($(b).find(".js-rass-percent").val());
+            rassDateStart = $(b).find("select[name='month']").val() + '.' + $(b).find("select[name='year']").val();
 
-      case "zaym":
-        var zaymSumm = normaleNum($(then).find(".js-zaym-summ").val()),
-            zaymPeriod = normaleNum($(then).find(".js-zaym-period").val()),
-            zaymPercent = normaleNum($(then).find(".js-zaym-percent").val()),
-            zaymDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='day']").val();
-        calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart);
-        break;
-      
-      case "refin":
-        var refinSumm = normaleNum($(then).find(".js-credit-summ").val()), 
-            refinPeriod = normaleNum($(then).find(".js-period").val()), 
-            refinPercent = normaleNum($(then).find(".js-percents").val()), 
-            refinPercentNew = normaleNum($(then).find(".js-percents-new").val()), 
-            refinType = normaleNum($(then).find("input[name='method']:checked").val());
-        if (refinType == 0) {
-          $(".calculator__res-line0").hide();
-          $(".calculator__res-line1").show();
-        } else {
-          $(".calculator__res-line1").hide();
-          $(".calculator__res-line0").show();
-        }
+            arrayOnePurchase.push(rassSumm, rassPeriod, rassPercent, rassDateStart);
+            rassArray.push(arrayOnePurchase);
+          }); 
 
-        calcRefin(refinSumm,refinPeriod,refinPercent,refinPercentNew,refinType)
-        break;
-      
-      default:
-        return;
+          calcRassrochka(rassArray);
+          break;
+        
+        default:
+          return;
+      }
     }
   });
 
@@ -221,18 +250,212 @@ $(document).ready(function () {
       return format + ' ₽';;
     }
   }
+  function formatDate(date) {
+    var dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+    var mm = date.getMonth() + 1;
+    if (mm < 10) mm = '0' + mm;
+    var yy = date.getFullYear();
+    return dd + '.' + mm + '.' + yy;
+  }
 
 
   function calcCardMinAmount(cardMinAmount,cardCreditSumm,cardMaxLimit,cardPercents) {
-    
+    $('.grafik__table table').remove();
+    $(".grafik").show();
+
+    var table = '<table>' +
+        '<tr>' +
+        '<th>№, Месяц</th>' +
+        '<th><span class="th-desktop">Сумма платежа</span><span class="th-mobile">Платеж</span></th>' +
+        '<th>Проценты + долг</th>' +
+        '<th>Остаток долга</th>' +
+        '</tr>';
+
+    var currentPay, 
+        currentPercent, 
+        currentDolg, 
+        countMonth = 0, 
+        row,
+        currDate = new Date(),
+        minPay = cardCreditSumm,
+        totalPay = 0,
+        beginSum = cardCreditSumm;
+
+    while (cardCreditSumm > 0) {
+      countMonth++;
+      if (countMonth > 50) {
+        alert('Ошибка! Неверные данные!');
+        return;
+      }
+      currentPercent = Math.round(cardCreditSumm / 1200 * cardPercents);
+      currentDolg = Math.round(cardCreditSumm / 100 * cardMinAmount);
+      if (currentDolg < 500) currentDolg = 500;
+      if ((cardCreditSumm < currentDolg)||(countMonth == 36)) {
+        currentDolg = cardCreditSumm
+      }    
+      currentPay = currentPercent + currentDolg;
+      totalPay += currentPay; 
+      if (minPay > currentPay) {
+        minPay = currentPay;
+      }
+      cardCreditSumm -= currentDolg;
+      if (cardCreditSumm < 0) cardCreditSumm = 0;
+      currDate.setMonth(currDate.getMonth() + 1);
+
+      row = '';
+      row += '<tr>' +
+        '<td>' + countMonth + '. ' + formatDate(currDate)+'</td>'+
+        '<td>' +
+        '<span class="td-desktop">'+formatMoney( Math.round(currentPay),true )+'</span>' +
+        '<span class="td-mobile">'+formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</span>' +
+        '</td>' +
+        '<td>' +formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</td>'+
+        '<td>'+formatMoney( Math.round(cardCreditSumm),true )+'</td>'+
+      '</tr>';
+      table += row;
+    }
+
+    $('.js-month-pay').text('от '+formatMoney( Math.round(minPay) ));
+    $('.js-month-count').text(countMonth + ' мес.');
+    $('.js-total-pay').text(formatMoney( Math.round(totalPay)) );
+    $('.js-over-pay').text(formatMoney( Math.round(totalPay - beginSum)) );
+
+    table +='</table>';
+    $('.grafik__table').html(table);
   }
 
   function calcCardMonthAmount(cardMonthAmount,cardCreditSumm,cardMaxLimit,cardPercents) {
-    
+    $('.grafik__table table').remove();
+    $(".grafik").show();
+
+    var table = '<table>' +
+        '<tr>' +
+        '<th>№, Месяц</th>' +
+        '<th><span class="th-desktop">Сумма платежа</span><span class="th-mobile">Платеж</span></th>' +
+        '<th>Проценты + долг</th>' +
+        '<th>Остаток долга</th>' +
+        '</tr>';
+
+    var currentPay, 
+        currentPercent, 
+        currentDolg, 
+        countMonth = 0, 
+        row,
+        currDate = new Date(),
+        minPay = cardMonthAmount,
+        totalPay = 0,
+        beginSum = cardCreditSumm;
+
+    while (cardCreditSumm > 0) {
+      countMonth++;
+      if (countMonth > 50) {
+        alert('Ошибка! Неверные данные!');
+        return;
+      }
+      currentPercent = Math.round(cardCreditSumm / 1200 * cardPercents);
+      currentDolg = Math.round(cardMonthAmount - currentPercent);
+      if (currentDolg < 500) currentDolg = 500;
+      if ((cardCreditSumm < currentDolg)||(countMonth == 36)) {
+        currentDolg = cardCreditSumm
+      }    
+      currentPay = currentDolg + currentPercent;
+      totalPay += currentPay; 
+      cardCreditSumm -= currentDolg;
+      if (cardCreditSumm < 0) cardCreditSumm = 0;
+      currDate.setMonth(currDate.getMonth() + 1);
+
+      row = '';
+      row += '<tr>' +
+        '<td>' + countMonth + '. ' + formatDate(currDate)+'</td>'+
+        '<td>' +
+        '<span class="td-desktop">'+formatMoney( Math.round(currentPay),true )+'</span>' +
+        '<span class="td-mobile">'+formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</span>' +
+        '</td>' +
+        '<td>' +formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</td>'+
+        '<td>'+formatMoney( Math.round(cardCreditSumm),true )+'</td>'+
+      '</tr>';
+      table += row;
+    }
+
+    $('.js-month-pay').text(formatMoney( Math.round(minPay) ));
+    $('.js-month-count').text(countMonth + ' мес.');
+    $('.js-total-pay').text(formatMoney( Math.round(totalPay)) );
+    $('.js-over-pay').text(formatMoney( Math.round(totalPay - beginSum)) );
+
+    table +='</table>';
+    $('.grafik__table').html(table);
   }
   
   function calcCardYourPeriod(cardYourPeriod,cardCreditSumm,cardMaxLimit,cardPercents) {
-    
+    $('.grafik__table table').remove();
+    $(".grafik").show();
+
+    var table = '<table>' +
+        '<tr>' +
+        '<th>№, Месяц</th>' +
+        '<th><span class="th-desktop">Сумма платежа</span><span class="th-mobile">Платеж</span></th>' +
+        '<th>Проценты + долг</th>' +
+        '<th>Остаток долга</th>' +
+        '</tr>';
+
+    var currentPay, 
+        currentPercent, 
+        currentDolg, 
+        countMonth = 0, 
+        row,
+        currDate = new Date(),
+        minPay = cardCreditSumm,
+        totalPay = 0,
+        beginSum = cardCreditSumm;
+
+    while (countMonth < cardYourPeriod) {
+      countMonth++;
+      if (countMonth > 50) {
+        alert('Ошибка! Неверные данные!');
+        return;
+      }
+      currentPercent = Math.round(cardCreditSumm / 1200 * cardPercents);
+      currentDolg = Math.round(beginSum / cardYourPeriod);
+      if (countMonth == cardYourPeriod) {
+        currentDolg = cardCreditSumm;
+        cardCreditSumm = 0;
+      }
+      currentPay = currentDolg + currentPercent;
+      totalPay += currentPay; 
+      cardCreditSumm -= currentDolg;
+      if (cardCreditSumm < 0) cardCreditSumm = 0;
+      currDate.setMonth(currDate.getMonth() + 1);
+      if (minPay > currentPay) {
+        minPay = currentPay;
+      }
+
+      row = '';
+      row += '<tr>' +
+        '<td>' + countMonth + '. ' + formatDate(currDate)+'</td>'+
+        '<td>' +
+        '<span class="td-desktop">'+formatMoney( Math.round(currentPay),true )+'</span>' +
+        '<span class="td-mobile">'+formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</span>' +
+        '</td>' +
+        '<td>' +formatMoney( Math.round(currentPercent),true )+ ' + ' +
+        formatMoney( Math.round(currentDolg),true ) + '</td>'+
+        '<td>'+formatMoney( Math.round(cardCreditSumm),true )+'</td>'+
+      '</tr>';
+      table += row;
+    }
+
+    $('.js-month-pay').text(formatMoney( Math.round(minPay) ));
+    $('.js-month-count').text(countMonth + ' мес.');
+    $('.js-total-pay').text(formatMoney( Math.round(totalPay)) );
+    $('.js-over-pay').text(formatMoney( Math.round(totalPay - beginSum)) );
+
+    table +='</table>';
+    $('.grafik__table').html(table);
   }
 
   // Калькулятор кредита
@@ -287,7 +510,6 @@ $(document).ready(function () {
       $('.grafik__table table').remove();
       $(".grafik").show();
 
-
       var table = '<table>' +
           '<tr>' +
           '<th>№, Месяц</th>' +
@@ -330,14 +552,6 @@ $(document).ready(function () {
     }
     function decreasingMonthPay(number,sum,month,percent) {
       return (sum - (number-1)* (sum/month))*percent;
-    }
-    function formatDate(date) {
-      var dd = date.getDate();
-      if (dd < 10) dd = '0' + dd;
-      var mm = date.getMonth() + 1;
-      if (mm < 10) mm = '0' + mm;
-      var yy = date.getFullYear();
-      return dd + '.' + mm + '.' + yy;
     }
     
     showValue(calcPay(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay));
@@ -427,6 +641,117 @@ $(document).ready(function () {
     $('.js-overpayment-decrease').text(formatMoney( Math.round(overpaymentDecrease)) );
     $('.js-years-decrease').text(Math.round(yearsDecrease) + ' мес.' );
     $('.js-montlypay-decrease').text(formatMoney(Math.round(monthlyPaymentDecrease)));
+  }
+
+  // Калькулятор рассрочки
+  function calcRassrochka(rassArray) {
+    $('.grafik__table table').remove();
+    $(".grafik").show();
+
+    var table = '<table>' +
+        '<tr>' +
+        '<th>№, Месяц</th>' +
+        '<th><span class="th-desktop">Сумма платежа</span><span class="th-mobile">Платеж</span></th>' +
+        '<th>Проценты + долг</th>' +
+        '<th>Остаток долга</th>' +
+        '</tr>';
+
+    var arrayTable = new Array();
+
+    for (var i = 0; i < rassArray.length; i++) {
+      var arrayLocaleTable = new Array(),
+          currentPay, 
+          currentPercent, 
+          currentDolg, 
+          countMonth = 0, 
+          row,
+          currDate = new Date("01." + rassArray[i][3]),
+          minPay = rassArray[i][0],
+          totalPay = 0,
+          beginSum = rassArray[i][0];
+
+      while (countMonth < rassArray[i][1]) {
+        countMonth++;
+        if (countMonth > 50) {
+          alert('Ошибка! Неверные данные!');
+          return;
+        }
+        currentPercent = Math.round(rassArray[i][0] / 1200 * rassArray[i][2]);
+        currentDolg = Math.round(beginSum / rassArray[i][1]);
+        if (countMonth == rassArray[i][1]) {
+          currentDolg = rassArray[i][0];
+          rassArray[i][0] = 0;
+        }
+        currentPay = currentDolg + currentPercent;
+        totalPay += currentPay; 
+        rassArray[i][0] -= currentDolg;
+        if (rassArray[i][0] < 0) rassArray[i][0] = 0;
+        currDate.setMonth(currDate.getMonth() + 1);
+        if (minPay > currentPay) {
+          minPay = currentPay;
+        }
+
+        arrayLocaleTable.push(new Array(formatDate(currDate),
+          Math.round(currentPay),
+          Math.round(currentPercent),
+          Math.round(currentDolg),
+          Math.round(rassArray[i][0]))
+        );
+      }
+
+      $(".purchase").each(function (k, b) {
+        if (k == i) {
+          $(b).find(".js-month-pay").text('от ' + formatMoney(minPay));
+          $(b).find(".js-overpay").text(formatMoney(totalPay - beginSum));
+        }
+      });
+      
+      /*/
+        Суммирование массивов покупок
+      */
+
+      if (arrayTable.length == 0) {
+        arrayTable = arrayLocaleTable;
+      } else {
+        for (var i = 0; i < arrayLocaleTable.length; i++) {
+          for (var j = 0; j < arrayLocaleTable[i].length; j++) {
+            
+            if (j > 0) {
+              if (arrayTable.length < (i + 1)) arrayTable[i] = new Array();
+              if (!(arrayTable[i][j])) arrayTable[i][j] = 0;
+              arrayTable[i][j] += arrayLocaleTable[i][j]
+            } else {
+              //date
+            }
+          }
+        }
+      }
+
+    }   
+
+    // $('.js-month-pay').text(formatMoney( Math.round(minPay) ));
+    // $('.js-month-count').text(countMonth + ' мес.');
+    // $('.js-total-pay').text(formatMoney( Math.round(totalPay)) );
+    // $('.js-over-pay').text(formatMoney( Math.round(totalPay - beginSum)) );
+    
+    
+    for (var i = 0; i < arrayTable.length; i++) {
+      row = '';
+      row += '<tr>' +
+        '<td>' + (i+1) + '. ' + arrayTable[i][0] +'</td>'+
+        '<td>' +
+        '<span class="td-desktop">'+formatMoney( arrayTable[i][1],true )+'</span>' +
+        '<span class="td-mobile">'+formatMoney( arrayTable[i][2],true )+ ' + ' +
+        formatMoney( arrayTable[i][3],true ) + '</span>' +
+        '</td>' +
+        '<td>' +formatMoney( arrayTable[i][2],true )+ ' + ' +
+        formatMoney( arrayTable[i][3],true ) + '</td>'+
+        '<td>'+formatMoney( arrayTable[i][4],true )+'</td>'+
+      '</tr>';
+      table += row;
+    }
+    table +='</table>';
+    $('.grafik__table').html(table);
   }
 
 
