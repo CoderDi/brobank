@@ -643,6 +643,11 @@ $(document).ready(function () {
     $('.js-montlypay-decrease').text(formatMoney(Math.round(monthlyPaymentDecrease)));
   }
 
+
+  function diffDate(date1, date2){
+    return date1.getMonth() - date2.getMonth()
+       + (12 * (date1.getFullYear() - date2.getFullYear()));
+  };
   // Калькулятор рассрочки
   function calcRassrochka(rassArray) {
     $('.grafik__table table').remove();
@@ -713,15 +718,23 @@ $(document).ready(function () {
       if (arrayTable.length == 0) {
         arrayTable = arrayLocaleTable;
       } else {
+        // определяем с какого момента даты будут пересекаться
+        if (new Date(arrayTable[0][0]) > new Date(arrayLocaleTable[0][0])) {
+          // console.log(diffDate(new Date(arrayTable[0][0]), new Date(arrayLocaleTable[0][0])));
+
+        }
+
+       
+
         for (var i = 0; i < arrayLocaleTable.length; i++) {
           for (var j = 0; j < arrayLocaleTable[i].length; j++) {
             
             if (j > 0) {
-              if (arrayTable.length < (i + 1)) arrayTable[i] = new Array();
+              if (!(arrayTable[i])) arrayTable[i] = new Array();
               if (!(arrayTable[i][j])) arrayTable[i][j] = 0;
               arrayTable[i][j] += arrayLocaleTable[i][j]
             } else {
-              //date
+              // arrayTable[i][j] = arrayLocaleTable[i][j]
             }
           }
         }
