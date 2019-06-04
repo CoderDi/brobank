@@ -360,7 +360,91 @@
           <div class="offer-page__block">
             <h2>Калькулятор платежей</h2>
             <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
+            <div class="calculator__container">
+              <div class="calculator__form" data-type="calcPay">
+                <div class="calculator__line calculator__line--half calculator__line_input">
+                  <span class="calculator__line_caption">Сколько вам нужно</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-pay-summ">
+                    <div class="input-slider" data-max="500000" data-min="10000" data-value="100000" data-step="1000" data-suffix="₽"></div>
+                  </div>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line_input">
+                  <span class="calculator__line_caption">На какой срок</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-pay-period">
+                    <div class="input-slider" data-max="60" data-min="6" data-value="24" data-step="1" data-suffix="мес."></div>
+                  </div>
+                </div>
+                
+                <input type="hidden" class="calculator__input js-pay-percent" value="11">
+                 
+                <div class="calculator__line calculator__line--half calculator__line--pb30 calculator__line--pb30-first">
+                  <span class="calculator__res-line">
+                    <span>Проц. ставка</span>
+                    <strong class="js-percents">11% годовых</strong>
+                  </span>
+                  <span class="calculator__res-line">
+                    <span>Платеж в месяц</span>
+                    <strong class="js-month-pay">9 964.29 ₽</strong>
+                  </span>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line--pb30">
+                  <span class="calculator__res-line">
+                    <span>Сумма выплат</span>
+                    <strong class="js-total-pay">358 714 ₽</strong>
+                  </span>
+                  <span class="calculator__res-line">
+                    <span>Переплата</span>
+                    <strong class="js-over-pay">58 714 ₽</strong>
+                  </span>
+                </div>
+
+                <div class="grafik">
+                  <span class="grafik__title">График платежей</span>
+                  <div class="grafik__table">
+                    <table>
+                      <tr>
+                        <th>№, Месяц</th>
+                        <th>
+                          <span class="th-desktop">Сумма платежа</span>
+                          <span class="th-mobile">Платеж</span>
+                        </th>
+                        <th>Проценты + долг</th>
+                        <th>Остаток долга</th>
+                      </tr>
+                      <tr>
+                        <td>1. 10.04.2019</td>
+                        <td>
+                          <span class="td-desktop">61 811.94</span>
+                          <span class="td-mobile">3 000.00 + 58 811.94</span>
+                        </td>
+                        <td>3 000.00 + 58 811.94</td>
+                        <td>241 188.06</td>
+                      </tr>
+                      <tr>
+                        <td>1. 10.04.2019</td>
+                        <td>
+                          <span class="td-desktop">61 811.94</span>
+                          <span class="td-mobile">3 000.00 + 58 811.94</span>
+                        </td>
+                        <td>3 000.00 + 58 811.94</td>
+                        <td>241 188.06</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="calculator__line calculator__line--half calculator__line--pb0 js-calculate">
+                  <span class="btn calculator__btn">График платежей</span>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line--pb0">
+                  <button class="btn tariffs__btn calculator__btn">Оформить карту</button>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="offer-page__block">
             <h2>Тарифы и условия</h2>
             <div class="tariffs__block">
@@ -415,7 +499,7 @@
             <li>Можно получить карточку через Почту России. Конверт от банка вам доставят по месту жительства.</li>
           </ol>
 
-          <div class="offer-page__block">
+          <!-- <div class="offer-page__block">
             <h2>Калькулятор лимита</h2>
             <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
             <form class="calc-limit">
@@ -451,7 +535,7 @@
                 </div>
               </div>              
             </form>
-          </div>
+          </div> -->
 
           <div class="offer-page__block">
             <h2>Способы пополнения</h2>
@@ -975,6 +1059,7 @@
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/maskedinput.js"></script>
   <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -420,7 +420,122 @@
           <div class="offer-page__block">
             <h2>Калькулятор рассрочки</h2>
             <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
+            <div class="calculator__container">
+              <div class="calculator__form" data-type="rassrochka">
+                <div class="purchase__list">
+                  <div class="purchase" id="purchase1">
+                    <div class="purchase__title">
+                      <h4 class="purchase__caption">Покупка <span>1</span></h4>
+                      <span class="purchase__control purchase-remove">Удалить</span>
+                      <span class="purchase__control purchase-add">Добавить</span>
+                    </div>
+                    <div class="calculator__line calculator__line--half calculator__line_input">
+                      <span class="calculator__line_caption">Сумма покупки</span>
+                      <div class="calculator__block">
+                        <input type="text" class="calculator__input js-rass-summ">
+                        <div class="input-slider" data-max="300000" data-min="10000" data-value="100000" data-step="1000" data-suffix="₽"></div>
+                      </div>
+                    </div>
+                    <div class="calculator__line calculator__line--half calculator__line_input">
+                      <span class="calculator__line_caption">Срок рассрочки</span>
+                      <div class="calculator__block">
+                        <input type="text" class="calculator__input js-rass-period">
+                        <div class="input-slider" data-max="30" data-min="3" data-value="6" data-step="1" data-suffix="мес."></div>
+                      </div>
+                    </div>
+                    <!-- <div class="calculator__line calculator__line--half calculator__line_input">
+                      <span class="calculator__line_caption flex">Процентная ставка</span>
+                      <div class="calculator__block"> -->
+                        <input type="hidden" class="calculator__input js-rass-percent" value="12">
+                        <!-- <div class="input-slider" data-max="20" data-min="5" data-value="12" data-step="1" data-suffix="%"></div>
+                      </div>
+                    </div> -->
+
+                    <input type="hidden" class="calculator__input js-total-limit" value="300000">
+
+                    <div class="hidden calculator__line calculator__line--half calculator__line_input">
+                      <span class="calculator__line_caption">Дата взятия займа</span>
+                      <div class="calculator__flex flex">
+                        <select name="month" id="" class="calculator__select js-month">
+                          <option value="1">Январь</option> 
+                          <option value="2">Февраль</option>
+                          <option value="3">Март</option>
+                          <option value="4">Апрель</option>
+                          <option value="5" selected>Май</option>
+                          <option value="6">Июнь</option>
+                          <option value="7">Июль</option>
+                          <option value="8">Август</option>
+                          <option value="9">Сентябрь</option>
+                          <option value="10">Октябрь</option>
+                          <option value="11">Ноябрь</option>
+                          <option value="12">Декабрь</option>
+                        </select>
+                        <select name="year" id="" class="calculator__select js-year">
+                          <option value="2018">2018</option>
+                          <option value="2019" selected>2019</option>
+                          <option value="2020">2020</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="calculator__line calculator__line--half calculator__line--pb30 calculator__line--pb30-first">
+                      <span class="calculator__res-line">
+                        <span>Платеж в месяц</span>
+                        <strong class="js-month-pay">10 000 ₽</strong>
+                      </span>
+                      <span class="calculator__res-line">
+                        <span>Переплата</span>
+                        <strong class="js-over-pay">10 000 ₽</strong>
+                      </span>
+                    </div>
+                    <div class="calculator__line calculator__line--half calculator__line--pb30">
+                      <span class="calculator__res-line">
+                        <span>Месяц покупки</span>
+                        <strong class="js-month">Май</strong>
+                      </span>
+                      <span class="calculator__res-line">
+                        <span>Оставшийся лимит</span>
+                        <strong class="js-total">10 000 ₽</strong>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="grafik">
+                  <span class="grafik__title">График платежей</span>
+                  <div class="grafik__table">
+                    <table>
+                      <tr>
+                        <th>№, Месяц</th>
+                        <th>Сумма платежа</th>
+                        <th>Проценты + долг</th>
+                        <th>Остаток долга</th>
+                      </tr>
+                      <tr>
+                        <td>1. 10.04.2019</td>
+                        <td>61 811.94</td>
+                        <td>3 000.00 + 58 811.94</td>
+                        <td>241 188.06</td>
+                      </tr>
+                      <tr>
+                        <td>1. 10.04.2019</td>
+                        <td>61 811.94</td>
+                        <td>3 000.00 + 58 811.94</td>
+                        <td>241 188.06</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>         
+      
+                <div class="calculator__line calculator__line--half calculator__line--pb0 js-calculate">
+                  <span class="btn calculator__btn">Рассчитать</span>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line--pb0">
+                  <button class="btn tariffs__btn calculator__btn">Подобрать займ</button>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="offer-page__block">
             <h2>Тарифы и условия</h2>
             <div class="tariffs__block">
@@ -1026,6 +1141,7 @@
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/maskedinput.js"></script>
   <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

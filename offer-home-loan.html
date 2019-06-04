@@ -360,7 +360,60 @@
           <div class="offer-page__block">
             <h2>Калькулятор переплаты</h2>
             <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
+            <div class="calculator__container">
+              <div class="calculator__form" data-type="calcZaym">
+                <div class="calculator__line calculator__line--half calculator__line_input">
+                  <span class="calculator__line_caption">Сумма займа</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-zaym-summ">
+                    <div class="input-slider" data-max="30000" data-min="1000" data-value="15000" data-step="500" data-suffix="₽"></div>
+                  </div>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line_input">
+                  <span class="calculator__line_caption">Срок займа</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-zaym-period">
+                    <div class="input-slider" data-max="60" data-min="6" data-value="30" data-step="1" data-suffix="дней"></div>
+                  </div>
+                </div>
+                
+                <input type="hidden" class="calculator__input js-zaym-percent" value="1">
+                  
+                <div class="calculator__line calculator__line--half calculator__line--pb30 calculator__line--pb30-first">
+                  <span class="calculator__res-line">
+                    <span>Вы берете</span>
+                    <strong class="js-sumBegin">20 000 ₽</strong>
+                  </span>
+                  <span class="calculator__res-line">
+                    <span>Отдаете</span>
+                    <strong class="js-totalPay">9 964.29 ₽</strong>
+                  </span>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line--pb30">
+                  <span class="calculator__res-line">
+                    <span>Вернуть до</span>
+                    <strong class="js-date">21.04.2019</strong>
+                  </span>
+                  <span class="calculator__res-line">
+                    <span>Проц. ставка</span>
+                    <strong class="js-percent">1% в день</strong>
+                  </span>
+                </div>
+
+                <div class="calculator__line calculator__line--half calculator__line--pb0">
+                  <label class="zaym-checkbox">
+                    <input type="checkbox" name="zaymFirst" class="js-first">
+                    <span class="zaym-checkbox__custom"></span>
+                    <span class="zaym-checkbox__text">Первый займ бесплатно</span>
+                  </label>
+                </div>
+                <div class="calculator__line calculator__line--half calculator__line--pb0">
+                  <button class="btn calculator__btn">Получить деньги</button>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="offer-page__block">
             <h2>Тарифы и условия</h2>
             <div class="tariffs__block">
@@ -966,6 +1019,7 @@
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/maskedinput.js"></script>
   <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

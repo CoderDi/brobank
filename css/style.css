@@ -3523,7 +3523,9 @@ CALCULATORS
           border-radius: 4px;
 }
 
-
+.hidden {
+  display: none;
+}
 .calculator {
   padding: 40px 0 25px;
 }
@@ -3534,6 +3536,9 @@ CALCULATORS
           border-radius: 4px;
   padding: 60px;
   overflow: hidden;
+}
+.offer-page__block .calculator__container {
+  padding: 40px;
 }
 .calculator__form {
   display: -webkit-box;
@@ -3822,10 +3827,32 @@ CALCULATORS
   display: none;
 }
 
-
-
-
-
+.zaym-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.zaym-checkbox input {
+  display: none;
+}
+.zaym-checkbox__custom {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border: 1px solid #E6EAED;
+  border-radius: 4px;
+}
+.zaym-checkbox__text {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #444444;
+}
+.zaym-checkbox input:checked ~ .zaym-checkbox__custom {
+  background: #e6eaed;
+}
 
 
 
