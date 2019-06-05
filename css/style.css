@@ -5203,7 +5203,8 @@ MEDIA
   .calculator {
     padding-top: 0;
   }
-  .calculator__container {
+  .calculator__container,
+  .offer-page__block .calculator__container {
     border-radius: 0;
     border: none;
     padding: 30px 0;
