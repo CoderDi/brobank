@@ -65,6 +65,7 @@ $(document).ready(function () {
       $(this).parents(".calculator__form").find(".calculator__line_change").hide();
       $(this).parents(".calculator__form").find(".calculator__line_" + method).show();
     }    
+    calculate();
   });
 
   $(".calculator__select").click(function(){
@@ -136,6 +137,12 @@ $(document).ready(function () {
   });
 
   function calculate() {
+    $(".js-calculate").addClass("table--open");
+      if (!($(".js-calculate").hasClass("js-nochange"))) {
+        $(".js-calculate").find('span').text('Скрыть график');
+      }
+      $('.grafik__table table').remove();
+      $(".grafik").show();
     //Определяем тип калькулятора
     var then = $(".calculator__form"),
         calcType = $(then).data("type");
@@ -258,6 +265,8 @@ $(document).ready(function () {
       default:
         return;
     }
+
+    
   }
 
   $(".js-calculate").click(function(){
@@ -277,7 +286,7 @@ $(document).ready(function () {
     }
   });
 
-  $(".menu").click(function(){
+  $(".calculator__method-pay--three").click(function(){
     $(".js-calculate").removeClass("table--open");
     $(".js-calculate").find('span').text('Рассчитать');
     $(".grafik").hide();
