@@ -137,12 +137,7 @@ $(document).ready(function () {
   });
 
   function calculate() {
-    $(".js-calculate").addClass("table--open");
-      if (!($(".js-calculate").hasClass("js-nochange"))) {
-        $(".js-calculate").find('span').text('Скрыть график');
-      }
-      $('.grafik__table table').remove();
-      $(".grafik").show();
+    
     //Определяем тип калькулятора
     var then = $(".calculator__form"),
         calcType = $(then).data("type");
