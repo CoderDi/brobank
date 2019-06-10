@@ -296,6 +296,11 @@ $(document).ready(function () {
     $(".js-calculate").find('span').text('Рассчитать');
     $(".grafik").hide();
   });
+  $(".calculator__method-pay--half").click(function(){
+    $(".js-calculate").removeClass("table--open");
+    $(".js-calculate").find('span').text('Рассчитать');
+    $(".grafik").hide();
+  });
 
   /*Calculators*/
   function formatMoney(money, bool) {
