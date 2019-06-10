@@ -3832,6 +3832,9 @@ CALCULATORS
   border-bottom: 1px solid #e6eaed;
   margin-bottom: 40px;
 }
+.calc-line-hide  {
+  display: none;
+}
 .purchase:last-child {
   border-bottom: none;
   margin-bottom: 0;
@@ -3853,6 +3856,11 @@ CALCULATORS
   font-size: 23px;
   line-height: 1;
   color: #000000;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.purchase__caption span {
+  font-weight: 700;
 }
 .purchase__control {
   display: block;
@@ -4527,6 +4535,15 @@ MEDIA
 @media screen and (max-width: 750px) {
   .logo img {
     height: 25px;
+  }
+  .grafik__table {
+    margin: 0 -20px;
+  }
+  .grafik__table table th:first-child, .grafik__table table td:first-child {
+    padding-left: 20px;
+  }
+  .grafik__table table th:last-child, .grafik__table table td:last-child {
+    padding-right: 20px;
   }
   .article ul.oglavlenie__sub li a {
     line-height: 1.4;
@@ -5263,9 +5280,15 @@ MEDIA
     border-bottom: 1px solid #e6eaed;
     overflow: visible;
   }
+  .calculator__container {
+    border: none;
+  }
   .calculator__container:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .calculator:hover {
+    box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
   }
   .calculator__flex {
     -webkit-flex-wrap: wrap;
@@ -5730,6 +5753,15 @@ MEDIA
     /* width: 100%; */
     /* margin-bottom: 10px; */
     background-position: 96% center;
+  }
+  .purchase__caption,
+  .purchase__caption span {
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .purchase__control {
+    padding-right: 15px;
+    line-height: 1;
   }
 }
 

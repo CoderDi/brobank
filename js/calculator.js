@@ -136,12 +136,21 @@ $(document).ready(function () {
     calculate();
   });
 
+  var clickOrChange = 0;
+
   function calculate() {
     
     //Определяем тип калькулятора
     var then = $(".calculator__form"),
         calcType = $(then).data("type");
     // console.log("calcType = " + calcType);
+
+    if ((clickOrChange == 0)&((calcType == "zaym")||(calcType == "refin"))) {
+      $(".calculator__line--pb30").hide();
+      return;
+    } else {
+      $(".calculator__line--pb30").show();
+    }
 
     switch (calcType) {
       case "card":
@@ -261,7 +270,7 @@ $(document).ready(function () {
         return;
     }
 
-    
+    clickOrChange = 0;
   }
 
   $(".js-calculate").click(function(){
@@ -277,6 +286,7 @@ $(document).ready(function () {
       $('.grafik__table table').remove();
       $(".grafik").show();
 
+      clickOrChange = 1;
       calculate();
     }
   });
