@@ -278,6 +278,9 @@ $(document).ready(function () {
       $(this).removeClass("table--open");
       $(this).find('span').text('Рассчитать');
       $(".grafik").hide();
+
+      var scTop = $('.calculator').offset().top - 30;
+      $("html, body").animate({scrollTop: scTop})
     } else {
       $(this).addClass("table--open");
       if (!($(this).hasClass("js-nochange"))) {
