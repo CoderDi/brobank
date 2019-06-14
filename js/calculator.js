@@ -178,7 +178,7 @@ $(document).ready(function () {
         var creditPercents = normaleNum($(then).find(".js-percents").val()),
             creditPeriod = normaleNum($(then).find(".js-period").val()),
             creditMethod = normaleNum($(then).find("input[name='method']:checked").val()),
-            creditDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='year']").val(),
+            creditDateStart = '01.' + $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='year']").val(),
             creditVidPay = $(then).find("input[name='vid-pay']:checked").val();
         if (creditMethod == 0) {
           var creditSumm = normaleNum($(then).find(".js-credit-summ").val());
@@ -197,7 +197,7 @@ $(document).ready(function () {
         var zaymSumm = normaleNum($(then).find(".js-zaym-summ").val()),
             zaymPeriod = normaleNum($(then).find(".js-zaym-period").val()),
             zaymPercent = normaleNum($(then).find(".js-zaym-percent").val()),
-            zaymDateStart = $(then).find("select[name='month']").val() + '.' + $(then).find("select[name='day']").val();
+            zaymDateStart = moment($(then).find("select[name='month']").val() + '.' + $(then).find("select[name='day']").val(),"MM.DD").format("DD.MM.YYYY");
         calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart);
         break;
       
@@ -253,7 +253,7 @@ $(document).ready(function () {
         var paySumm = normaleNum($(then).find(".js-pay-summ").val()),
             payPeriod = normaleNum($(then).find(".js-pay-period").val()),
             payPercent = normaleNum($(then).find(".js-pay-percent").val()),
-            payDateStart = new Date();
+            payDateStart = moment().format("DD.MM.YYYY");
         calcPay(payPeriod,paySumm,payDateStart,payPercent);
         break;
 
@@ -261,7 +261,7 @@ $(document).ready(function () {
         var zaymSumm = normaleNum($(then).find(".js-zaym-summ").val()),
             zaymPeriod = normaleNum($(then).find(".js-zaym-period").val()),
             zaymPercent = normaleNum($(then).find(".js-zaym-percent").val()),
-            zaymDateStart = new Date(),
+            zaymDateStart = moment().format("DD.MM.YYYY"),
             zaymFirst = $(then).find(".js-first").is(":checked");
         calcPageZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart,zaymFirst);
         break;
@@ -563,9 +563,8 @@ $(document).ready(function () {
       var remTotal = info.data.inputSum,
           remDebt = info.data.inputSum,
           payPercent,paySum,monthPay,pp = 0,
-          currDate = new Date("01." + info.data.date);
+          currDate = moment(info.data.date,"DD.MM.YYYY").format("DD.MM.YYYY");
 
-      
       var table = '<table>' +
           '<tr>' +
           '<th>№, Месяц</th>' +
@@ -587,11 +586,12 @@ $(document).ready(function () {
             paySum = info.mainPay;
         }
         remTotal= remTotal-paySum;
-        currDate.setMonth(currDate.getMonth() + 1);
+        // currDate.setMonth(currDate.getMonth() + 1);
+        currDate = moment(currDate, "DD.MM.YYYY").add(1, "month").format("DD.MM.YYYY");
 
         var row = '';
         row += '<tr>' +
-          '<td>' + i + '. ' + formatDate(currDate)+'</td>'+
+          '<td>' + i + '. ' + currDate+'</td>'+
           '<td>' +
           '<span class="td-desktop">'+formatMoney( Math.round(monthPay),true )+'</span>' +
           '<span class="td-mobile">'+formatMoney( Math.round(payPercent),true )+ ' + ' +
@@ -616,18 +616,18 @@ $(document).ready(function () {
 
   // Калькулятор займа
   function calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart) {
-    var now = new Date(zaymDateStart),
+    var now = zaymDateStart,
         result1 = zaymSumm,
         result2 = zaymSumm+(zaymSumm/100*zaymPercent*zaymPeriod),
-        date = new Date(+now+(zaymPeriod*86400*1000)),
-        d = date.getDate(),
-        m = date.getMonth()+1,
-        y = new Date().getFullYear();
+        date = moment(now, "DD.MM.YYYY").add(zaymPeriod*86400*1000).format("DD.MM.YYYY");
+    //     d = date.getDate(),
+    //     m = date.getMonth()+1,
+    //     y = new Date().getFullYear();
 
-    if (d < 10) d = '0'+d;
-    if (m < 10) m = '0'+m;
+    // if (d < 10) d = '0'+d;
+    // if (m < 10) m = '0'+m;
 
-    var result3 = d+'.'+m+'.'+y,
+    var result3 = date,
         result4 = zaymPeriod;
 
     switch (result4 % 10) {
@@ -900,11 +900,10 @@ $(document).ready(function () {
         currentDolg, 
         countMonth = 0, 
         row,
-        currDate = new Date(),
+        currDate = moment().format("DD.MM.YYYY"),
         minPay = cardCreditSumm,
         totalPay = 0,
         beginSum = cardCreditSumm;
-
     while (countMonth < cardYourPeriod) {
       countMonth++;
       if (countMonth > 80) {
@@ -921,14 +920,14 @@ $(document).ready(function () {
       totalPay += currentPay; 
       cardCreditSumm -= currentDolg;
       if (cardCreditSumm < 0) cardCreditSumm = 0;
-      currDate.setMonth(currDate.getMonth() + 1);
+      currDate = moment(currDate, "DD.MM.YYYY").add(1, "month").format("DD.MM.YYYY");
       if (minPay > currentPay) {
         minPay = currentPay;
       }
 
       row = '';
       row += '<tr>' +
-        '<td>' + countMonth + '. ' + formatDate(currDate)+'</td>'+
+        '<td>' + countMonth + '. ' + currDate+'</td>'+
         '<td>' +
         '<span class="td-desktop">'+formatMoney( Math.round(currentPay),true )+'</span>' +
         '<span class="td-mobile">'+formatMoney( Math.round(currentPercent),true )+ ' + ' +
@@ -955,18 +954,19 @@ $(document).ready(function () {
       zaymPercent = 0;
     }
     // console.log(zaymFirst);
-    var now = new Date(zaymDateStart),
+    var now = zaymDateStart,
         result1 = zaymSumm,
         result2 = zaymSumm+(zaymSumm/100*zaymPercent*zaymPeriod),
-        date = new Date(+now+(zaymPeriod*86400*1000)),
-        d = date.getDate(),
-        m = date.getMonth()+1,
-        y = new Date().getFullYear();
+        date = moment(now, "DD.MM.YYYY").add(zaymPeriod*86400*1000).format("DD.MM.YYYY");
+        // d = date.getDate(),
+        // m = date.getMonth()+1,
+        // y = new Date().getFullYear();
 
-    if (d < 10) d = '0'+d;
-    if (m < 10) m = '0'+m;
+    // if (d < 10) d = '0'+d;
+    // if (m < 10) m = '0'+m;
 
-    var result3 = d+'.'+m+'.'+y
+    // var result3 = d+'.'+m+'.'+y
+    var result3 = date;
 
     
     // Вывод
