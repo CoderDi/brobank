@@ -3956,7 +3956,7 @@ CALCULATORS
   background: #e6eaec;
 }
 .calculator__res-line .ras-month__current {
-  color: #528CAA;
+  color: #444;
   cursor: pointer;
   position: relative;
   padding-right: 20px;
