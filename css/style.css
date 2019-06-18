@@ -3924,9 +3924,40 @@ CALCULATORS
   width: 17px;
   height: 17px;
 }
-
-
-
+.ras-month {
+  display: inline-block;
+  position: relative;
+}
+.ras-month__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  max-height: 130px;
+  overflow-y: auto;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.ras-month__list--open {
+  opacity: 1;
+  visibility: visible;
+}
+.ras-month__item {
+  display: block;
+  min-width: 0 !important;
+  cursor: pointer;
+  padding: 3px 5px;
+}
+.ras-month__item:hover {
+  background: #e6eaec;
+}
+.calculator__res-line .ras-month__current {
+  color: #528CAA;
+  cursor: pointer;
+}
 
 
 
@@ -5704,7 +5735,7 @@ MEDIA
     text-align: center;
     background-color: #fedd2e;
   }
-
+ 
   .b-menu {
     display: block;
     padding: 10px 0;

@@ -231,14 +231,23 @@ $(document).ready(function () {
           rassPeriod = normaleNum($(b).find(".js-rass-period").val());
           rassPercent = normaleNum($(b).find(".js-rass-percent").val());
           if ($(b).find("select[name='month']").hasClass("hidden")) {
-            rassDateStart = new Date();
-            var dd = rassDateStart.getDate();
-            if (dd < 10) dd = '0' + dd;
-            var mm = rassDateStart.getMonth() + 1;
-            if (mm < 10) mm = '0' + mm;
-            var yy = rassDateStart.getFullYear() % 100;
-            if (yy < 10) yy = '0' + yy;
-            rassDateStart = mm + '.' + dd + '.' + yy;
+            var arr=[
+              'Январь',
+              'Февраль',
+              'Март',
+              'Апрель',
+              'Май',
+              'Июнь',
+              'Июль',
+              'Август',
+              'Сентябрь',
+              'Октябрь',
+              'Ноябрь',
+              'Декабрь',
+            ];
+            rassDateStart = moment().set('date', 1).set('month', arr.indexOf($(b).find(".js-month-res").text())).format("MM.DD.YYYY");
+            // alert(arr.indexOf($(b).find(".js-month-res").text()));
+        
           } else {
             rassDateStart = $(b).find("select[name='month']").val() + '.01.' + $(b).find("select[name='year']").val();
           }
@@ -292,6 +301,15 @@ $(document).ready(function () {
       clickOrChange = 1;
       calculate();
     }
+  });
+
+  $(".js-month-res").click(function(){
+    $(this).parents(".ras-month").find(".ras-month__list").toggleClass("ras-month__list--open");
+  });
+  $(".ras-month__item").click(function(){
+    $(this).parents(".ras-month").find(".js-month-res").text($(this).text());
+    $(this).parents(".ras-month").find(".ras-month__list").removeClass("ras-month__list--open");
+    calculate();
   });
 
   $(".calculator__method-pay--three").click(function(){
@@ -743,7 +761,8 @@ $(document).ready(function () {
         '</tr>';
 
     var arrayTable = new Array(),
-        dateBegin = new Date(rassArray[0][3]);
+        dateBegin = moment(rassArray[0][3]);
+        // alert(dateBegin);
         // console.log(rassArray);
     for (var i = 0; i < rassArray.length; i++) {
       var arrayLocaleTable = new Array(),
@@ -752,7 +771,7 @@ $(document).ready(function () {
           currentDolg, 
           countMonth = 0, 
           row,
-          currDate = new Date(rassArray[i][3]),
+          currDate = moment(rassArray[i][3]).format("DD.MM.YYYY"),
           minPay = rassArray[i][0],
           totalPay = 0,
           beginSum = rassArray[i][0];
@@ -773,12 +792,12 @@ $(document).ready(function () {
         totalPay += currentPay; 
         rassArray[i][0] -= currentDolg;
         if (rassArray[i][0] < 0) rassArray[i][0] = 0;
-        currDate.setMonth(currDate.getMonth() + 1);
+        currDate = moment(currDate, "DD.MM.YYYY").add(1, "month").format("DD.MM.YYYY");
         if (minPay > currentPay) {
           minPay = currentPay;
         }
 
-        arrayLocaleTable.push(new Array(formatDate(currDate),
+        arrayLocaleTable.push(new Array(currDate,
           Math.round(currentPay),
           Math.round(currentPercent),
           Math.round(currentDolg),
@@ -800,10 +819,11 @@ $(document).ready(function () {
             'Июль',
             'Август',
             'Сентябрь',
+            'Октябрь',
             'Ноябрь',
             'Декабрь',
           ];
-          $(b).find(".js-month-res").text(arr[dateBegin.getMonth()]);
+          $(b).find(".js-month-res").text(arr[moment(dateBegin).month()]);
           $(b).find(".js-total").text(formatMoney($(b).find(".js-total-limit").val() - beginSum));
         }
       });
