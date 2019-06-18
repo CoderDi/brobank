@@ -246,7 +246,7 @@ $(document).ready(function () {
               'Декабрь',
             ];
             rassDateStart = moment().set('date', 1).set('month', arr.indexOf($(b).find(".js-month-res").text())).format("MM.DD.YYYY");
-            // alert(arr.indexOf($(b).find(".js-month-res").text()));
+            // console.log($(b).find(".js-month-res").text());
         
           } else {
             rassDateStart = $(b).find("select[name='month']").val() + '.01.' + $(b).find("select[name='year']").val();
@@ -254,6 +254,7 @@ $(document).ready(function () {
           arrayOnePurchase.push(rassSumm, rassPeriod, rassPercent, rassDateStart);
           rassArray.push(arrayOnePurchase);
         }); 
+
 
         calcRassrochka(rassArray);
         break;
@@ -303,10 +304,12 @@ $(document).ready(function () {
     }
   });
 
-  $(".js-month-res").click(function(){
-    $(this).parents(".ras-month").find(".ras-month__list").toggleClass("ras-month__list--open");
+  $("body").on("click", ".js-month-res", function(){
+    $(this).parents(".ras-month").find(".ras-month__list").addClass("ras-month__list--open");
+    $(this).addClass("ras-month__current--open");
   });
-  $(".ras-month__item").click(function(){
+  $("body").on("click", ".ras-month__item", function(){
+    $(this).parents(".ras-month").find(".js-month-res").removeClass("ras-month__current--open");
     $(this).parents(".ras-month").find(".js-month-res").text($(this).text());
     $(this).parents(".ras-month").find(".ras-month__list").removeClass("ras-month__list--open");
     calculate();
@@ -751,7 +754,8 @@ $(document).ready(function () {
   };
   // Калькулятор рассрочки
   function calcRassrochka(rassArray) {
-    
+    // console.log(rassArray[0][3], rassArray[1][3]);
+
     var table = '<table>' +
         '<tr>' +
         '<th>№, Месяц</th>' +
@@ -823,7 +827,8 @@ $(document).ready(function () {
             'Ноябрь',
             'Декабрь',
           ];
-          $(b).find(".js-month-res").text(arr[moment(dateBegin).month()]);
+          $(b).find(".js-month-res").text(arr[moment(rassArray[k][3]).month()]);
+          // console.log($(b).find(".js-month-res").text());
           $(b).find(".js-total").text(formatMoney($(b).find(".js-total-limit").val() - beginSum));
         }
       });

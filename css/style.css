@@ -3950,6 +3950,7 @@ CALCULATORS
   min-width: 0 !important;
   cursor: pointer;
   padding: 3px 5px;
+  color: #000000 !important;
 }
 .ras-month__item:hover {
   background: #e6eaec;
@@ -3957,6 +3958,24 @@ CALCULATORS
 .calculator__res-line .ras-month__current {
   color: #528CAA;
   cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+  display: block;
+}
+
+.calculator__res-line .ras-month__current::after {
+  content: '';
+  background: url(../images/svg-icons.svg#select) no-repeat 100% center;
+  width: 15px;
+  display: inline-block;
+  position: relative;
+  right: 0;
+  top: 3px;
+  margin-left: 15px;
+  height: 15px;
+}
+.calculator__res-line .ras-month__current--open::after {
+  background-image: url(../images/svg-icons.svg#select-rotate);
 }
 
 

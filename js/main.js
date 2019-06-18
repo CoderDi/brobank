@@ -303,6 +303,11 @@ $(document).ready(function () {
       if (container.has(e.target).length === 0){
           container.removeClass("s-item__drop--show");
       }
+      var container = $(".ras-month__list");
+      if (container.has(e.target).length === 0){
+          container.removeClass("ras-month__list--open");
+          container.parents(".ras-month").find(".ras-month__current").removeClass("ras-month__current--open");
+      }
     }
   });
 
