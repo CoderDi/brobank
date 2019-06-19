@@ -304,7 +304,27 @@ $(document).ready(function () {
     }
   });
 
+  function monthListCreate(el) {
+    var item = '',
+        arr=[
+          'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+          'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',
+          'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+          'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+        ],
+        curr = $(el).parents(".ras-month").find(".js-month-res").text(),
+        index = arr.indexOf(curr),
+        tempEl;
+    el.html("");
+    for (var i = index; i < (index + 12); i++) {
+      tempEl = '<span class="ras-month__item">' + arr[i] + '</span>';
+      el.append(tempEl);
+    }
+  }
+
+
   $("body").on("click", ".js-month-res", function(){
+    monthListCreate($(this).parents(".ras-month").find(".ras-month__list-container"));
     $(this).parents(".ras-month").find(".ras-month__list").addClass("ras-month__list--open");
     $(this).addClass("ras-month__current--open");
   });
