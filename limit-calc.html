@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Brobank</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/limit-calc.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrapper">
+      <div class="header-fixed flex">
+        <div class="header-top flex">
+          <a href="/" class="logo">
+            <img src="images/logo_svg.svg" alt="">
+          </a>
+          <div class="butter"><i></i></div>
+          <div class="mobile">
+            <div class="mobile-menu">
+              <a href="/kreditnye-karty.html" class="mobile-menu__item">Кредитные карты</a>
+              <a href="#" class="mobile-menu__item">Кредиты</a>
+              <a href="#" class="mobile-menu__item">Дебетовые карты</a>
+              <a href="#" class="mobile-menu__item">Займы</a>
+              <a href="#" class="mobile-menu__item">Карты рассрочки</a>
+              <a href="#" class="mobile-menu__item">Рефинансирование</a>
+              <a href="#" class="mobile-menu__item">Кредитная история</a>
+              <a href="#" class="mobile-menu__item">Страхование</a>
+              <a href="#" class="mobile-menu__item">Для бизнеса</a>
+            </div>
+
+            <div class="header-top__menu flex">
+              <a href="#" class="header-top__menu_item header-top__menu_item--vo flex active"><i></i>50 руб. за 1 мин!</a>
+              <a href="#" class="header-top__menu_item header-top__menu_item--calc flex"><i></i>Калькулятор</a>
+              <a href="#" class="header-top__menu_item header-top__menu_item--jour flex"><i></i>Журнал</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="menu main-menu">
+        <div class="menu__container">
+          <div class="menu__block">
+            <a href="/kreditnye-karty.html" class="menu__item active">Кредитные карты </a>
+            <a href="#" class="menu__item">Кредиты</a>
+            <a href="#" class="menu__item">Дебетовые карты </a>
+            <a href="#" class="menu__item">Займы</a>
+            <a href="#" class="menu__item">Карты рассрочки</a>
+            <a href="#" class="menu__item">Рефинансирование</a>
+            <a href="#" class="menu__item">Кредитная история</a>
+            <a href="#" class="menu__item">Страхование</a>
+            <a href="#" class="menu__item">Р/с счета</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="top top-without-padding">
+    <div class="wrapper">
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__container">
+          <a href="#" class="breadcrumbs__item">Главная</a>
+          <a href="#" class="breadcrumbs__item breadcrumbs__item--current">Кредитная карта Тинькофф</a>
+        </div>
+      </div>
+      <div class="page-title">
+        <h1>Кредитная карта Тинькофф Платинум онлайн-заявка</h1>
+      </div>
+      <div class="offer-page__rating">
+        <div class="new-card__rating">
+          <div class="new-card__rating_stars">
+            <span class="new-card__rating_preline"></span>
+            <span class="new-card__rating_line" style="width: 96%;"></span>
+            <span class="new-card__rating_bg"></span>
+          </div>
+          <span class="new-card__rating_num">4.8</span>&nbsp; (28 960 заявок за 30 дней)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead">
+    <div class="wrapper">
+      <div class="lead__block">
+        <div class="lead-top">
+          <div class="lead__img"><img src="images/tinkoff-platinum.png" alt=""></div>
+          <div class="lead__items">
+            <div class="lead__item lead__item--limit">
+              <i></i>
+              <span>Кредит. лимит <strong>300 000 ₽</strong></span>
+            </div>
+            <div class="lead__item lead__item--stavka">
+              <i></i>
+              <span>Проц. ставка <strong>От 12%</strong></span>
+            </div>
+            <div class="lead__item lead__item--bez">
+              <i></i>
+              <span>Без процентов <strong>До 55 дней</strong></span>
+            </div>
+            <div class="lead__item lead__item--month">
+              <i></i>
+              <span>Плата за мес. <strong>590 руб./год</strong></span>
+            </div>
+            <div class="lead__item lead__item--cashback">
+              <i></i>
+              <span>Кэшбек <strong>От 1 до 30%</strong></span>
+            </div>
+            <div class="lead__item lead__item--time">
+              <i></i>
+              <span>Решение <strong>За 10 минут</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="lead-content">
+          <div class="lead__range white-range">
+            <div class="lead__range_flex">
+              <span>Желаемый лимит</span>
+              <span><strong id="leadRangeVal"></strong> ₽</span>
+            </div>
+            <div id="polzunokLimit"></div>
+          </div>
+          <div class="lead__ps">
+            <a href="" class="btn lead__btn">Оформить сейчас</a>
+            <div class="lead__count">
+              <span>1 468 заявок вчера</span>
+              <span>28 оформляют сейчас</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead-menu">
+    <div class="wrapper">
+      <div class="lead-menu__wrapper">
+        <div class="menu menu--section">
+          <div class="menu__container">
+            <div class="menu__block">
+              <a href="" class="menu__item active">О карте </a>
+              <a href="" class="menu__item">Тарифы</a>
+              <a href="" class="menu__item">Требования</a>
+              <a href="" class="menu__item">Сравнение</a>
+              <a href="" class="menu__item">Отзывы  <span>268</span></a>
+              <a href="" class="menu__item">Вопрос-ответ</a>
+              <a href="" class="menu__item">Статьи и обзоры</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-carousel-top">
+    <div class="wrapper">
+      <div class="section__wrapper">
+        <div class="section__top">
+          <h2 class="section__title">Похожие карты</h2>
+        </div>
+        <div class="new-carousel js-new-carousel">
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/tinkoff-platinum.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_rsb_platinum.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_ubrir_120.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_tinkoff_all_airlines.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_homecreditbank.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section offer-page-section">
+    <div class="wrapper">
+      <div class="page-flex">
+        <section class="article">
+          
+
+          <div class="offer-page__block">
+            <h2>Калькулятор лимита</h2>
+            <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
+            <div class="limit" id="limit-calc" data-total="300000">
+              <div class="limit-container">
+                <div class="limit-header">
+                  <strong class="limit-quest" id="limit-quest">Какой ваш возраст?</strong>
+                  <div class="limit-progress">
+                    <span class="limit-progress__text">
+                      Вопрос <span id="limit-curr-num">1</span> из <span id="limit-count">10</span>
+                    </span>
+                    <div class="limit-progress__line"><i id="limit-line"></i></div>
+                  </div>
+                </div>
+
+                <div class="limit-content" id="limit-content">
+                  <div class="limitem" id="limitem1">
+                    <span class="limitem-quest">Какой ваш возраст?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="5">
+                        <span class="limit-radio-custom">18-22 года</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="35">
+                        <span class="limit-radio-custom">23-27 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="55">
+                        <span class="limit-radio-custom">27-35 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="95">
+                        <span class="limit-radio-custom">36-45 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="55">
+                        <span class="limit-radio-custom">46-60 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="age" value="5">
+                        <span class="limit-radio-custom">Более 60 лет</span>
+                        <span class="hidden_info">В таком возрасте получение кредита достаточно проблематично, Вам нужны будут поручители. Рекомендую <a href="" target="_blank">ознакомиться с предложением Совкомбанка</a>.</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem2">
+                    <span class="limitem-quest">Ваш пол?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="gender" value="50">
+                        <span class="limit-radio-custom">Мужчина</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="gender" value="50">
+                        <span class="limit-radio-custom">Женщина</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem3">
+                    <span class="limitem-quest">Семейное положение?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="marital" value="60">
+                        <span class="limit-radio-custom">Женат/замужем</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="marital" value="35">
+                        <span class="limit-radio-custom">Холост/незамужем</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="marital" value="30">
+                        <span class="limit-radio-custom">Гражданский брак</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="marital" value="20">
+                        <span class="limit-radio-custom">В разводе</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem4">
+                    <span class="limitem-quest">Где вы проживаете?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="housing" value="115">
+                        <span class="limit-radio-custom">Собственное жилье</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="housing" value="40">
+                        <span class="limit-radio-custom">Съемное жилье</span>
+                        <span class="hidden_info">Проживание в съемном жилье негативно влияет на кредитный рейтинг т.к. значительная часть вашего дохода уходит на оплату аренды. Когда у заемщика нет собственного жилья, лучшим считается проживание у родственников.</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="housing" value="5">
+                        <span class="limit-radio-custom">Общежитие</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="housing" value="35">
+                        <span class="limit-radio-custom">Жилье родственников</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem5">
+                    <span class="limitem-quest">Ваш доход в месяц?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="5">
+                        <span class="limit-radio-custom">Менее 10 000 ₽</span>
+                        <span class="hidden_info">Подобный уровень доходов не позволит Вам получить кредит в банке без залога. Поэтому советуем обратить внимание на <a href="" target="_blank">предложения по картам и микрозаймам</a>.</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="35">
+                        <span class="limit-radio-custom">10 000 ₽ - 20 000 ₽</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="65">
+                        <span class="limit-radio-custom">20 000 ₽ - 30 000 ₽</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="85">
+                        <span class="limit-radio-custom">30 000 ₽ - 40 000 ₽</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="140">
+                        <span class="limit-radio-custom">40 000 ₽ - 60 000 ₽</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="income" value="200">
+                        <span class="limit-radio-custom">Более 60 000 ₽</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem6">
+                    <span class="limitem-quest">Стаж работы на последнем месте?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="5">
+                        <span class="limit-radio-custom">Менее полугода</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="15">
+                        <span class="limit-radio-custom">До 1 года</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="75">
+                        <span class="limit-radio-custom">1-3 года</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="95">
+                        <span class="limit-radio-custom">3-5 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="110">
+                        <span class="limit-radio-custom">5-7 лет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="experience" value="140">
+                        <span class="limit-radio-custom">Более 7 лет</span>
+                      </label>
+                    </div>
+                    <div class="limitem-dop-block">
+                      <strong class="limitem-dop-caption">Какая у вас должность?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="125">
+                          <span class="limit-radio-custom">Руководитель</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="65">
+                          <span class="limit-radio-custom">Работник</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="15">
+                          <span class="limit-radio-custom">Предприниматель</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="15">
+                          <span class="limit-radio-custom">Пенсионер</span>
+                          <span class="hidden_info">Пенсионеру для получения кредита необходимы поручители или наличие работы. Предлагаем <a href="" target="_blank">ознакомиться с предложением Совкомбанка</a>.</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="15">
+                          <span class="limit-radio-custom">Студент</span>
+                          <span class="hidden_info">Студентам без работы проблематично получить кредит в банке без поручителей. Изучите советы и перечень банков, работающих с молодежью. Рекомендуем <a href="" rel="nofollow" target="_blank">получить студенческую карту Русский Стандарт</a>.</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="job" value="5">
+                          <span class="limit-radio-custom">Я не работаю</span>
+                          <span class="hidden_info">Обязательное условие для кредитных организаций - наличие работы. Безработные могут рассчитывать на быстрый займ. Рекомендую <a href="" target="_blank">ознакомиться с микрозаймом на карту</a>.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem7">
+                    <span class="limitem-quest">Есть ли у вас иждивенцы (дети, инвалиды)?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="dependent" value="45">
+                        <span class="limit-radio-custom">Нет</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="dependent" value="75">
+                        <span class="limit-radio-custom">1</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="dependent" value="55">
+                        <span class="limit-radio-custom">2</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="dependent" value="5">
+                        <span class="limit-radio-custom">Более 3</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem8">
+                    <span class="limitem-quest">Кредитовались ли вы ранее?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="prevCredit" value="0">
+                        <span class="limit-radio-custom limit-label--openCredit">Да</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="prevCredit" value="55">
+                        <span class="limit-radio-custom limit-label--hideCredit">Нет</span>
+                      </label>
+                    </div>
+                    <div class="limitem-dop-block limitem-dop-block--hide" id="limit-label--openCredit">
+                      <strong class="limitem-dop-caption">Есть открытые кредиты?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="openCredit" value="0">
+                          <span class="limit-radio-custom limit-label--showSumm">Да</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="openCredit" value="55">
+                          <span class="limit-radio-custom limit-label--hideSumm">Нет</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="limitem-dop-block limitem-dop-block--hide" id="limit-label--summCredit">
+                      <strong class="limitem-dop-caption">Сколько платите в месяц по кредитам?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="25">
+                          <span class="limit-radio-custom">Менее 10 000 ₽</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="15">
+                          <span class="limit-radio-custom">10 000 ₽ - 20 000 ₽</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="5">
+                          <span class="limit-radio-custom">20 000 ₽ - 30 000 ₽</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="-10">
+                          <span class="limit-radio-custom">30 000 ₽ - 40 000 ₽</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="-25">
+                          <span class="limit-radio-custom">40 000 ₽ - 60 000 ₽</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="monthPayCredit" value="-40">
+                          <span class="limit-radio-custom">Более 60 000 ₽</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem9">
+                    <span class="limitem-quest">Какая у вас кредитная история?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="creditHistory" value="150">
+                        <span class="limit-radio-custom limit-delay-hide">Хорошая</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="creditHistory" value="5">
+                        <span class="limit-radio-custom limit-delay-hide">Плохая</span>
+                        <span class="hidden_info">Получить кредит с плохой кредитной историей в банке весьма проблематично. Рекомендуется <a href="" target="_blank">воспользоваться микрозаймами</a>.</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="creditHistory" value="25">
+                        <span class="limit-radio-custom limit-delay-open">Были просрочки</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="creditHistory" value="55">
+                        <span class="limit-radio-custom limit-delay-hide">Нулевая</span>
+                      </label>
+                    </div>
+                    <div class="limitem-dop-block limitem-dop-block--hide" id="limit-delay">
+                      <strong class="limitem-dop-caption">На сколько дней просрочили?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="delayDays" value="25">
+                          <span class="limit-radio-custom">До 10 дней</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="delayDays" value="5">
+                          <span class="limit-radio-custom">До 30 дней</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="delayDays" value="-10">
+                          <span class="limit-radio-custom">Более 30 дней</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="delayDays" value="5">
+                          <span class="limit-radio-custom">Не помню</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="limitem" id="limitem10">
+                    <span class="limitem-quest" id="limitem-quest">Какое у вас образование?</span>
+                    <div class="limit-labels">
+                      <label class="limit-label">
+                        <input type="radio" name="education" value="85">
+                        <span class="limit-radio-custom">Высшее</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="education" value="55">
+                        <span class="limit-radio-custom">Неоконченное высшее</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="education" value="35">
+                        <span class="limit-radio-custom">Среднее специальное</span>
+                      </label>
+                      <label class="limit-label">
+                        <input type="radio" name="education" value="5">
+                        <span class="limit-radio-custom">Среднее общее</span>
+                      </label>
+                    </div>
+                    <div class="limitem-dop-block">
+                      <strong class="limitem-dop-caption">Есть у вас автомобиль?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="auto" value="0">
+                          <span class="limit-radio-custom limit-auto-open">Да</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="auto" value="10">
+                          <span class="limit-radio-custom limit-auto-hide">Нет</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="limitem-dop-block limitem-dop-block--hide" id="limit-auto">
+                      <strong class="limitem-dop-caption">Какой именно?</strong>
+                      <div class="limit-labels">
+                        <label class="limit-label">
+                          <input type="radio" name="autoType" value="115">
+                          <span class="limit-radio-custom">Новая иномарка</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="autoType" value="60">
+                          <span class="limit-radio-custom">Старая иномарка</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="autoType" value="55">
+                          <span class="limit-radio-custom">Новый отечественный</span>
+                        </label>
+                        <label class="limit-label">
+                          <input type="radio" name="autoType" value="30">
+                          <span class="limit-radio-custom">Старый отечественный</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="limitem limitem-load" id="limitem-load">
+                    <div class="limitem-load-content">
+                      <strong class="limitem-title">Рассчитываем лимит, подождите немного</strong>
+                      <div class="load">
+                        <span class="load-time" id="load-time">00:20</span>
+                        <div class="load-block">
+                          <div class="load-begunok"></div>
+                          <div class="load-gradient load-gradient1"></div>
+                          <div class="load-gradient load-gradient2"></div>
+                        </div>
+                      </div>
+                      <p class="limitem-text">Вы узнаете предварительную сумму кредитного лимита, который банк сможет вам выдать. Расчет носят информационно-справочный характер, у каждого банка индивидуальные условия назначения лимита.</p>
+                    </div>
+                    
+                    <div class="limitem-result" id="limitem-result">
+                      <strong class="limitem-title">Вы можете получить</strong>
+                      <strong class="limitem-sum" id="limitem-sum">292 000 ₽</strong>
+                      <p class="limitem-text" id="result-text"></p>
+
+                      <div class="limitem-result-btns">
+                        <span class="btn tariffs__btn limit-btn limit-prev limit-new js-limit-new">Начать заново</span>
+                        <a href="" class="btn limit-btn limit-next">Оформить карту</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+
+                <div class="limit-footer limit-footer--first">
+                  <span class="btn tariffs__btn limit-btn limit-prev js-limit-prev">Вернуться</span>
+                  <span class="btn limit-btn limit-next js-limit-next">Продолжить</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <aside class="sidebar article-sidebar fixed-sidebar">
+          <div class="offer sidebar__offer">
+            <div class="offer__flex">
+              <a href="" class="offer__img">
+                <div class="offer__img_container">
+                  <img src="images/tinkoff-platinum.png" alt="">
+                </div>
+              </a>
+              <div class="offer-home__flex">
+                <div class="offer-home__item">
+                  <img src="images/logo-tinkoff.png" alt="" class="offer-home__item_img">
+                </div>
+                <div class="offer-home__item">
+                  <div class="offer-page__rating">
+                    <div class="new-card__rating">
+                      <div class="new-card__rating_stars">
+                        <span class="new-card__rating_preline"></span>
+                        <span class="new-card__rating_line" style="width: 96%;"></span>
+                        <span class="new-card__rating_bg"></span>
+                      </div>
+                      <span class="new-card__rating_num">4.8</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="offer-home__item">
+                  <span>Организация</span>
+                  <strong>Тинькофф Банк</strong>
+                </div>
+                <div class="offer-home__item">
+                  <span>Официальный сайт</span>
+                  <a href="">tinkoff.ru</a>
+                </div>
+                <div class="offer-home__item">
+                  <span>Телефон</span>
+                  <a href="">8 800 555-77-78</a>
+                </div>
+                <div class="offer-home__item">
+                  <span>Электронная почта</span>
+                  <a href="">credit@tinkoff.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer__content_flex">
+              <a href="" class="btn offer-home__btn">Оформить карту</a>
+              <a href="" class="btn tariffs__btn offer-home__btn">Личный кабинет</a>
+            </div>
+            <div class="offer__content_flex offer__content_flex--rating">
+              <div class="article__socials flex">
+                <a href="" class="article__socials_item article__socials_item--vk"><i></i><span>286</span></a>
+                <a href="" class="article__socials_item article__socials_item--ok"><i></i><span>148</span></a>
+                <a href="" class="article__socials_item article__socials_item--fb"><i></i><span>32</span></a>
+                <a href="" class="article__socials_item article__socials_item--mir"><i></i><span>5</span></a>
+              </div>
+              <div class="article__rating article__rating--empty">
+                <div class="article__rating_stars flex">
+                  <span class="article__rating_star"></span>
+                  <span class="article__rating_star"></span>
+                  <span class="article__rating_star"></span>
+                  <span class="article__rating_star"></span>
+                  <span class="article__rating_star"></span>
+                  <span class="article__rating_text">
+                    <span class="article__rating_text--default">Поставьте оценку</span>
+                    <span class="article__rating_text--thanks">Большое спасибо :)</span>
+                    <span class="article__rating_text--value"><span class="article__rating--value">4.84</span> (286 оценок)</span>
+                  </span>
+                </div>
+              </div>
+            </div>           
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>  
+
+  <section class="section section-carousel">
+    <div class="wrapper">
+      <div class="section__wrapper">
+        <div class="section__top">
+          <h2 class="section__title">Похожие карты</h2>
+        </div>
+        <div class="new-carousel js-new-carousel">
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/tinkoff-platinum.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_rsb_platinum.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_ubrir_120.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_card_tinkoff_all_airlines.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+          <div class="new-carousel__item">
+            <a href="#" class="new-carousel__item_container">
+              <div class="new-carousel__item_img"><img src="images/credit_homecreditbank.png" alt=""></div>
+              <span class="new-carousel__item_title">Кредитная карта Тинькофф Платинум</span>
+              <div class="offer__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td> Макс. сумма: </td> 
+                      <td> 2 млн. руб. </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Ставка: </td> 
+                      <td> От 12% </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Срок кредита: </td> 
+                      <td> До 3х лет </td> 
+                    </tr> 
+                    <tr>
+                      <td> Мин. сумма: </td> 
+                      <td> 50 000 руб. </td> 
+                    </tr> 
+                    <tr>
+                      <td> Возраст: </td> 
+                      <td> От 18 лет </td> 
+                    </tr> 
+                    <tr> 
+                      <td> Решение: </td> 
+                      <td> через 1 мин. </td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+            </a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer-top">
+        <div class="footer-menu">
+          <a href="#" class="footer-menu__item">Кредитные карты</a>
+          <a href="#" class="footer-menu__item">Дебетовые карты</a>
+          <a href="#" class="footer-menu__item">Карты рассрочки</a>
+          <a href="#" class="footer-menu__item">Кредиты наличными</a>
+          <a href="#" class="footer-menu__item">Микрозаймы</a>
+        </div>
+        <div class="footer-menu">
+          <a href="#" class="footer-menu__item">Рефинансирование</a>
+          <a href="#" class="footer-menu__item">Кредитная история</a>
+          <a href="#" class="footer-menu__item">Страхование</a>
+          <a href="#" class="footer-menu__item">Расчетные счета</a>
+          <a href="#" class="footer-menu__item">Ипотека</a>
+        </div>
+        <div class="footer-menu">
+          <a href="#" class="footer-menu__item">Рефинансирование</a>
+          <a href="#" class="footer-menu__item">Кредитная история</a>
+          <a href="#" class="footer-menu__item">Страхование</a>
+          <a href="#" class="footer-menu__item">Расчетные счета</a>
+          <a href="#" class="footer-menu__item">Ипотека</a>
+        </div>
+        <div class="footer-menu">
+          <a href="#" class="footer-menu__item">Наши контакты</a>
+          <a href="#" class="footer-menu__item">Карта сайта</a>
+          <a href="#" class="footer-menu__item">О Бробанк.ру</a>
+          <a href="#" class="footer-menu__item">Реклама</a>
+          <a href="#" class="footer-menu__item">Задать вопрос</a>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <div class="footer-contacts__item footer-contacts__item--mail">
+          <span class="footer-contacts__item_name">Наша почта</span>
+          <a href="mailto:admin@brobank.ru" class="footer-contacts__item_text">admin@brobank.ru</a>
+        </div>
+        <div class="footer-contacts__item footer-contacts__item--phone">
+          <span class="footer-contacts__item_name">Телефон (выкл.)</span>
+          <a href="tel:8 950 500 05-05" class="footer-contacts__item_text">8 950 500 05-05</a>
+        </div>
+        <div class="footer-contacts__item footer-contacts__item--address">
+          <span class="footer-contacts__item_name">Кемерово</span>
+          <span class="footer-contacts__item_text">Ленинградский, 41</span>
+        </div>
+        <div class="footer-contacts__item footer-contacts__item--time">
+          <span class="footer-contacts__item_name">Режим работы</span>
+          <span class="footer-contacts__item_text">Круглосуточно</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">2014-2019 Brobank.ru. Официальный сайт сервиса Бробанк.ру. Вся информация на сайте носит ознакомительный характер.</span>
+        <div class="socials">
+          <a href="#" class="socials__item socials__item--vk"><i></i></a>
+          <a href="#" class="socials__item socials__item--fb"><i></i></a>
+          <a href="#" class="socials__item socials__item--ok"><i></i></a>
+          <a href="#" class="socials__item socials__item--ig"><i></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+  <script src="libs/jquery-ui/jquery-ui.js"></script>
+  <script src="libs/jquery-ui/touch.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="js/maskedinput.js"></script>
+  <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/limit-calc.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   
   <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -452,6 +453,100 @@
                 </div>
               </div>              
             </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section index-calc-section">
+    <div class="wrapper">
+      <div class="section__wrapper">
+        <div class="section__top">
+          <h2 class="section__title">Кредит на любые цели</h2>
+        </div>
+
+        <div class="index-calculator__container">
+          <div class="index-calculator__form calculator__form" data-type="index-credit">
+            <div class="index-calc-flex">
+              <div class="index-calc-left">
+                <div class="calculator__line calculator__line_input">
+                  <span class="calculator__line_caption">Сумма кредита</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-credit-summ">
+                    <div class="input-slider" data-max="3000000" data-min="100000" data-value="2000000" data-step="10000" data-suffix="₽"></div>
+                  </div>
+                </div>
+                <div class="calculator__line calculator__line_input">
+                  <span class="calculator__line_caption">Осталось платить (<span id="calc-refin-srok">5 лет 4 мес.</span>)</span>
+                  <div class="calculator__block">
+                    <input type="text" class="calculator__input js-period">
+                    <div class="input-slider" data-max="120" data-min="3" data-value="64" data-step="1" data-suffix="мес."></div>
+                  </div>
+                </div>
+                <input type="hidden" class="calculator__input js-percents" value="11">
+              </div>
+    
+              <div class="index-calc-right">
+                <div class="index-calc__line">
+                  <span>Процентная ставка</span>
+                  <strong class="js-percents-out">11,5 %</strong>
+                </div>
+                <div class="index-calc__line">
+                  <span>Ежемесячный платеж</span>
+                  <strong class="js-monthPay">41 786 ₽</strong>
+                </div>
+                <div class="index-calc__line">
+                  <span>Переплата</span>
+                  <strong class="js-morePay">607 160 ₽</strong>
+                </div>
+                <span class="index-calc__ps">Предварительный расчет. Бробанк поможет подобрать кредит на индивидуальных условиях и оформить онлайн.</span>
+                <div class="calculator__line calculator__line--full calculator__flex flex calculator__line--pb0">
+                  <div class="calculator__line calculator__line--half calculator__line--pb0">
+                    <span class="btn calculator__btn">Оформить онлайн</span>
+                  </div>
+                  <div class="calculator__line calculator__line--half calculator__line--pb0 js-calculate">
+                    <button class="btn tariffs__btn calculator__btn">График платежей</button>
+                  </div>
+                </div>
+              </div>
+            </div>           
+  
+            <div class="grafik">
+              <span class="grafik__title">График платежей</span>
+              <div class="grafik__table">
+                <table>
+                  <tr>
+                    <th>№, Месяц</th>
+                    <th>
+                      <span class="th-desktop">Сумма платежа</span>
+                      <span class="th-mobile">Платеж</span>
+                    </th>
+                    <th>Проценты + долг</th>
+                    <th>Остаток долга</th>
+                  </tr>
+                  <tr>
+                    <td>1. 10.04.2019</td>
+                    <td>
+                      <span class="td-desktop">61 811.94</span>
+                      <span class="td-mobile">3 000.00 + 58 811.94</span>
+                    </td>
+                    <td>3 000.00 + 58 811.94</td>
+                    <td>241 188.06</td>
+                  </tr>
+                  <tr>
+                    <td>1. 10.04.2019</td>
+                    <td>
+                      <span class="td-desktop">61 811.94</span>
+                      <span class="td-mobile">3 000.00 + 58 811.94</span>
+                    </td>
+                    <td>3 000.00 + 58 811.94</td>
+                    <td>241 188.06</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -1252,7 +1347,11 @@
   
   <script src="libs/jquery/jquery-3.3.1.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/jquery-ui/jquery-ui.js"></script>
+  <script src="libs/jquery-ui/touch.js"></script>
   <script src="js/maskedinput.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

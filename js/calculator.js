@@ -13,7 +13,7 @@ Number.prototype.format=format;
 String.prototype.format=format;
 
 function normaleNum(num) {
-  return parseFloat(num.replace(' ', ''));
+  return parseFloat(num.split(' ').join(''));
 }
 
 function initSelectDate() {
@@ -274,6 +274,17 @@ $(document).ready(function () {
             zaymDateStart = moment().format("DD.MM.YYYY"),
             zaymFirst = $(then).find(".js-first").is(":checked");
         calcPageZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart,zaymFirst);
+        break;
+      
+      case "index-credit":
+        var creditPercents = normaleNum($(then).find(".js-percents").val()),
+            creditPeriod = normaleNum($(then).find(".js-period").val()),
+            creditDateStart = moment().format("DD.MM.YYYY"),
+            creditSumm = normaleNum($(then).find(".js-credit-summ").val());
+        
+        // alert(creditSumm);
+        indexCalcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart);
+        
         break;
       
       default:
@@ -654,6 +665,131 @@ $(document).ready(function () {
     showValue(calcPay(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay));
     generateTable(calcPay(creditSumm,creditPercents,creditPeriod,creditDateStart,creditVidPay));
   }  
+
+  function indexCalcCreditSumm(creditSumm,creditPercents,creditPeriod,creditDateStart) {
+    var refSrok = {
+      year: 0,
+      month: 0
+    };
+    refSrok.year = Math.floor(creditPeriod / 12);
+    refSrok.month = creditPeriod % 12;
+    if (refSrok.month == 0) {
+      refSrok.month = '';
+    } else {
+      refSrok.month += " мес.";
+    }
+
+    if (refSrok.year == 0) {
+      refSrok.year = '';
+    } else {
+      if (refSrok.year == 1) {
+        refSrok.year += " год ";
+      } else if (((refSrok.year == 2)||(refSrok.year == 3)||(refSrok.year == 4)) & ((refSrok.year > 20)||(refSrok.year < 10))) {
+        refSrok.year += " года ";
+      } else {
+        refSrok.year += " лет ";
+      }
+    }
+    $("#calc-refin-srok").text(refSrok.year + refSrok.month);
+    
+    $('.js-percents-out').text(creditPercents + "%");
+
+    
+    function calcPay(sum, percent, month,  date) {
+      var calcValue = {};
+      calcValue.data = {
+        percent:Number(percent/1200),
+        inputSum: Number(sum),
+        inputMonth: Number(month),
+        typeCalc: 0,
+        date: date
+      }
+      
+      if(calcValue.data.typeCalc == 0) {
+        calcValue.monthPay = calcValue.data.inputSum * (calcValue.data.percent + calcValue.data.percent /
+          (Math.pow((1 + calcValue.data.percent), calcValue.data.inputMonth) - 1)); // платеж в месяц
+        calcValue.totalPay = calcValue.monthPay * calcValue.data.inputMonth;
+      } else {
+        calcValue.mainPay = calcValue.data.inputSum/calcValue.data.inputMonth;
+        calcValue.totalPay = 0;
+        for(var i = 1;i<calcValue.data.inputMonth+1;i++){
+          calcValue.totalPay = calcValue.totalPay +
+            decreasingMonthPay(i, calcValue.data.inputSum, calcValue.data.inputMonth,calcValue.data.percent);
+        }
+        calcValue.totalPay = calcValue.totalPay + calcValue.data.inputSum;
+      }
+
+      calcValue.morePay = calcValue.totalPay-(calcValue.data.inputSum);
+      calcValue.overPay = calcValue.morePay/calcValue.data.inputSum*100;
+
+      return calcValue
+    }
+    //отрисовка значений
+    function showValue(data) {
+      if(data.data.typeCalc == 0) {
+          $('.js-monthPay').text(formatMoney( Math.round(data.monthPay)) );
+      }
+      else
+          $('.js-monthPay').text('от '+formatMoney( Math.round(data.mainPay) ));
+
+      $('.js-totalPay').text(formatMoney( Math.round(data.totalPay)) );
+      $('.js-morePay').text(formatMoney( Math.round(data.morePay)) );
+    }
+    //герерация таблицы
+    function generateTable(info) {
+      var remTotal = info.data.inputSum,
+          remDebt = info.data.inputSum,
+          payPercent,paySum,monthPay,pp = 0,
+          currDate = moment(info.data.date,"DD.MM.YYYY").format("DD.MM.YYYY");
+
+      var table = '<table>' +
+          '<tr>' +
+          '<th>№, Месяц</th>' +
+          '<th><span class="th-desktop">Сумма платежа</span><span class="th-mobile">Платеж</span></th>' +
+          '<th>Проценты + долг</th>' +
+          '<th>Остаток долга</th>' +
+          '</tr>';
+
+      for(var i = 1; i<info.data.inputMonth+1;i++){
+        if(info.data.typeCalc == 0) {
+            monthPay = info.monthPay;
+            payPercent = remDebt * info.data.percent;
+            paySum = monthPay-payPercent;
+            remDebt = remDebt-paySum;
+        }
+        else {
+            payPercent = decreasingMonthPay(i, remDebt, info.data.inputMonth,info.data.percent);
+            monthPay = info.mainPay + payPercent;
+            paySum = info.mainPay;
+        }
+        remTotal= remTotal-paySum;
+        // currDate.setMonth(currDate.getMonth() + 1);
+        currDate = moment(currDate, "DD.MM.YYYY").add(1, "month").format("DD.MM.YYYY");
+
+        var row = '';
+        row += '<tr>' +
+          '<td>' + i + '. ' + currDate+'</td>'+
+          '<td>' +
+          '<span class="td-desktop">'+formatMoney( Math.round(monthPay),true )+'</span>' +
+          '<span class="td-mobile">'+formatMoney( Math.round(payPercent),true )+ ' + ' +
+          formatMoney( Math.round(paySum),true ) + '</span>' +
+          '</td>' +
+          '<td>' +formatMoney( Math.round(payPercent),true )+ ' + ' +
+          formatMoney( Math.round(paySum),true ) + '</td>'+
+          '<td>'+formatMoney( Math.round(remTotal),true )+'</td>'+
+        '</tr>';
+        table += row;
+      }
+      table +='</table>';
+      $('.grafik__table').html(table);
+    }
+    function decreasingMonthPay(number,sum,month,percent) {
+      return (sum - (number-1)* (sum/month))*percent;
+    }
+    
+    showValue(calcPay(creditSumm,creditPercents,creditPeriod,creditDateStart));
+    generateTable(calcPay(creditSumm,creditPercents,creditPeriod,creditDateStart));
+  }
 
   // Калькулятор займа
   function calcZaym(zaymSumm,zaymPeriod,zaymPercent,zaymDateStart) {
