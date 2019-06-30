@@ -392,6 +392,7 @@
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  border-top: 1px solid #E6EAED;
 }
 .bank__table td {
   padding: 16px 0 17px;
@@ -401,7 +402,7 @@
   line-height: 20px;
 }
 .bank__table tr:last-child td {
-  border: none;
+  /* border: none; */
 }
 .bank__table td:first-child {
   width: 51.95%;
@@ -501,6 +502,10 @@
 }
 .bank__offer {
   padding: 30px;
+  margin: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #E6EAED;
 }
 .bank-aside-list {
   margin-top: 30px;
@@ -547,6 +552,68 @@
   margin-top: 5px;
   line-height: 50px;
 }
+.bank-comments__top {
+  padding-bottom: 30px;
+}
+.bank-comments__top .comments__top-input {
+  margin: 0;
+}
+.bank-comments__top {
+  display: flex;
+  align-items: center;
+}
+.bank-comments__rating_num {
+  display: block;
+  font-size: 60px;
+  line-height: 1;
+  color: #000000;
+  margin-right: 20px;
+}
+.bank-comments__rating {
+  display: block;
+  margin-right: 30px;
+}
+.bank-comments__rating .bank-rating-stars {
+  width: 175px;
+  height: 25px;
+}
+.bank-comments__rating .new-card__rating_num {
+  display: none;
+}
+.bank-comments__rating_count {
+  display: block;
+  padding-top: 5px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #88919D;
+}
+.bank-comments {
+  padding-bottom: 80px;
+}
+.bank-top-date--mobile {
+  display: none;
+}
+.bank-top__text {
+  padding-top: 15px;
+}
+.bank-cards-labels {
+  padding-top: 15px;
+}
+.bank-card-label {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #528CAA;
+  background: #F5F8FA;
+  border-radius: 4px;
+}
+.bank-card-label:hover {
+  background: #E6EFF2;
+}
 
 
 
@@ -558,6 +625,133 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+  .bank-top {
+    flex-wrap: wrap;
+  }
+  .bank-lead-menu {
+    margin-right: -45px;
+  }
+  .bank-top__btns {
+    width: 100%;
+    padding-top: 30px;
+    justify-content: space-between;
+  }
+  .bank-top-btn {
+    margin: 0;
+    width: 48%;
+    width: calc(50% - 15px);
+  }
+  .bank-slider .slick-arrow {
+    display: none !important;
+  }
+  .bank-slider-item__content {
+    height: 345px;
+  }
+  .bank-slider-item__title {
+    font-size: 32px;
+  }
+  .bank-slider-item__text {
+    font-size: 13px;
+    margin-bottom: 45px;
+  }
+  .bank-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bank__offer,
+  .bank-aside-list {
+    width: 48%;
+    width: calc(50% - 15px);
+    margin: 0;
+  }
+  .bank__offer .offer__content_flex {
+    display: block;
+  }
+  .bank__offer .article__rating, 
+  .bank__offer .article__socials {
+    width: 100%;
+    justify-content: center;
+  }
+  .bank__offer .article__socials_item {
+    margin: 0 5px;
+  }
+  .bank__offer .article__rating_stars {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
+  }
+  .bank__offer .article__rating_text {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .bank-slider-item__content {
+    height: 260px;
+    max-width: 400px;
+    padding-left: 40px;
+  }
+  .bank-slider-item .bank-slider-item__man {
+    height: 100%;
+  }
+  .bank-slider-item .bank-slider-item__water-img {
+    height: 80%;
+    width: auto;
+  }
+  .bank-slider-item__title {
+    font-size: 24px;
+  }
+  .bank-slider-item__text {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+  .bank-slider-item__btn {
+    max-width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+  }
+  .bank-top__link {
+    font-size: 13px;
+  }
+  .bank-offer__flex_link {
+    margin-right: 0;
+  }
+  .bank__offer .article__socials {
+    margin-bottom: 0;
+  }
+  .bank-lead-menu {
+    margin-right: -40px;
+  }
+}
 
 @media screen and (max-width: 750px) {
   .limit {
@@ -595,6 +789,139 @@
     margin: 10px 0;
     font-size: 40px;
   }
+  .bank-lead-menu {
+    margin-right: 0;
+  }
+  .bank-slider-item__btn {
+    display: none;
+  }
+  .bank-slider-item__title {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .bank-slider-item__content {
+    padding-left: 20px;
+    max-width: 100%;
+    padding-right: 160px;
+    height: 210px;
+  }
+  .bank-slider-item__text span {
+    display: none;
+  }
+  .bank-slider-item .bank-slider-item__man {
+    right: -105px;
+  }
+  .bank-top {
+    padding: 10px 0;
+    position: relative;
+  }
+  .bank-top .bank-img {
+    position: absolute;
+    left: 0;
+    top: 45px;
+  }
+  .bank-top__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bank-top__line--mb {
+    order: 2;
+    display: block;
+    padding-top: 15px;
+    padding-left: 95px;
+    margin-bottom: 20px;
+  }
+  .bank-top__btns {
+    padding-top: 0;
+  }
+  .bank-rating-stars {
+    width: 69px;
+    height: 11px;
+  }
+  .bank-top-btn {
+    font-size: 13px;
+  }
+  .bank-top__link {
+    /* padding: 6px 0 6px 25px; */
+    line-height: 27px;
+  }
+  .bank-top__link::before {
+    top: 6px;
+  }
+  .bank-top__line {
+    width: 100%;
+    align-items: center;
+  }
+  .bank-rating {
+    display: flex;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .bank-rating .new-card__rating_num {
+    font-size: 13px;
+  }
+  .bank-top-date {
+    font-size: 13px;
+  }
+  .bank-section {
+    padding-top: 35px;
+  }
+  .bank__offer, .bank-aside-list {
+    width: 100%;
+    margin: 0 auto 30px;
+    max-width: 380px;
+  }
+  .bank-sidebar {
+    flex-wrap: wrap;
+  }
+  .bank-comments__top {
+    flex-wrap: wrap;
+  }
+  .bank-comments__rating_num {
+    font-size: 45px;
+    margin-right: 10px;
+  }
+  .bank-comments__rating .bank-rating-stars {
+    width: 95px;
+    height: 15px;
+  }
+  .bank-comments__rating {
+    display: block;
+  }
+  .bank-comments__rating_count {
+    padding-top: 0;
+  }
+  .bank-comments__top .comments__top-input {
+    margin-top: 25px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .bank-comments {
+    padding-bottom: 35px;
+  }
+  .bank-card-label {
+    padding: 7px 10px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .bank-cards-labels {
+    padding-top: 5px;
+  }
+  .bank-article-rating .article__rating_stars {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .article__rating_text {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .navigation__link {
+    margin: 0 5px;
+  }
+  .navigation__list {
+    margin: 0 -5px;
+  }
 }
 
 
@@ -616,6 +943,89 @@
   }
   .limit {
     margin: 0 -20px;
+  }
+  .bank-slider-item .bank-slider-item__man {
+    display: block;
+  }
+  .bank-slider-item .bank-slider-item__water-img {
+    display: block;
+  }
+  .bank-slider-item__content {
+    padding-right: 90px;
+  }
+  .bank__table tr {
+    display: block;
+  }
+  .bank__table td {
+    display: block;
+    width: 100% !important;
+    border: none;
+    padding: 15px 0 5px;
+  }
+  .bottom h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+  .bank__table td:last-child {
+    padding-top: 0;
+    border-bottom: 1px solid #E6EAED;
+    padding-bottom: 15px;
+  }
+  .bank__table {
+    border-top: 1px solid #E6EAED;
+  }
+  .bank__table td:first-child {
+    font-size: 13px;
+  }
+  .bank__offer, .bank-aside-list {
+    padding: 20px;
+  }
+  .bank-offer__btn,
+  .bank-aside-list__btn,
+  .bank__all-show,
+  .bank-table__btn {
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  .bank__offer .article__rating_stars {
+    padding-top: 20px;
+  }
+  .bank-news-block .journal__list {
+    padding: 0;
+  }
+  .bank-news-block .journal__item {
+    margin: 0;
+    border-radius: 0;
+    border-bottom: none;
+  }
+  .bank-news-block .journal__item:hover {
+    position: relative;
+  }
+  .bank-news-block .journal__item_container {
+    display: flex;
+  }
+  .bank-news-block .journal__item_img {
+    width: 95px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    height: 60px;
+  }
+  .bank-news-block .journal__item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bank__all-show {
+    margin-top: 20px;
+  }
+  .bank-top-date--comp {
+    display: none;
+  }
+  .bank-top-date--mobile {
+    display: inline-block;
   }
 }
 
