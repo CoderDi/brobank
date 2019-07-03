@@ -140,6 +140,8 @@ $(".limit-label--openCredit").click(function(){
 });
 $(".limit-label--hideCredit").click(function(){
   $("#limit-label--openCredit").hide();
+  $("#limit-label--summCredit").hide();
+  $("#limit-label--openCredit").find("input:checked").prop('checked',false);
   $("#limit-content").css("height", $("#limitem" + currentQuestNum).outerHeight());
 });
 $(".limit-label--showSumm").click(function(){
