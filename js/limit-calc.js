@@ -75,8 +75,9 @@ $(".js-limit-new").click(function(){
   $(".limit-footer").addClass("limit-footer--first");
   $("#limit-quest").text($("#limitem1 .limitem-quest").text());
   $("#limit-curr-num").text(1);
-  $("#limit-line").css("width", (1 / questCount * 100) + "%");
+  $("#limit-line").css("width", "0%");
   $("#limitem1").css("left","0");
+  $(".limit-label").find("input:checked").prop('checked',false);
   currentQuestNum = 1;
   scoringCurrent = -565;
   infoArray = new Array();
@@ -129,6 +130,13 @@ $(".js-limit-next").click(function(){
 
   $("#limit-quest").text($("#limitem" + currentQuestNum + " .limitem-quest").text());
   $("#limit-curr-num").text(currentQuestNum);
+  if ($("#limitem" + currentQuestNum + " input:checked").length) {
+    $("#limit-line").css("width", (currentQuestNum / questCount * 100) + "%");
+  }
+  
+});
+
+$(".limit-label").click(function(){
   $("#limit-line").css("width", (currentQuestNum / questCount * 100) + "%");
 });
 
@@ -170,16 +178,3 @@ $(".limit-auto-hide").click(function(){
   $("#limit-auto").hide();
   $("#limit-content").css("height", $("#limitem" + currentQuestNum).outerHeight());
 });
-
-
-
-
-
-
-
-
-
-
-
-
-

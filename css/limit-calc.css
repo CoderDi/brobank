@@ -1,3 +1,10 @@
+.bank-carousel {
+  overflow: hidden;
+}
+.bank-carousel .slick-arrow {
+  opacity: 0;
+  visibility: hidden;
+}
 .limit {
   background: #FFFFFF;
   border: 1px solid #E6EAED;
@@ -80,7 +87,7 @@
   background: #FEDD2E;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  width: 10%;
+  width: 0%;
 }
 .limitem-quest {
   display: none;
@@ -618,7 +625,7 @@
 .bottom h3 {
   font-size: 29px;
   line-height: 1.4;
-  margin: 0 0 30px;
+  margin: 20px 0 30px;
 }
 .bank-offer__title {
   display: block;
@@ -802,35 +809,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1100px) {
   .bank-top {
     -webkit-flex-wrap: wrap;
@@ -916,6 +894,9 @@
 }
 
 @media screen and (max-width: 980px) {
+  .bank-carousel {
+    overflow: visible;
+  }
   .bank-slider-item__content {
     height: 260px;
     max-width: 400px;
@@ -1014,13 +995,13 @@
     right: -105px;
   }
   .bank-top {
-    padding: 10px 0;
+    padding: 0 0 10px;
     position: relative;
   }
   .bank-top .bank-img {
     position: absolute;
     left: 0;
-    top: 45px;
+    top: 31px;
   }
   .bank-top__content {
     display: -webkit-box;
@@ -1050,6 +1031,9 @@
   }
   .bank-top-btn {
     font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    width: calc(50% - 8px);
   }
   .bank-top__link {
     /* padding: 6px 0 6px 25px; */
@@ -1265,7 +1249,41 @@
   .bank-top-date--mobile {
     display: inline-block;
   }
+  .navigation__list {
+    padding-top: 20px;
+  }
+  .bank-sidebar {
+    margin-top: 5px;
+  }
+  .bank-comments__rating_count {
+    font-size: 13px;
+    padding-top: 4px;
+  }
+  .bank-news-block .journal__item {
+    max-width: 200%;
+    border-radius: 0;
+    padding: 0 20px;
+  }
+  .bank-news-block .journal__item_container {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #e6eaed;
+    padding: 20px 0;
+  }
+  .bank-news-block .journal__item_img {
+    margin-bottom: 0;
+  }
+  .bank-news-block .journal__item:last-child .journal__item_container {
+    border-bottom: 1px solid #e6eaed;
+  }
+  .bank-news-block .journal__item_container:hover {
+    margin: 0 -20px;
+    padding: 20px;
+  }
+  .bank-news-block .journal__item:hover ~ .journal__item .journal__item_container {
+    border-color: transparent;
+  }
+  .bank-table__btns {
+    padding-top: 15px;
+  }
 }
-
-
-

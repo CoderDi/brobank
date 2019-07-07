@@ -265,12 +265,36 @@ $(document).ready(function () {
         breakpoint: 980,
         settings: {
           variableWidth: true,
+          draggable: true,
           arrows: false,
           dots: true,
         }
       }
     ]
   });
+
+  function windowsSlider() {
+    if ($(window).width() <= 963) {
+      if (($(".bank-carousel").length != 0) && !($(".bank-carousel").hasClass("slick-slider"))) {
+        $(".js-bank-carousel").slick({
+          slidesToScroll: 1,
+          variableWidth: true,
+          arrows: false,
+          dots: true,
+        });
+      }
+    } else {
+      if (($(".bank-carousel").length != 0) && ($(".bank-carousel").hasClass("slick-slider"))){
+        $(".js-bank-carousel").slick('unslick');
+      }
+    }
+  }
+  windowsSlider();
+  $(window).resize(function(){
+    windowsSlider();
+  })
+
+  
 
   $(".new-slider").slick({
     dots: true

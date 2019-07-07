@@ -4552,6 +4552,10 @@ MEDIA
   .slider .slick-arrow {
     display: none;
   }
+  
+  .main-menu {
+    margin-right: -40px;
+  }
   .chapter {
     width: 50%;
     min-height: 65px;
