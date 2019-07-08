@@ -106,6 +106,10 @@ $(".js-limit-prev").click(function(){
 
 
 $(".js-limit-next").click(function(){
+  
+  if ($("#limitem" + currentQuestNum + " input:checked").length == 0) {
+    return;
+  }
   var scTop = $('#limit-calc').offset().top - 100;
   $("html, body").animate({scrollTop: scTop});
 
