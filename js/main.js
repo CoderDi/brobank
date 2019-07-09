@@ -264,6 +264,8 @@ $(document).ready(function () {
       {
         breakpoint: 980,
         settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
           variableWidth: true,
           draggable: true,
           arrows: false,

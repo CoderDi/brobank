@@ -162,6 +162,7 @@ HEADER
   position: absolute;
   content: '';
   bottom: 0;
+  left: 0;
   height: 2px;
   width: 100%;
   background: #FEDD2E;
@@ -1571,7 +1572,7 @@ FOOTER
   background-color: #E6EAED;
   -webkit-border-radius: 100%;
           border-radius: 100%;
-  margin: 0 15px;
+  margin: 0 9px;
 }
 .socials__item i {
   display: block;
@@ -1595,6 +1596,16 @@ FOOTER
   width: 14px;
   height: 14px;
   background-image: url(../images/svg-icons.svg#ig-grey);
+}
+.socials__item--you i {
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/svg-icons.svg#foot-yt);
+}
+.socials__item--zen i {
+  width: 8px;
+  height: 15px;
+  background-image: url(../images/svg-icons.svg#foot-zen);
 }
 .copyright {
   font-size: 15px;
