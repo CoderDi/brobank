@@ -294,6 +294,23 @@ $(document).ready(function () {
     clickOrChange = 0;
   }
 
+  calculate();
+
+  function delay(callback, ms) {
+    var timer = 0;
+    return function() {
+      var context = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        callback.apply(context, args);
+      }, ms || 0);
+    };
+  }
+
+  $('.calculator__input').keyup(delay(function (e) {
+    calculate();
+  }, 1000));
+
   $(".js-calculate").click(function(){
     if ($(this).hasClass("table--open")) {
       $(this).removeClass("table--open");
