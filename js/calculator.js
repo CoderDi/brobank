@@ -53,6 +53,11 @@ function initSelectDate() {
 }
 
 $(document).ready(function () {
+
+  $(".calculator__input").each(function(el,i){
+    var str = $(this).parent(".calculator__block").find(".input-slider");
+    $(this).attr('placeholder', formatMoney($(str).attr('data-min'), true) + ' ' + $(str).attr('data-suffix'))
+  })
   
   initSelectDate();
 
@@ -144,6 +149,14 @@ $(document).ready(function () {
     var then = $(".calculator__form"),
         calcType = $(then).data("type");
     // console.log("calcType = " + calcType);
+
+    $(then).find('.calculator__input').each(function(el,i){
+      var str = $(this).parent('.calculator__block').find('.input-slider');
+      if ($(this).val() == '') {
+        $(this).val(formatMoney($(str).attr('data-min'), true) + ' ' + $(str).attr('data-suffix'));
+      }
+    });
+
 
     if ((clickOrChange == 0)&((calcType == "zaym")||(calcType == "refin"))) {
       $(".calculator__line--pb30").hide();
