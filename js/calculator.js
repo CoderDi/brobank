@@ -305,6 +305,13 @@ $(document).ready(function () {
     }
 
     clickOrChange = 0;
+
+    $(then).find('.calculator__input').each(function(el,i){
+      var str = $(this).parent('.calculator__block').find('.input-slider');
+      if (normaleNum($(this).val()) == $(str).attr('data-min')) {
+        $(this).val('');
+      }
+    });
   }
 
   calculate();
