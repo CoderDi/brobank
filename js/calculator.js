@@ -1,5 +1,5 @@
 function numSpacing(num) {
-  return String(parseInt(num)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
+  return String(parseFloat(num)).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')
 }
 
 function format(digits){
@@ -17,9 +17,26 @@ function normaleNum(num) {
 }
 
 function initSelectDate() {
+  var day = new Date;
+  $(".js-month option[value=" + (day.getMonth() + 1) + "]").prop('selected',true);
+  var arr=[
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ];
+  $(".js-month-res").text(arr[day.getMonth()]);   
   if ($("#day").length > 0) {
-    var day = new Date,
-          md = (new Date(day.getFullYear(), day.getMonth() + 1, 0, 0, 0, 0, 0)).getDate(),
+    
+          var md = (new Date(day.getFullYear(), day.getMonth() + 1, 0, 0, 0, 0, 0)).getDate(),
           $month_name = "января февраля марта апреля мая июня июля августа сентября октября ноября декабря".split(" ");
 
       function set_select(a, c, d, e) {
@@ -31,7 +48,6 @@ function initSelectDate() {
       }
       set_select("day", md, 1, day.getDate() - 1);
       set_select("month", 12, 1, day.getMonth());
-      
       
       var month = document.getElementById("month");
 
@@ -124,7 +140,11 @@ $(document).ready(function () {
     uiSlider(selector);
 
     var scTop = $('#' + newId).offset().top - 100;
-    $("html, body").animate({scrollTop: scTop})
+    $("html, body").animate({scrollTop: scTop});
+
+    var day = new Date;
+  $(".js-month option[value=" + (day.getMonth() + 1) + "]").prop('selected',true);
+  
   });
   $(".purchase__list").on("click",".purchase-remove", function(){
     purchaseCount--;
@@ -262,7 +282,8 @@ $(document).ready(function () {
             // console.log($(b).find(".js-month-res").text());
         
           } else {
-            rassDateStart = $(b).find("select[name='month']").val() + '.01.' + $(b).find("select[name='year']").val();
+            // rassDateStart = $(b).find("select[name='month']").val() + '.01.' + $(b).find("select[name='year']").val();
+            rassDateStart = moment().set('date', 1).set('month', $(b).find("select[name='month']").val() - 1).set('year', $(b).find("select[name='year']").val()).format("MM.DD.YYYY");
           }
           arrayOnePurchase.push(rassSumm, rassPeriod, rassPercent, rassDateStart);
           rassArray.push(arrayOnePurchase);

@@ -3568,6 +3568,7 @@ CALCULATORS
 }
 .offer-page__block .calculator__container {
   padding: 40px;
+  overflow: hidden;
 }
 .calculator__form {
   display: -webkit-box;
@@ -3826,7 +3827,9 @@ CALCULATORS
   font-size: 13px;
   color: #88919D;
 }
-
+.purchase__list {
+  width: 100%;
+}
 .purchase {
   width: 100%;
   display: -webkit-box;
@@ -4124,11 +4127,6 @@ input {
 .b-menu {
   display: none;
 }
-
-
-
-
-
 
 
 
