@@ -4128,7 +4128,9 @@ input {
   display: none;
 }
 
-
+select::-ms-expand {
+  display: none;
+}
 
 
 

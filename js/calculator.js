@@ -91,6 +91,7 @@ $(document).ready(function () {
 
   $(".calculator__select").click(function(){
     $(this).toggleClass("calculator__select--active");
+    calculate();
   });
   $(".calculator__select").focusout(function(){
     $(this).removeClass("calculator__select--active");
@@ -989,7 +990,9 @@ $(document).ready(function () {
           currentDolg, 
           countMonth = 0, 
           row,
-          currDate = moment(rassArray[i][3]).format("DD.MM.YYYY"),
+          currDate = rassArray[i][3].replace('.','/'),
+          currDate = currDate.replace('.','/'),
+          currDate = moment(currDate).format("DD.MM.YYYY"),
           minPay = rassArray[i][0],
           totalPay = 0,
           beginSum = rassArray[i][0];
@@ -1010,6 +1013,7 @@ $(document).ready(function () {
         totalPay += currentPay; 
         rassArray[i][0] -= currentDolg;
         if (rassArray[i][0] < 0) rassArray[i][0] = 0;
+        
         currDate = moment(currDate, "DD.MM.YYYY").add(1, "month").format("DD.MM.YYYY");
         if (minPay > currentPay) {
           minPay = currentPay;
