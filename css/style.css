@@ -3116,9 +3116,6 @@ OFFER PAGE
   color: #000000;
   font-weight: 700;
 }
-.chavo__item--open .chavo__item_answer {
-  /* max-height: 500px; */
-}
 .chavo__item--open .chavo__item_quest i {
   -webkit-transform: rotate(225deg);
       -ms-transform: rotate(225deg);
@@ -4131,6 +4128,117 @@ input {
 select::-ms-expand {
   display: none;
 }
+.review-bottom__banki {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background: url(../images/banki-logo.png) no-repeat;
+}
+.review-bottom__banki--sber {
+  background-position: -10px -50px;
+}
+.review-bottom__banki--alfa {
+  background-position: -10px -10px;
+}
+.review-bottom__banki--vtb {
+  background-position: -90px -10px;
+}
+.review-bottom__banki--renessans {
+  background-position: -50px -10px;
+}
+.banki-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.banki-item {
+  padding: 0 15px 30px;
+  width: 25%;
+}
+.banki-item__container {
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #E6EAED;
+  border-radius: 4px;
+  padding: 30px;
+  height: 100%;
+}
+
+.rating--banki {
+  border-bottom: none;
+  border-radius: 0;
+}
+.rating--banki:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.rating--banki:last-child {
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px solid #e6eaed;
+}
+.banki-item__container:hover {
+  box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+}
+.banki-item__title {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #528CAA;
+}
+.banki-item__title:hover {
+  color: #0a2c4b;
+}
+.banki-item__img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.banki-item__img img {
+  max-width: 100%;
+  height: auto;
+}
+.banki-rating {
+  padding: 0 0 10px;
+  white-space: nowrap;
+}
+.banki-list .bank-offer__flex_link {
+  margin-right: 0;
+}
+.banki-ratings,
+.reviews--banki {
+  padding-top: 40px;
+}
+.banki-ratings__flex {
+  display: flex;
+}
+.banki-ratings .rating__container {
+  align-items: center;
+}
+.banki-ratings .rating__img {
+  width: 60px;
+  height: 60px;
+}
+.banki-ratings .banki-rating,
+.banki-ratings .bank-top__link--phone {
+  margin: 0 40px 0 0;
+  padding-bottom: 0;
+}
+.banki-ratings .banki-rating {
+  padding-top: 4px;
+}
+.banki-ratings .banki-item__title {
+  margin-bottom: 5px;
+}
+.rating--banki__num {
+  display: none;
+}
+.rating--banki {
+  padding: 20px;
+}
+
+
 
 
 
@@ -4560,6 +4668,16 @@ MEDIA
 }
 
 @media screen and (max-width: 980px) {
+  .banki-item {
+    width: 50%;
+  }
+  .banki-list .bank-offer__flex_link {
+    font-size: 15px;
+  }
+
+
+
+
   .slider .slick-arrow {
     display: none;
   }
@@ -4695,6 +4813,32 @@ MEDIA
 }
 
 @media screen and (max-width: 750px) {
+  .rating--banki__num {
+    display: block;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #E6EAED;
+    padding-top: 5px;
+  }
+  
+  .banki-ratings__flex {
+    display: block;
+  }
+  .banki-ratings .rating__container {
+    align-items: flex-start;
+  }
+  .banki-ratings .banki-rating {
+    margin-bottom: 10px;
+  }
+  .banki-ratings .banki-rating, .banki-ratings .bank-top__link--phone {
+    margin-right: 0;
+  }
+
+
+
+
+
   .logo img {
     height: 25px;
   }
@@ -5525,6 +5669,47 @@ MEDIA
 }
 
 @media screen and (max-width: 580px) {
+  .banki-item {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .banki-item__container {
+    padding: 20px;
+    display: flex;
+    border-radius: 0;
+    border-bottom: none;
+  }
+  .banki-item:first-child .banki-item__container,
+  .rating--banki:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+  .banki-item:last-child .banki-item__container,
+  .rating--banki:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid #e6eaed;
+  }
+  .banki-item__container:hover {
+    position: relative;
+    z-index: 2;
+    border-radius: 0 0 4px 4px;
+  }
+  .banki-item__img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  .banki-item__title {
+    font-size: 15px;
+  }
+  .banki-rating .new-card__rating,
+  .banki-rating .new-card__rating_num,
+  .banki-list .bank-offer__flex_link {
+    font-size: 13px;
+  }
+
+
+
+
   .slider__item img {
     display: none;
   }
