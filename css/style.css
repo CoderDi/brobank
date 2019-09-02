@@ -4191,6 +4191,7 @@ select::-ms-expand {
   color: #0a2c4b;
 }
 .banki-item__img {
+  display: block;
   width: 80px;
   height: 80px;
   margin-bottom: 20px;
@@ -4237,7 +4238,13 @@ select::-ms-expand {
 .rating--banki {
   padding: 20px;
 }
-
+.rating--banki:hover {
+  position: relative;
+  z-index: 2;
+}
+.reviews--banki .navigation {
+  padding-bottom: 30px;
+}
 
 
 
@@ -5669,6 +5676,12 @@ MEDIA
 }
 
 @media screen and (max-width: 580px) {
+  .banki-ratings, .reviews--banki {
+    padding-top: 20px;
+  }
+  .reviews--banki .reviews__list {
+    padding-top: 0;
+  }
   .banki-item {
     width: 100%;
     padding-bottom: 0;
