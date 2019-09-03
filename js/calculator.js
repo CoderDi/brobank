@@ -1030,7 +1030,7 @@ $(document).ready(function () {
       $(".purchase").each(function (k, b) {
         if (k == i) {
           $(b).find(".js-month-pay").text('от ' + formatMoney(minPay));
-          $(b).find(".js-over-pay").text(formatMoney(totalPay - beginSum));
+          $(b).find(".js-overpay").text(formatMoney(totalPay - beginSum));
           var arr=[
             'Январь',
             'Февраль',
