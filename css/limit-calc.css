@@ -1,5 +1,6 @@
 .bank-carousel {
   overflow: hidden;
+  padding: 0 10px;
 }
 .bank-carousel .slick-arrow {
   opacity: 0;
