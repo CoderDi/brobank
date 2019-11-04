@@ -110,6 +110,9 @@ $(document).ready(function () {
       if (!(suffix)) {
         suffix = '';
       }
+      if (suffix == "₽") {
+        suffix = "₽";
+      }
       $(b).slider({
         animate: "slow",
         range: "min",
@@ -119,7 +122,20 @@ $(document).ready(function () {
         value: value,
         slide : function(event, ui) {    
           input.val(numSpacing(ui.value) + ' ' + suffix);
-          calculate();       
+          calculate();
+          
+          if (( $(b).slider("value") >= 5000 )&( $(b).slider("value") <= 105000 )&($(b).slider('option', "step") != 5000)) {
+            newStep = 5000
+            $(b).slider('option', 'step', newStep);
+          }
+          if (( $(b).slider("value") >= 110000 )&( $(b).slider("value") <= 450000 )&($(b).slider('option', "step") != 50000)) {
+            newStep = 50000
+            $(b).slider('option', 'step', newStep);
+          }
+          // if (( $(b).slider("value") >= 400000 )) {
+          //   newStep = 100000
+          //   $(b).slider('option', 'step', newStep);
+          // }
         }
       });
     

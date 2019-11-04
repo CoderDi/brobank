@@ -71,8 +71,7 @@ $(document).ready(function () {
 
   $(".butter").click(function(){
     $(this).toggleClass("butter-active");
-    $(".mobile").toggleClass("mobile-active");
-    $(".header-fixed").toggleClass("header-fixed-without");
+    $(".menu").toggleClass("menu--open");
   });
   $(".breadcrumbs__item--current").removeAttr('href');
 
