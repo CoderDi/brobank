@@ -375,7 +375,7 @@ $(document).ready(function () {
       $(this).find('span').text('Рассчитать');
       $(".grafik").hide();
 
-      var scTop = $('.calculator').offset().top - 30;
+      var scTop = $('.calculator__container').offset().top - 30;
       $("html, body").animate({scrollTop: scTop})
     } else {
       $(this).addClass("table--open");
@@ -388,6 +388,8 @@ $(document).ready(function () {
       clickOrChange = 1;
       calculate();
     }
+
+    $(".fixed-sidebar").stickySidebar('updateSticky');
   });
 
   function monthListCreate(el) {
