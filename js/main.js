@@ -120,22 +120,24 @@ $(document).ready(function () {
 
 
   function fixedSidebar(){
-    if ($(".fixed-sidebar").length > 0) {
-      var sidebar;
-      if ($(window).width() >= 1050) {
-        if ($(".fixed-sidebar").hasClass("is-affixed")) {
+    try {
+      if ($(".fixed-sidebar").length > 0) {
+        var sidebar;
+        if ($(window).width() >= 1050) {
+          if ($(".fixed-sidebar").hasClass("is-affixed")) {
+          } else {
+            $(".fixed-sidebar").stickySidebar({
+              topSpacing: 20,
+              bottomSpacing: 50
+            });
+          }
         } else {
-          $(".fixed-sidebar").stickySidebar({
-            topSpacing: 20,
-            bottomSpacing: 50
-          });
+          if ($(".fixed-sidebar").hasClass("is-affixed")) {
+            $(".fixed-sidebar").stickySidebar('destroy');
+          } else {}
         }
-      } else {
-        if ($(".fixed-sidebar").hasClass("is-affixed")) {
-          $(".fixed-sidebar").stickySidebar('destroy');
-        } else {}
-      }
-    }    
+      } 
+    } catch (err) {}
   } 
   fixedSidebar();
 
