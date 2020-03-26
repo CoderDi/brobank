@@ -275,6 +275,13 @@
   display: block;
   position: relative;
   height: 50px;
+  padding: 10px 0 0 10px;
+}
+.f-catalog-item__icon img {
+  width: 30px;
+  display: block;
+  height: 30px;
+  position: relative;
 }
 .f-catalog-item__text {
   font-weight: normal;
@@ -285,6 +292,8 @@
 }
 .f-catalog-item__icon::before {
   position: absolute;
+  top: 0;
+  left: 0;
   content: '';
   width: 25px;
   height: 25px;
@@ -297,22 +306,195 @@
 .f-catalog-item__icon--round::before {
   border-radius: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.f-about {
+  padding-top: 30px;
+}
+.f-about-link-more {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #528CAA;
+}
+.f-about-link-more:hover {
+  color: #0A2C4B;
+}
+.f-about__list {
+  margin: 0 -15px;
+  display: flex;
+}
+.f-about__item {
+  width: 33.333%;
+  padding: 0 15px;
+}
+.f-about__item_container {
+  background: #F5F8FA;
+  border-radius: 4px;
+  padding: 20px 30px 30px;
+}
+.f-about__item_img {
+  height: 150px;
+}
+.f-about__item_img img {
+  max-height: 100%;
+}
+.f-about__item_title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 140.62%;
+  color: #444444;
+}
+.f-about__item_text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: #88919D;
+}
+.f-journal__list {
+  margin: 0 -15px;
+  display: flex;
+}
+.f-journal__item {
+  width: 25%;
+  padding: 0 15px;
+}
+.f-journal__item_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.f-journal__item_content {
+  padding: 20px;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E6EAED;
+  border-top: none;
+}
+.f-journal__item_title {
+  flex-grow: 2;
+}
+.f-journal__item_img {
+  position: relative;
+}
+.f-journal__item_img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.f-journal__item_container:hover {
+  box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+}
+.f-journal__item_title {
+  margin: 0 0 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 140%;
+  color: #528CAA;
+}
+.f-journal__item_title:hover {
+  color: #0A2C4B;
+}
+.f-journal__item_date {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #88919D;
+}
+.f-journal__item_counter {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #88919D;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: left center;
+}
+.f-journal__item_counter--views {
+  background-image: url(../images/svg-icons.svg#eye);
+}
+.f-journal__item_counter--comments {
+  background-image: url(../images/svg-icons.svg#comments);
+}
+.f-play {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  background: #FEDD2E;
+  border-radius: 100%;
+  left: 20px;
+  bottom: 20px;
+}
+.f-play::before {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  content: '';
+  border-left: 8px solid #000;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.f-partner__container {
+  display: block;
+  padding: 30px 15px 20px;
+  height: 100%;
+  background: #FFFFFF;
+  border: 1px solid #E6EAED;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+}
+.f-partner__container:hover {
+  box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+}
+.f-partner__img {
+  display: block;
+  margin: 0 auto 20px;
+}
+.f-partner__title {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 140%;
+  color: #444444;
+}
+.f-ready__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.f-ready__item {
+  width: 25%;
+  padding: 0 15px 30px;
+}
+.f-ready__item_container {
+  padding: 20px;
+  background: #F5F8FA;
+  border-radius: 4px;
+}
+.f-ready__link {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #444444;
+}
+.f-ready__link:last-child {
+  margin: 0;
+}
+.f-ready__link--top {
+  font-weight: bold;
+}
 
 
 
