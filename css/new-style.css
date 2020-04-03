@@ -113,7 +113,11 @@ body, html {
   flex-wrap: wrap;
   cursor: pointer;
 }
-.filter-section .filter-item {
+.filter-item:hover {
+  background: #F5F8FA;  
+}
+.filter-section .filter-item,
+.filter-section .filter-btn {
   width: 16.667%;
 }
 .filter-item:nth-last-child(2) {
@@ -144,6 +148,7 @@ body, html {
   font-size: 17px;
   line-height: 20px;
   color: #444444;
+  cursor: pointer;
 }
 
 .filter-drop {
@@ -249,6 +254,9 @@ body, html {
 .f-catalog__top {
   margin-bottom: 30px;
 }
+.f-catalog__top--section {
+  margin-bottom: 0;
+}
 .f-section__title {
   margin: 0;
   font-weight: bold;
@@ -335,6 +343,7 @@ body, html {
   font-size: 15px;
   line-height: 18px;
   color: #528CAA;
+  white-space: nowrap;
 }
 .f-about-link-more:hover {
   color: #0A2C4B;
@@ -752,7 +761,7 @@ body, html {
   margin-top: 0 !important;
 }
 .f-cards {
-  padding-top: 0;
+  padding-top: 30px;
 }
 .f-drop {
   position: relative;
@@ -867,10 +876,20 @@ body, html {
   font-size: 15px;
   line-height: 18px;
   color: #444444;
-  border-bottom: 1px solid #E6EAED;
+  /* border-bottom: 1px solid #E6EAED; */
+}
+.f-rubrics .rubrics__item:first-child {
+  border-top: 1px solid #E6EAED;
 }
 .f-rubrics {
   padding-top: 0;
+}
+.f-rubrics--mobile,
+.f-drop--mobile {
+  display: none;
+}
+.f-rubrics .rubrics__list {
+  /* display: nosne; */
 }
 .f-rubrics__title .f-drop__arrow {
   background-position-x: right;
@@ -881,6 +900,9 @@ body, html {
   height: 20px;
   margin-right: 10px;
 }
+.f-cards-section {
+  padding-top: 30px;
+}
 
 
 
@@ -889,10 +911,19 @@ body, html {
   .f-catalog-item {
     width: 25%;
   }
+  .f-page-flex {
+    flex-wrap: wrap;
+  }
   .f-about__item {
     width: 370px;
     flex-shrink: 0;
     padding: 0 30px 0 0;
+  }
+  .review {
+    width: 265px;
+    padding: 0 30px 0 0;
+    flex-shrink: 0;
+    margin: 0;
   }
   .f-about__list {
     overflow: hidden;
@@ -907,9 +938,7 @@ body, html {
     position: relative;
     padding-top: 40px;
   }
-  .f-cards-section {
-    padding-top: 0;
-  }
+  
   .f-best__card {
     width: 300px !important;
     flex-shrink: 0;
@@ -1010,6 +1039,46 @@ body, html {
     margin: 0;
     padding-top: 30px;
   }
+  .f-rubrics--mobile {
+    display: block;
+    width: calc(50% - 15px);
+    margin: 0;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+  .f-rubrics--mobile .rubrics__list {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+    padding: 0 15px;
+    border: 1px solid #E6EAED;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+
+  }
+  .f-rubrics--mobile.active {
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+  }
+  .f-catalog__top--section {
+    flex-wrap: wrap;
+  }
+  .f-catalog__top--section .f-section__title {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .f-drop {
+    width: calc(50% - 15px);
+  }
+  .f-drop--mobile {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -1038,7 +1107,7 @@ body, html {
     flex-wrap: wrap;
   }
   .f-catalog__top {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .f-catalog__valute {
     width: 100%;
@@ -1047,13 +1116,29 @@ body, html {
   .f-catalog__valute_item {
     margin: 0 30px 0 0;
   }
+  .f-banner-shape1,
+  .f-banner-shape2 {
+    height: 370px;
+    width: 300px;
+  }
+  .f-banner-shape2 {
+    top: auto;
+    bottom: 0;
+  }
+  .f-catalog__top--wrap {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .f-banner__title {
     font-size: 21px;
     margin-bottom: 15px;
-    text-align: center;
+    /* text-align: center; */
+  }
+  .f-drop {
+    width: 100%;
+    margin-bottom: 10px;
   }
   .f-banner {
     padding-top: 30px;
@@ -1062,7 +1147,7 @@ body, html {
     display: block;
     margin-bottom: 30px;
     font-size: 15px;
-    text-align: center;
+    /* text-align: center; */
   }
   .filter-item, .filter-btn {
     width: 100%;
@@ -1107,16 +1192,19 @@ body, html {
     padding-top: 35px;
   }
   .f-catalog__top {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .f-section__title {
     font-size: 19px;
     width: 100%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .f-catalog__valute {
     padding-top: 10px;
-    white-space: normal;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-bottom: 25px;
+    margin-bottom: -25px;
   }
   .f-catalog__valute_item {
     margin-right: 15px;
@@ -1124,6 +1212,10 @@ body, html {
   }
   .f-catalog__list1 {
     margin: 0 -7px;
+    padding-top: 0px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
   }
   .f-catalog-item {
     width: 50%;
@@ -1246,6 +1338,12 @@ body, html {
   .f-cards-section  {
     -webkit-box-pack: center;
             justify-content: center;
+            padding-top: 0;
+  }
+  .f-banner-shape1,
+  .f-banner-shape2 {
+    height: 245px;
+    width: 195px;
   }
 }
 

@@ -34,4 +34,9 @@ $(document).ready(function () {
     $(this).parents(".f-ready__item").toggleClass("active");
     $(this).parents(".f-ready__item").find(".f-ready__item_content").slideToggle(200);
   });
+
+  $(".f-rubrics__title").click(function(){
+    // $(this).parents(".f-rubrics").toggleClass("active");
+    $(this).parents(".f-rubrics").find(".rubrics__list").slideToggle(200);
+  });
 });
