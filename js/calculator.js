@@ -273,11 +273,13 @@ $(document).ready(function () {
             rassPeriod,
             rassPercent,
             rassDateStart,
-            rassArray = new Array();
+            rassArray = new Array(),
+            totalSumm = 0;
         
         $(".purchase").each(function (i, b) {
           var arrayOnePurchase = new Array();
           rassSumm = normaleNum($(b).find(".js-rass-summ").val());
+          totalSumm += rassSumm;
           rassPeriod = normaleNum($(b).find(".js-rass-period").val());
           rassPercent = normaleNum($(b).find(".js-rass-percent").val());
           if ($(b).find("select[name='month']").hasClass("hidden")) {
@@ -306,7 +308,14 @@ $(document).ready(function () {
           rassArray.push(arrayOnePurchase);
         }); 
 
-
+        if (totalSumm > 300000) {
+          $(".js-calculate").addClass("disabled").removeClass("table--open").find(".btn").text("Рассчитать");
+          $(".grafik").hide();
+          $(".over-warning").show();
+        } else {
+          $(".js-calculate").removeClass("disabled");
+          $(".over-warning").hide();
+        }
         calcRassrochka(rassArray);
         break;
 

@@ -3769,6 +3769,16 @@ CALCULATORS
   width: 100%;
   padding: 0;
 }
+.js-calculate.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.over-warning {
+  color: #E61B25;
+  text-align: center;
+  width: 100%;
+  padding: 25px 0;
+}
 
 .grafik {
   width: 100%;
