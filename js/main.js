@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+  //popup-info open
+  $(".js-getinfo").click(function(){
+    $(".popup-block").hide();
+    $("#popup-info").show();
+    $(".popup").addClass("popup--show");
+  });
+  $(".js-popup-close").click(function(){
+    $(".popup").removeClass("popup--show");
+  });
+
  
   
   var updateColl
