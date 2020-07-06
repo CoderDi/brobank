@@ -146,7 +146,24 @@ $(document).ready(function () {
             $(".fixed-sidebar").stickySidebar('destroy');
           } else {}
         }
-      } 
+      }
+      
+      if ($(".article2-aside").length > 0) {
+        var sidebar;
+        if ($(window).width() >= 1170) {
+          if ($(".article2-aside").hasClass("is-affixed")) {
+          } else {
+            $(".article2-aside").stickySidebar({
+              topSpacing: 20,
+              bottomSpacing: 50
+            });
+          }
+        } else {
+          if ($(".article2-aside").hasClass("is-affixed")) {
+            $(".article2-aside").stickySidebar('destroy');
+          }
+        }
+      }
     } catch (err) {}
   } 
   fixedSidebar();
