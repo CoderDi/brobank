@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Brobank</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/limit-calc.css">
+  <link rel="stylesheet" href="css/new-style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/bank-city.css">
+</head>
+<body>
+
+  <section class="top top-without-padding">
+    <div class="wrapper">
+      <div class="bc-top-flex">
+        <div class="breadcrumbs">
+          <div class="breadcrumbs__container">
+            <a href="#" class="breadcrumbs__item">Главная</a>
+            <a href="#" class="breadcrumbs__item">Банки</a>
+            <a href="#" class="breadcrumbs__item">Тинькофф Банк</a>
+            <a href="#" class="breadcrumbs__item breadcrumbs__item--current">Кемерово</a>
+          </div>
+        </div>
+
+        <div class="bc-city-choise">
+          Ваш город: <span class="bc-city-choise__value js-city-choise">Кемерово</span>
+        </div>
+      </div>
+      
+      <div class="page-title">
+        <h1>Тинькофф Банк в Кемерово</h1>
+      </div>
+      
+      <div class="bank-top">
+        <div class="bank-img"><img src="images/bank-tinkoff.png" alt=""></div>
+        <div class="bank-top__content">
+          <div class="bank-top__line bank-top__line--mb">
+            <a href="tel:8 800 555-77-78" class="bank-top__link bank-top__link--phone">8 800 555-77-78</a>
+            <a href="https://www.tinkoff.ru" class="bank-top__link bank-top__link--www">tinkoff.ru</a>
+            <a href="" class="bank-top__link bank-top__link--license">Лицензия: №2673</a>
+          </div>
+          <div class="bank-top__line">
+            <div class="new-card__rating bank-rating">
+              <div class="new-card__rating_stars bank-rating-stars">
+                <span class="new-card__rating_preline"></span>
+                <span class="new-card__rating_line" style="width: 0%;"></span>
+                <span class="new-card__rating_bg"></span>
+              </div>
+              <span class="new-card__rating_num">4.2 </span>&nbsp; (268)
+            </div>
+            <div class="bank-top-date">
+              <span class="bank-top-date--comp">Данные обновлены:</span>
+              <span class="bank-top-date--mobile">Обновлено:</span>
+              <span class="bank-last-date">24.08.2019</span></div>
+          </div>
+        </div>
+        <div class="bank-top__btns">
+          <a href="" class="btn tariffs__btn bank-top-btn bank-top-btn--yellow">Написать отзыв</a>
+          <a href="" class="btn tariffs__btn bank-top-btn bank-top-btn--white">Задать вопрос</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead-menu">
+    <div class="wrapper">
+      <div class="lead-menu__wrapper bank-lead-menu">
+        <div class="menu menu--section">
+          <div class="menu__container">
+            <div class="menu__block">
+              <a href="" class="menu__item active">О банке</a>
+              <a href="" class="menu__item">Отзывы</a>
+              <a href="" class="menu__item">Кредитные карты</a>
+              <a href="" class="menu__item">Кредиты</a>
+              <a href="" class="menu__item">Дебетовые карты</a>
+              <a href="" class="menu__item">Вопрос-ответ</a>
+              <a href="" class="menu__item">Новости</a>
+              <a href="" class="menu__item">Отделения</a>
+              <a href="" class="menu__item">Банкоматы</a>
+              <a href="" class="menu__item">Контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bc-plashes">
+    <div class="wrapper">
+      <h3 class="bc-plashes__title">Предложения банка</h3>
+      <div class="bc-plashes__wrapper">
+        <div class="bc-plashes__container js-bc-plashes">
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #ABACAF;">
+              <div class="bc-plashe__img"><img src="images/tinkoff-platinum.png" alt=""></div>
+              <strong class="bc-plashe__title">Кредитная карта Тинькофф Платинум</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #ABACAF;">
+              <div class="bc-plashe__img"><img src="images/tinkoff-platinum.png" alt=""></div>
+              <strong class="bc-plashe__title">Кредитная карта Тинькофф Платинум</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #689393;">
+              <div class="bc-plashe__img"><img src="images/debet_card_tinkoff_black.png" alt=""></div>
+              <strong class="bc-plashe__title">Кредитная карта 100 дней без % Classic</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #74A3C7;">
+              <div class="bc-plashe__img"><img src="images/credit_tinkoff.png" alt=""></div>
+              <strong class="bc-plashe__title">Кредит наличными Тинькофф Банк</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #057BBB;">
+              <div class="bc-plashe__img"><img src="images/credit_card_tinkoff_all_airlines.png" alt=""></div>
+              <strong class="bc-plashe__title">Кредитная карта Тинькофф All Airlines</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #5C8E99;">
+              <div class="bc-plashe__img"><img src="images/credit_tinkoff.png" alt=""></div>
+              <strong class="bc-plashe__title">Рефинансирование кредитов Тинькофф</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+          <div class="bc-plashe">
+            <a href="" class="bc-plashe__container" style="background-color: #A64800;">
+              <div class="bc-plashe__img"><img src="images/tinkoff-platinum.png" alt=""></div>
+              <strong class="bc-plashe__title">Дебетовая карта Tinkoff Junior</strong>
+              <div class="bc-plashe__footer">
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--views">8682</span>
+                <span class="bc-plashe__footer_span bc-plashe__footer_span--comments">268</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section class="bc-section">
+    <div class="wrapper">
+      <div class="page-flex">
+        <section class="article bc-article">
+          <div class="offer-page__block">
+            <div class="bc-article-btns">
+              <a href="" class="bc-article-btn">Отделения: <span>18</span></a>
+              <a href="" class="bc-article-btn">Банкоматы: <span>76</span></a>
+            </div>
+
+            <p>Банк занимает 2 место по активам. В клиентской базе значатся государственные и частные компании. Обслуживаются как представители малого и среднего бизнеса, так и представители крупного - кредитование, банковские гарантии, размещение средств, расчетное обслуживание.</p>
+            
+            <div class="bc-bank-block">
+              <h2>Контакты и реквизиты</h2>
+              <div class="bc-bank-table">
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Телефоны</span>
+                  <div class="bc-bank-table__line_content">
+                    8 800 755-10-10, 8 800 555-10-10
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Официальный сайт</span>
+                  <div class="bc-bank-table__line_content">
+                    <a href="">tinkoff.ru</a>
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Электронная почта</span>
+                  <div class="bc-bank-table__line_content">
+                    <a href="mailto:credit@tinkoff.ru">credit@tinkoff.ru</a>
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Головной офис</span>
+                  <div class="bc-bank-table__line_content">
+                    650468, г. Кемерово, проспект Ленинградский, дом 41, офис 61
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Лицензия ЦБ РФ</span>
+                  <div class="bc-bank-table__line_content">
+                    №2673
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Дата регистрации банка</span>
+                  <div class="bc-bank-table__line_content">
+                    28.01.1994
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Полное наименование</span>
+                  <div class="bc-bank-table__line_content">
+                    Акционерное общество "Тинькофф Банк"
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Председатель правления</span>
+                  <div class="bc-bank-table__line_content">
+                    Хьюз Оливер Чарлз
+                  </div>
+                </div>
+                <div class="bc-bank-table__line">
+                  <span class="bc-bank-table__line_title">Банк в социальных сетях</span>
+                  <div class="bc-bank-table__line_content">
+                    <div class="bank-socials">
+                      <a href="" class="bank-soc bank-soc--vk"></a>
+                      <a href="" class="bank-soc bank-soc--ok"></a>
+                      <a href="" class="bank-soc bank-soc--fb"></a>
+                      <a href="" class="bank-soc bank-soc--tw"></a>
+                      <a href="" class="bank-soc bank-soc--ig"></a>
+                      <a href="" class="bank-soc bank-soc--yt"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="f-show-more">Показать еще</div> 
+            </div>
+
+            <div class="bc-bank-block">
+              <h2>Отделения Тинькофф Банка, Кемерово (18)</h2>
+
+              <div class="bc-lines">
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Кредитно-кассовый офис «Кемерово-Кузбасс»</a>
+                      <span class="bc-line__address">Кемерово, Советский проспект, 32</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                      <div class="new-card__rating bc-sidebar__rating">
+                        <div class="new-card__rating_stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 92%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.8</span>&nbsp; <span class="offer-info">(29)</span><a href="https://brobank.ru/credit-card-kviku/comments/" class="offer_info_otz" target="_blank">Отзывы: 105</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание физических лиц:</span>
+                      пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                    </div>
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание VIP-клиентов:</span>
+                      пн.-пт.: 09:00—20:00, сб.: 10:00—17:00
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Кредитно-кассовый офис «Кемерово-Набережный»</a>
+                      <span class="bc-line__address">Кемерово, Соборная улица, 3</span>
+                      <strong class="bc-line__phones">8 800 200-00-00, 8 800 100-77-33</strong>
+                      <div class="new-card__rating bc-sidebar__rating">
+                        <div class="new-card__rating_stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 92%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.8</span>&nbsp; <span class="offer-info">(29)</span><a href="https://brobank.ru/credit-card-kviku/comments/" class="offer_info_otz" target="_blank">Отзывы: 105</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание физических лиц:</span>
+                      пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                    </div>
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание юридических лиц:</span>
+                      пн.-пт.: 09:00—20:00, сб.: 10:00—17:00
+                    </div>
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание VIP-клиентов:</span>
+                      пн.-пт.: 09:00—20:00, сб.: 10:00—17:00
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Кредитно-кассовый офис «Кемерово-Серебряный Ручей»</a>
+                      <span class="bc-line__address">Кемерово, бульвар Строителей, 28а</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                      <div class="new-card__rating bc-sidebar__rating">
+                        <div class="new-card__rating_stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 92%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.8</span>&nbsp; <span class="offer-info">(29)</span><a href="https://brobank.ru/credit-card-kviku/comments/" class="offer_info_otz" target="_blank">Отзывы: 105</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание физических лиц:</span>
+                      пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Операционный офис «Кемеровский» филиала «Новосибирский»</a>
+                      <span class="bc-line__address">Кемерово, Соборная улица, 3</span>
+                      <strong class="bc-line__phones">8 800 100-77-33</strong>
+                      <div class="new-card__rating bc-sidebar__rating">
+                        <div class="new-card__rating_stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 92%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.8</span>&nbsp; <span class="offer-info">(29)</span><a href="https://brobank.ru/credit-card-kviku/comments/" class="offer_info_otz" target="_blank">Отзывы: 105</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание физических лиц:</span>
+                      пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Операционный офис «Проспект Советский» филиала «Новосибирский»</a>
+                      <span class="bc-line__address">Кемерово, Советский проспект, 32</span>
+                      <strong class="bc-line__phones">8 800 100-77-33</strong>
+                      <div class="new-card__rating bc-sidebar__rating">
+                        <div class="new-card__rating_stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 92%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.8</span>&nbsp; <span class="offer-info">(29)</span><a href="https://brobank.ru/credit-card-kviku/comments/" class="offer_info_otz" target="_blank">Отзывы: 105</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    <div class="bc-line__right_block">
+                      <span>Обслуживание физических лиц:</span>
+                      пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="f-show-more">Показать еще</div> 
+            </div>
+
+            <div class="bc-bank-block">
+              <h2>Банкоматы Тинькофф Банка, Кемерово (36)</h2>
+
+              <div class="bc-lines">
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">ТК «Привоз»</a>
+                      <span class="bc-line__address">Кемерово, ул. Баумана, д. 55</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    Доступен в режиме работы места установки <br>
+                    Валюта: рубли
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Супермаркет «Лента»</a>
+                      <span class="bc-line__address">Кемерово, бул. Строителей, д. 28</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    Доступен в режиме работы места установки <br>
+                    Валюта: рубли
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Универсам «Бегемот»</a>
+                      <span class="bc-line__address">Кемерово, ул. Невьянская, д. 1а</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    Доступен в режиме работы места установки <br>
+                    Валюта: рубли
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Супермаркет «Лента»</a>
+                      <span class="bc-line__address">Кемерово, ул. Сибиряков-Гвардейцев, д. 18а</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    Доступен в режиме работы места установки <br>
+                    С функцией приема наличных. <br>
+                    Валюта: рубли
+                  </div>
+                </div>
+
+                <div class="bc-line">
+                  <div class="bc-line__left">
+                    <div class="bc-line__img"><img src="images/banki-tinkoff.png" alt=""></div>
+                    <div class="bc-line__left_content">
+                      <a href="" class="bc-line__link">Поликлиника № 5, травмпункт</a>
+                      <span class="bc-line__address">Кемерово, просп. Ленина, д. 107</span>
+                      <strong class="bc-line__phones">8 800 200-00-00</strong>
+                    </div>
+                  </div>
+
+                  <div class="bc-line__right">
+                    Доступен в режиме работы места установки <br>
+                    Валюта: рубли
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="f-show-more">Показать еще</div> 
+            </div>
+  
+          </div>
+
+          <div class="bc-bank-block">
+            <h2>Карта отделений и банкоматов Тинькофф Банка, Кемерово</h2>
+            <div class="map__block" id="map"></div>
+          </div>
+    
+    
+          <section class="articles__section comments">
+            <h2 class="section__title">Отзывы о Тинькофф Банке в Кемерово: 38</h2>
+            <div class="comments">
+              <div class="bank-comments__top">
+                <span class="bank-comments__rating_num">4.2</span>
+                <div class="new-card__rating bank-rating bank-comments__rating">
+                  <div class="new-card__rating_stars bank-rating-stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 0%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.2 </span>
+                  <span class="bank-comments__rating_count">268 отзывов</span>
+                </div>
+                <a href="#comments-form" class="comments__top-input">Написать комментарий</a>
+              </div>
+              
+              <div class="comments__list">
+                <div class="comment">
+                  <div class="review__top flex">
+                    <div class="review__img"><img src="images/review2.png" alt=""></div>
+                    <div class="review-top__content">
+                      <strong class="review__name">Александр</strong>
+                      <span class="review__date">01.03.2019 в 12:05</span>
+                    </div>
+                  </div>
+                  <p class="review__text">Здравствуйте!
+                      Расскажите на примере:
+                      Сколько денег будет списано за снятие 50 т.р. наличными с карты?</p>
+                  <span class="comment__reply">Ответить</span>
+      
+                  <div class="comment">
+                    <div class="review__top flex">
+                      <div class="review__img"><img src="images/review1.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name">Специалист Бробанк</strong>
+                        <span class="review__date">01.03.2019 в 12:05</span>
+                      </div>
+                    </div>
+                    <p class="review__text">Добрый день. Комиссия за снятие наличных 2.9% от суммы снятия + 290 рублей. На вашем примере получается 50000*2.9%=1450+290=1740 будет списана комиссия сразу во время снятия наличных. Помимо комиссии, на сумму снятия наличных начисляется иная процентная ставка, выше чем по операциям покупок. Не рекомендуем снимать наличные с кредитной карты без острой необходимости.</p>
+                    <span class="comment__reply">Ответить</span>
+                  </div>
+                </div>
+      
+                <div class="comment">
+                  <div class="review__top flex">
+                    <div class="review__img"><img src="images/review1.png" alt=""></div>
+                    <div class="review-top__content">
+                      <strong class="review__name">Администратор</strong>
+                      <span class="review__date">01.03.2019 в 12:05</span>
+                    </div>
+                  </div>
+                  <p class="review__text">Напишите нам в комментариях если обнаружили неточность в размещенных данных или документах. Мы внесем исправления максимально быстро.</p>
+                  <span class="comment__reply">Ответить</span>
+                </div>
+      
+                <div class="comment">
+                  <div class="review__top flex">
+                    <div class="review__img"><img src="images/review2.png" alt=""></div>
+                    <div class="review-top__content">
+                      <strong class="review__name">Александр</strong>
+                      <span class="review__date">01.03.2019 в 12:05</span>
+                    </div>
+                  </div>
+                  <p class="review__text">Мошенники и спамеры. Повелся я на хвалебные слюнявые отзывы взахлеб на профильных сайтах, дай думаю закажу сиё счастье. Ага заказал. Теперь с утра до ночи сыпется спам на телефон и почту от быстроденьги, мигом деньги и прочих шаражконтор. Подлецы и наглецы!!!</p>
+                  <span class="comment__reply">Ответить</span>
+      
+                  <div class="comment">
+                    <div class="review__top flex">
+                      <div class="review__img"><img src="images/review1.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name">Администратор</strong>
+                        <span class="review__date">01.03.2019 в 12:05</span>
+                      </div>
+                    </div>
+                    <p class="review__text">Александр, а саму карту вам одобрили? Вы оставляли заявку на карту Квику именно на официальном сайте?</p>
+                    <span class="comment__reply">Ответить</span>
+                  </div>
+                </div>
+              </div>
+  
+              <form class="comments__form" id="comments-form">
+                <span class="comments__form_title">Ваш отзыв:</span>
+                <div class="comments__form_flex">
+                  <textarea name="" class="comments__form_input comments__form_textarea"></textarea>
+                  <label class="comments__form_label">
+                    <span>Имя</span>
+                    <input type="text" class="comments__form_input">
+                  </label>
+                  <label class="comments__form_label">
+                    <span>E-mail (не будет опубликован)</span>
+                    <input type="email" class="comments__form_input">
+                  </label>
+                  <input type="submit" value="Отправить" class="comments__form_submit btn">
+                </div>
+              </form>
+            </div>
+          </section>
+
+
+        </section>
+
+        <aside class="sidebar bc-sidebar">
+          
+          <div class="bc-sidebar__block">
+            <div class="bc-sidebar__top">
+              <div class="bank-img bc-sidebar__img"><img src="images/bank-tinkoff.png" alt=""></div>
+              <div class="bc-sidebar__top_content">
+                <strong class="bc-sidebar__top_title">Тинькофф Банк</strong>
+                <div class="new-card__rating bc-sidebar__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 88%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.3</span>
+                </div>
+                <span class="bc-sidebar__top_license">Лицензия №1326</span>
+              </div>
+            </div>
+
+            <ul class="bc-sidebar__list">
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-home" alt=""> <span>О банке</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-reviews" alt=""> <span>Отзывы <span>128</span></span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-credit-card" alt=""> <span>Кредитные карты</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-credit" alt=""> <span>Кредиты</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-debet" alt=""> <span>Дебетовые карты</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-news" alt=""> <span>Новости</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-faq" alt=""> <span>Вопрос-ответ</span></a></li>
+              <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-contacts" alt=""> <span>Контакты</span></a></li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>  
+  
+  <section class="f-best f-catalog">
+    <div class="wrapper">
+      <div class="f-catalog__top flex">
+        <h2 class="f-section__title">Предложения Тинькофф Банка в Кемерово</h2>
+      </div>
+      <div class="lead-menu__wrapper bank-lead-menu">
+        <div class="menu menu--section">
+          <div class="menu__container">
+            <div class="menu__block">
+              <a href="" class="menu__item active">Кредитные карты</a>
+              <a href="" class="menu__item">Кредиты</a>
+              <a href="" class="menu__item">Дебетовые карты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards f-cards">
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта МТС Деньги Zero</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта MTS CASHBACK</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/banki-alfa.png" alt="">
+              Альфа-Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта 100 дней без % Classic</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта УБРиР 120 дней без процентов</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="f-best f-catalog">
+    <div class="wrapper">
+      <div class="f-catalog__top flex">
+        <h2 class="f-section__title">Лучшие предложения в Кемерово</h2>
+      </div>
+      <div class="lead-menu__wrapper bank-lead-menu">
+        <div class="menu menu--section">
+          <div class="menu__container">
+            <div class="menu__block">
+              <a href="" class="menu__item active">Кредитные карты</a>
+              <a href="" class="menu__item">Кредиты</a>
+              <a href="" class="menu__item">Дебетовые карты</a>
+              <a href="" class="menu__item">Займы</a>
+              <a href="" class="menu__item">Карты рассрочки</a>
+              <a href="" class="menu__item">Рефинансирование</a>
+              <a href="" class="menu__item">Автокредиты</a>
+              <a href="" class="menu__item">Расчетные счета</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards f-cards">
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта МТС Деньги Zero</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта MTS CASHBACK</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/banki-alfa.png" alt="">
+              Альфа-Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта 100 дней без % Classic</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="card f-best__card">
+          <div class="card__container">
+            <a href="" class="f-best__card_bank">
+              <img src="images/mts.png" alt="">
+              МТС Банк
+            </a>
+            <a href="" class="offer__title card__title">Кредитная карта УБРиР 120 дней без процентов</a>
+            <div class="f-best__card_rating">
+              <div class="offer-page__rating">
+                <div class="new-card__rating">
+                  <div class="new-card__rating_stars">
+                    <span class="new-card__rating_preline"></span>
+                    <span class="new-card__rating_line" style="width: 96%;"></span>
+                    <span class="new-card__rating_bg"></span>
+                  </div>
+                  <span class="new-card__rating_num">4.8</span>&nbsp; (286)
+                </div>
+              </div>
+              <a href="" class="f-best__card_review-link">Отзывы: 128</a>
+            </div>
+            <div class="card__img">
+              <div class="card__img_container">
+                <img src="images/tinkoff-platinum.png" alt="">
+                <span class="card__label"><i></i>Одобрение без справок!</span>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__table"> 
+                <table> 
+                  <tbody> 
+                    <tr> 
+                      <td>Кред. лимит</td> 
+                      <td>300 000 ₽</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Проц. ставка</td> 
+                      <td>От 12%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Без процентов</td> 
+                      <td>До 55 дней </td> 
+                    </tr> 
+                    <tr>
+                      <td>Плата/мес.</td> 
+                      <td>590 руб./год</td> 
+                    </tr> 
+                    <tr>
+                      <td>Кэшбек</td> 
+                      <td>От 1 до 30%</td> 
+                    </tr> 
+                    <tr> 
+                      <td>Решение</td> 
+                      <td>За 10 минут</td> 
+                    </tr> 
+                  </tbody> 
+                </table>
+              </div>
+
+              <div class="f-best__spans">
+                <a href="tel:8 800 555-77-78" class="f-best__card_span">8 800 555-77-78</a>
+                <a href="www.tinkoff.ru" class="f-best__card_span">tinkoff.ru</a>
+                <span class="f-best__card_span">Лицензия: №2673</span>
+                <span class="f-best__card_span">28 960 заявок</span>
+              </div>
+
+              <div class="f-best__card_btns flex">
+                <div class="card-btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Оформить</a>
+                </div>
+                <div class="card-btn f-best__card_btn">
+                  <a href="https://brobank.ru/credit-tinkoff/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>            
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="f-about">
+    <div class="wrapper">
+      <div class="f-catalog__top flex">
+        <h2 class="f-section__title">Готовые решения</h2>
+      </div>
+
+      <div class="f-ready__list">
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Кредитные карты</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Дебетовые карты</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Карты рассрочки</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Кредиты наличные</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Микрозаймы</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Рефинансирование</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Автокредиты</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="f-ready__item">
+          <div class="f-ready__item_container">
+            <a class="f-ready__link f-ready__link--top">Расчетные счета</a>
+            <div class="f-ready__item_content">
+            <a href="" class="f-ready__link">Лучшие кредитные карты</a>
+            <a href="" class="f-ready__link">Без процентов</a>
+            <a href="" class="f-ready__link">Для снятия наличных</a>
+            <a href="" class="f-ready__link">Без справок</a>
+            <a href="" class="f-ready__link">С льготным периодом</a>
+            <a href="" class="f-ready__link">По паспорту</a>
+            <a href="" class="f-ready__link">Моментальное одобрение</a>
+            <a href="" class="f-ready__link">Без отказа</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bottom">
+    <div class="wrapper">
+      <div class="bottom__block">
+        <h2>Заказать кредитку без проверки кредитной истории</h2>
+        <p>Без комиссии за вывод средств действует карта «100 дней без процентов». Популярный продукт от Альфа Банка предлагает пользователям кредитки расширенные возможности относительно других продуктов. Здесь можно не просто пользоваться средствами и получать большой кэшбек, но также увеличивать доступный кредитный лимит вплоть до одного миллиона рублей.</p>
+        <p>Условия будут меняться в зависимости от категории карты. Не зависимо от типа карты, действует одинаковое условие по снятию наличных без процентов — 50 тысяч рублей в месяц. При снятии большей суммы, комиссии будет составлять от 3,9% до 5,9%.</p>
+        <p>Выпуск карты любой категории абсолютно бесплатный. Если клиент в первые 100 дней беспроцентного пользования вернёт занятые у банка деньги, то и проценты платить не придется. Общая годовая ставка за использование кредитных средств на карте составляет 23,99% в год. Обслуживание карты в год обходится от 1190 до 5490 рублей в зависимости от её типа. Заявка на получение карт оформляется онлайн или при личном визите в банк. После одобрения будет необходимо подтвердить все условия и забрать выпущенную кредитку.</p>
+      </div>
+      <div class="bottom__block">
+        <h2>Срочно получить кредитную карту с любой историей</h2>
+        <p>Лучше использовать карты, которые в условиях имеют пункт, где указаны лимиты на беспроцентное снятие наличных. Если же клиент решит обналичить карту банка, где таких льгот нет, он рискует заплатить немаленькую комиссию и годовая ставка за использование кредитных средств при снятии увеличится вдвое.</p>
+        <p>Чаще всего по картам действуют лимиты по снятию без процентов наличных средств. Они доступны ежемесячно в определённом размере. Такой лимит автоматически возобновляется с новым календарным месяцем.</p>
+        <p>Снимать наличные средства лучше напрямую в «родных» банкоматах или кассе банка. Бывает, что даже при беспроцентной ставке снятие в стороннем банкомате будет облагаться комиссией. Поэтому стоит быть внимательным при выводе средств. На сайте банка и в мобильном приложении всегда предоставляется расширенная информация, где клиент может снять деньги и на каких условиях.</p>
+      </div>
+
+      <div class="article__footer_ps">
+        <strong>Эта статья полезная?</strong>
+        <div class="article__footer_btns">
+          <span class="article__footer_btn article__footer_btn--yes">Да</span>
+          <span class="article__footer_btn article__footer_btn--no">Нет</span>
+        </div>
+        <span class="article__banner_text2">Помогите нам узнать насколько эта статья помогла вам. Если чего-то не хватает или информация не точная, пожалуйста, сообщите об этом ниже в комментариях или напишите нам на почту <a href="mailto:admin@brobank.ru">admin@brobank.ru.</a></span>
+      </div>
+
+      <div class="bottom__inner-content">
+        <div class="socials_and_rating article__footer_top">
+          <div class="article__socials flex">
+            <a href="" class="article__socials_item article__socials_item--vk"><i></i><span>286</span></a>
+            <a href="" class="article__socials_item article__socials_item--ok"><i></i><span>148</span></a>
+            <a href="" class="article__socials_item article__socials_item--fb"><i></i><span>32</span></a>
+            <a href="" class="article__socials_item article__socials_item--mir"><i></i><span>5</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-plash-bc">Информация о банке, его продуктах, отделениях и банкоматах взята из открытых источников. Пожалуйста, уточняйте актуальную информацию в офисах Тинькофф Банк, на сайте tinkoff.ru или по телефону 8 800 200-00-00.</div>
+    </div>
+  </section> 
+
+
+  <div class="popup popup-city">
+    <a class="popup-bg js-popup-close"></a>
+    <div class="popup-content">
+      <a class="popup-close js-popup-close"></a>
+
+      <div class="popup-block popup-block--city" id="popup-city">
+        <div class="popup-block--container">
+          <div class="popup-city-top">
+            <strong class="popup-title">Ваш город</strong>
+            <form action="" class="popup-search">
+              <input type="text" class="popup-search__input" placeholder="Поиск города">
+              <input type="submit" value="" class="popup-search__submit">
+            </form>
+          </div>
+
+          <div class="popup-city__content">
+            <span class="popup-city__value">Россия</span>
+            <span class="popup-city__value">Москва</span>
+            <span class="popup-city__value current">Кемерово</span>
+            <span class="popup-city__value">Санкт-Петербург</span>
+            <span class="popup-city__value">Казань</span>
+            <span class="popup-city__value">Нижний Новгород</span>
+            <span class="popup-city__value">Нижний Новгород</span>
+            <span class="popup-city__value">Нижний Новгород</span>
+            <span class="popup-city__value">Нижний Новгород</span>
+            <span class="popup-city__value">Омск</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="js/maskedinput.js"></script>
+  <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bank-city.js"></script>
+</body>
+</html>
