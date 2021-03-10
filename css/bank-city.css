@@ -226,6 +226,7 @@
   border: 1px solid #E6EAED;
   color: #000;
   font-weight: 400;
+  line-height: 48px;
 }
 .bottom-plash-bc {
   margin: 40px 0;
@@ -316,6 +317,11 @@
 .bc-sidebar__list_item a:hover > span {
   color: #000;
 }
+
+.bc-article {
+  flex-grow: 2;
+  margin: 0;
+}
 .bc-article-btns {
   display: flex;
   margin-bottom: 15px;
@@ -326,7 +332,7 @@
   border: 1px solid #E6EAED;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 16px 34px;
+  padding: 15px 34px;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
@@ -334,8 +340,10 @@
   margin-right: 30px;
   margin-bottom: 15px;
 }
-.bc-article-btn:hover {
+.bc-article-btn:hover,
+.bc-article-btn.active {
   background: #E6EFF2;
+  border-color: #E6EFF2;
 }
 .bc-article-btn span {
   color: #88919D;
@@ -345,6 +353,7 @@
 }
 .bc-bank-block {
   margin-top: 60px;
+  width: 100%;
 }
 .bc-bank-block h2:nth-child(n) {
   margin: 0 0 30px;
@@ -490,8 +499,81 @@
   font-size: 13px;
   line-height: 160%;
   color: #88919D;
-  
 }
+
+.bc-f-drop .f-drop__title strong {
+  text-transform: none;
+}
+.bc-comments-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.bc-comments-rating {
+  display: flex;
+  align-items: center;
+}
+.bc-f-drop {
+  margin-right: 30px;
+  width: calc(33.333% - 20px);
+}
+.bc-comments-btn {
+  height: 50px;
+  width: calc(33.333% - 20px);
+}
+.bc-comment {
+  background: #FFFFFF;
+  border: 1px solid #E6EAED;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.bc-comment .comment__reply {
+  margin: 0;
+  cursor: pointer;
+}
+.bc-comment .review__text {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.bc-sub-comment {
+  background: #F5F8FA;
+  border-color: #F5F8FA;
+  margin-left: 20px;
+}
+.bc-active-comment {
+  background: #F5F8FA;
+  border-color: #F5F8FA;
+}
+.f-ready__item50 {
+  width: 50%;
+}
+.f-ready__item50 .f-ready__item_content {
+  columns: 2;
+}
+.bc-bottom-socials {
+  margin: 20px 0 40px;
+}
+.bc-article-search {
+  flex-grow: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
