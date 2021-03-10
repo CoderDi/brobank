@@ -177,6 +177,40 @@
       <div class="page-flex">
         <section class="article bc-article">
           <div class="offer-page__block">
+            <div class="bc-lines">
+              <div class="bc-line bc-line2">
+                <div class="bc-line__left">
+                  <div class="bc-line__left_content">
+                    <div class="bc-comments-rating">
+                      <span class="bank-comments__rating_num">4.2</span>
+                      <div class="new-card__rating bank-rating bank-comments__rating">
+                        <div class="new-card__rating_stars bank-rating-stars">
+                          <span class="new-card__rating_preline"></span>
+                          <span class="new-card__rating_line" style="width: 0%;"></span>
+                          <span class="new-card__rating_bg"></span>
+                        </div>
+                        <span class="new-card__rating_num">4.2 </span>
+                        <span class="bank-comments__rating_count">268 отзывов</span>
+                      </div>
+                    </div>
+                    <span class="bc-line__address bc-line__address2">Кемерово, Советский проспект, 32</span>
+                    <strong class="bc-line__phones bc-line__phones2">8 800 200-00-00</strong>
+                  </div>
+                </div>
+
+                <div class="bc-line__right">
+                  <div class="bc-line__right_block">
+                    <span>Обслуживание физических лиц:</span>
+                    пн.-пт.: 09:00—20:00,сб.: 10:00—17:00
+                  </div>
+                  <div class="bc-line__right_block">
+                    <span>Обслуживание VIP-клиентов:</span>
+                    пн.-пт.: 09:00—20:00, сб.: 10:00—17:00
+                  </div>
+                </div>
+              </div>
+            </div>
+            
 
             <div class="bc-article-btns">
               <a href="" class="bc-article-btn">Отделения: <span>18</span></a>
@@ -280,19 +314,43 @@
               
               <div class="f-show-more">Показать еще</div> 
   
-              <form class="comments__form" id="comments-form">
+              <form class="comments__form bc-comments-form" id="comments-form">
                 <span class="comments__form_title">Ваш отзыв:</span>
-                <div class="comments__form_flex">
-                  <textarea name="" class="comments__form_input comments__form_textarea"></textarea>
-                  <label class="comments__form_label">
+                <div class="comments__form_flex bc-comments-form-flex">
+                  <label class="comments__form_label bc-comments__form_label bc-comments__form_label-textarea">
+                    <span>Напишите свой отзыв</span>
+                    <textarea name="" class="comments__form_input comments__form_textarea"></textarea>
+                  </label>
+                  <label class="comments__form_label bc-comments__form_label">
                     <span>Имя</span>
                     <input type="text" class="comments__form_input">
                   </label>
-                  <label class="comments__form_label">
-                    <span>E-mail (не будет опубликован)</span>
+                  <label class="comments__form_label bc-comments__form_label">
+                    <span>E-mail</span>
                     <input type="email" class="comments__form_input">
                   </label>
-                  <input type="submit" value="Отправить" class="comments__form_submit btn">
+                  <div class="comments__form_label bc-comments__form_label bc-comments__rating">
+                    <span>Ваша оценка</span>
+                    <div class="article__rating bc-article__rating article__rating--with">
+                      <div class="article__rating_stars flex">
+                        <span class="article__rating_star"></span>
+                        <span class="article__rating_star"></span>
+                        <span class="article__rating_star"></span>
+                        <span class="article__rating_star"></span>
+                        <span class="article__rating_star"></span>
+                        <span class="article__rating_text">
+                          <span class="article__rating_text--value"><span class="article__rating--value">0</span></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="submit" value="Отправить" class="comments__form_submit bc-comments__form_submit btn">
+                  <label class="bc-check">
+                    <input type="checkbox" checked>
+                    <span class="bc-check-custom"></span>
+                    <span class="bc-check-text">Я принимаю условия обработки персональных данных, указанных в <a href="">Политике конфиденциальности</a></span>
+                  </label>
+                  <div class="bc-comments-form-ps">Ваш отзыв будет опубликован на сайте сразу после проверки нашим специалистом. Мы проверяем чтобы текст не содержал оскорблений, ругательств и прочей недопустимой информации. Благодарим за понимание.</div>
                 </div>
               </form>
             </div>
