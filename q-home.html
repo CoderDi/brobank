@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Brobank</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/limit-calc.css">
+  <link rel="stylesheet" href="css/new-style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/bank-city.css">
+  <link rel="stylesheet" href="css/q-home.css">
+</head>
+<body>
+  <section class="f-banner q-home-banner">
+    <img src="images/f-banner-shape1.png" alt="" class="f-banner-shape1">
+    <img src="images/f-banner-shape2.png" alt="" class="f-banner-shape2">
+    <div class="wrapper">
+      <div class="f-banner__wrapper">
+        <div class="f-breadcrumbs">
+          <a href="" class="f-breadcrumbs__link">Главная</a>
+          <a href="" class="f-breadcrumbs__link">Кредитные карты</a>
+        </div>
+        <h1 class="f-banner__title">Вопросы-ответы</h1>
+        <strong class="f-banner__subtitle">Бесплатный сервис для решения ваших финансовых вопросов</strong>
+        
+        <div class="q-home-btns">
+          <button class="q-home-btn q-home-btn--yellow js-getquest">Задать вопрос</button>
+          <button class="q-home-btn q-home-btn--blue js-getexpert">Стать экспертом</button>
+        </div>
+
+        <div class="f-banner__bottom">
+          <span class="f-banner__bottom_item f-banner__bottom_item--time">Получите ответ за 5 минут</span>
+          <span class="f-banner__bottom_item f-banner__bottom_item--count-quest">2684 вопросов с ответами</span>
+          <span class="f-banner__bottom_item f-banner__bottom_item--count-expert">8 экспертов по финансам</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section f-catalog section-with-sidebar">
+    <div class="wrapper">
+      
+      <div class="section__wrapper">
+        <div class="section__wrapper page-flex f-page-flex">
+          <div class="page-content">
+            <div class="f-catalog__top flex f-catalog__top--section">
+              <h2 class="f-section__title q-home-title">Лента вопросов</h2>
+
+              <form action="" class="popup-search bc-article-search q-home-search">
+                <input type="text" class="popup-search__input" placeholder="Поиск вопроса или ответа">
+                <input type="submit" value="" class="popup-search__submit">
+              </form>
+
+              <div class="f-drop q-home-drop">
+                <div class="f-drop__title">
+                  <span>Сортировка: &nbsp;</span>
+                  <strong>по популярности</strong>
+                  <i class="f-drop__arrow"></i>
+                </div>
+                <div class="f-drop__block">
+                  <span class="f-drop__item active">По популярности</span>
+                  <span class="f-drop__item">По кредитному лимиту</span>
+                  <span class="f-drop__item">По льготному периоду</span>
+                  <span class="f-drop__item">По процентной ставке</span>
+                </div>
+              </div>
+
+              <div class="f-drop f-drop--mobile q-home-drop">
+                <div class="f-drop__title">
+                  <span>Темы</span>
+                  <i class="f-drop__arrow"></i>
+                </div>
+                <div class="f-drop__block">
+                  <a href="" class="f-drop__item">Кредитные карты</a>
+                  <a href="" class="f-drop__item">Дебетовые карты</a>
+                  <a href="" class="f-drop__item">Карты рассрочки</a>
+                  <a href="" class="f-drop__item">Кредиты</a>
+                  <a href="" class="f-drop__item">Рефинансирование</a>
+                  <a href="" class="f-drop__item">Ипотека</a>
+                  <a href="" class="f-drop__item">Кредитная история</a>
+                  <a href="" class="f-drop__item">Займы</a>
+                  <a href="" class="f-drop__item">Расчетные счета</a>
+                  <a href="" class="f-drop__item">Страхование</a>
+                  <a href="" class="f-drop__item">Инвестиции</a>
+                  <a href="" class="f-drop__item">Заработная плата</a>
+                  <a href="" class="f-drop__item">Пособия</a>
+                  <a href="" class="f-drop__item">Банки</a>
+                  <a href="" class="f-drop__item">Валюта</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards f-cards-section">
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">Как доначислить проценты в следствии ошибки?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/anna.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--brobank">Анна Попович</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день. Комиссия за снятие наличных 2.9% от суммы снятия + 290 рублей. На вашем примере получается 50000*2.9%=1450+290=1740 будет списана комиссия сразу во время снятия наличн...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">Скажите пожалуйста, возможно это сделать на мужа?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/anna.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--brobank">Анна Попович</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день. Комиссия за снятие наличных 2.9% от суммы снятия + 290 рублей. На вашем примере получается 50000*2.9%=1450+290=1740 будет списана комиссия сразу во время снятия наличн...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">Как вернуть деньги, которые перевел мошенникам на карту?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/anna.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--brobank">Анна Попович</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день. Комиссия за снятие наличных 2.9% от суммы снятия + 290 рублей. На вашем примере получается 50000*2.9%=1450+290=1740 будет списана комиссия сразу во время снятия наличн...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">Если брать ипотеку на меня, заберут ли ту квартиру?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/banki-alfa.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--official">Альфа-Банк</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день, Оксана! По существу Вашего вопроса могу пояснить следующее. Предоставление сиротам жилья осуществляется по принципу нуждаемости в жило...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">СберБанк выдает деньги «до зарплаты»?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/anna.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--brobank">Анна Попович</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день, Оксана! По существу Вашего вопроса могу пояснить следующее. Предоставление сиротам жилья осуществляется по принципу нуждаемости в жило...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+
+              <div class="card f-best__card q-card">
+                <div class="card__container q-card-container">
+                  <div class="q-card-img"><img src="images/quest1.jpg" alt=""></div>
+                  <div class="q-card-content">
+                    <a href="" class="offer__title card__title q-card-title">СберБанк выдает деньги «до зарплаты»?</a>
+                    <div class="q-card-meta">
+                      <span class="f-journal__item_date">01.03.19 в 12:05</span>
+                      <div class="f-journal__item_counters">
+                        <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                        <span class="f-journal__item_counter f-journal__item_counter--comments">7</span>
+                      </div>
+                    </div>
+                    <div class="review__top flex q-card-author">
+                      <div class="review__img"><img src="images/anna.png" alt=""></div>
+                      <div class="review-top__content">
+                        <strong class="review__name q-card-author--brobank">Анна Попович</strong>
+                        <span class="review__date">01.03.19 в 12:05 отвечает:</span>
+                      </div>
+                    </div>
+
+                    <div class="q-card-text">
+                      Добрый день, Оксана! По существу Вашего вопроса могу пояснить следующее. Предоставление сиротам жилья осуществляется по принципу нуждаемости в жило...<a href="#" class="q-card-text-more">Показать полностью</a>
+                    </div>
+                  </div>
+                </div>            
+              </div>
+              
+      
+            </div>
+
+            <div class="f-show-more">Показать еще</div>
+          </div>        
+
+          <aside class="sidebar f-sidebar">
+            <div class="rubrics f-rubrics q-rubrics">
+              <span class="f-rubrics__title">Темы <i class="f-drop__arrow"></i></span>
+              <div class="rubrics__list">
+                <a href="" class="rubrics__item">Кредитные карты</a>
+                <a href="" class="rubrics__item">Дебетовые карты</a>
+                <a href="" class="rubrics__item">Карты рассрочки</a>
+                <a href="" class="rubrics__item">Кредиты</a>
+                <a href="" class="rubrics__item">Рефинансирование</a>
+                <a href="" class="rubrics__item">Ипотека</a>
+                <a href="" class="rubrics__item">Кредитная история</a>
+                <a href="" class="rubrics__item">Займы</a>
+                <a href="" class="rubrics__item">Расчетные счета</a>
+                <a href="" class="rubrics__item">Страхование</a>
+                <a href="" class="rubrics__item">Инвестиции</a>
+                <a href="" class="rubrics__item">Заработная плата</a>
+                <a href="" class="rubrics__item">Пособия</a>
+                <a href="" class="rubrics__item">Банки</a>
+                <a href="" class="rubrics__item">Валюта</a>
+              </div>
+            </div>
+          </aside> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="f-catalog q-experts">
+    <div class="wrapper">
+      <div class="f-catalog__top flex">
+        <h2 class="f-section__title">Лучшие эксперты</h2>
+        <a href="" class="f-about-link-more">Показать все</a>
+      </div>
+
+      <div class="f-catalog__list f-banki__list">
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+            <div class="q-expert-img">
+              <img src="images/natalya.png" alt="">
+            </div>
+            <span class="f-partner__title">Колбасина Наталья</span>
+          </a>
+        </div>
+
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+            <div class="q-expert-img">
+              <img src="images/olga.png" alt="">
+            </div>
+            <span class="f-partner__title">Пихоцкая Ольга</span>
+          </a>
+        </div>
+
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+            <div class="q-expert-img">
+              <img src="images/klavdia.png" alt="">
+            </div>
+            <span class="f-partner__title">Трескова Клавдия</span>
+          </a>
+        </div>
+
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+          <div class="q-expert-img">
+              <img src="images/dmitry.png" alt="">
+            </div>
+            <span class="f-partner__title">Сысоев Дмитрий</span>
+          </a>
+        </div>
+
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+            <div class="q-expert-img">
+              <img src="images/anna.png" alt="">
+            </div>
+            <span class="f-partner__title">Попович Анна</span>
+          </a>
+        </div>
+
+        <div class="f-catalog-item">
+          <a href="" class="f-partner__container">
+            <div class="q-expert-img">
+              <img src="images/irina.png" alt="">
+            </div>
+            <span class="f-partner__title">Русанова Ирина</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <div class="popup">
+    <a class="popup-bg js-popup-close"></a>
+    <div class="popup-content">
+      <div class="popup-block popup-block--expert" id="popup-expert">
+        <strong class="q-popup-title">Для экспертов</strong>
+        <p class="q-popup-text">Мы принимаем специалистов с экономическим образованием и опытом работы в финансовых организациях. Если вы считаете себя экспертом и готовы помочь нашим посетителям, напишите нам на почту <b><a href="mailto:admin@brobank.ru">admin@brobank.ru</a></b></p>
+        <span class="btn js-popup-close q-popup-btn">Понятно</span>
+      </div>
+
+      <div class="popup-block popup-block--expert popup-block--full" id="popup-quest">
+        <span class="q-popup-close js-popup-close">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M14.8225 0.177473C14.5859 -0.0591576 14.2023 -0.0591576 13.9656 0.177473L0.177473 13.9656C-0.0591577 14.2022 -0.0591577 14.5859 0.177473 14.8225C0.295774 14.9408 0.450871 15 0.60594 15C0.761008 15 0.916076 14.9408 1.03441 14.8225L14.8225 1.03435C15.0591 0.797745 15.0591 0.414103 14.8225 0.177473Z" fill="#88919D"/>
+              <path d="M14.8225 13.9656L1.03435 0.177473C0.797746 -0.0591577 0.414074 -0.0591577 0.177473 0.177473C-0.0591577 0.414075 -0.0591577 0.797717 0.177473 1.03435L13.9656 14.8225C14.0839 14.9408 14.239 15 14.3941 15C14.5492 15 14.7043 14.9408 14.8225 14.8225C15.0591 14.5859 15.0591 14.2022 14.8225 13.9656Z" fill="#88919D"/>
+            </g>
+          </svg> <span>Закрыть</span></span>
+
+        <strong class="q-popup-title">Ваш вопрос</strong>
+        <form action="" class="q-quest">
+          <label class="q-quest-label">
+            <span>Заголовок вопроса</span>
+            <input type="text" class="input q-quest-input">
+          </label>
+          <label class="q-quest-label">
+            <span>Опишите подробнее</span>
+            <textarea class="input textarea q-quest-input q-quest-textarea"></textarea>
+          </label>
+          <label class="q-quest-label q-quest-label50">
+            <span>Ваше имя</span>
+            <input type="text" class="input q-quest-input">
+          </label>
+          <label class="q-quest-label q-quest-label50">
+            <span>E-mail (не будет опубликован)</span>
+            <input type="email" class="input q-quest-input">
+          </label>
+          <div class="f-drop q-quest-drop">
+            <div class="f-drop__title">
+              <span>Выбрать тему &nbsp;</span>
+              <strong></strong>
+              <i class="f-drop__arrow"></i>
+            </div>
+            <div class="f-drop__block">
+              <span class="f-drop__item">тема1</span>
+              <span class="f-drop__item">тема2</span>
+              <span class="f-drop__item">тема3</span>
+              <span class="f-drop__item">тема4</span>
+            </div>
+          </div>
+          <button type="submit" class="btn q-quest-submit">Отправить</button>
+          <label class="check">
+            <input type="checkbox">
+            <span class="check-custom"></span>
+            <span class="check-text">Я принимаю условия обработки персональных данных, указанных в <a href="">Политике конфиденциальности</a></span>
+          </label>
+        </form>
+      </div>
+
+      <div class="popup-block popup-block--expert" id="popup-ready">
+        <strong class="q-popup-title">Готово</strong>
+        <p class="q-popup-text">Ваш вопрос будет опубликован на сайте сразу после проверки нашим специалистом. Мы проверяем чтобы текст не содержал оскорблений, ругательств и прочей недопустимой информации. Благодарим за понимание.</p>
+        <span class="btn js-popup-close q-popup-btn">Понятно</span>
+      </div>
+    </div>
+  </div> 
+  
+  <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="js/maskedinput.js"></script>
+  <script src="libs/sticky-sidebar/jquery.sticky-sidebar.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/new-script.js"></script>
+  <script src="js/bank-city.js"></script>
+  <script src="js/q-home.js"></script>
+</body>
+</html>
