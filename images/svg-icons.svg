@@ -809,6 +809,39 @@
 			</g>
 		</svg>
 
+		<svg viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="down" class="img">
+				<path d="M11.1723 0.41384C10.9539 0.211014 10.5997 0.211014 10.3813 0.41384L6.00399 4.4785L1.62668 0.413839C1.40826 0.211012 1.05412 0.211012 0.835696 0.413839C0.617268 0.616665 0.617268 0.945502 0.835696 1.14833L5.60851 5.58022C5.71771 5.68165 5.86087 5.73235 6.00399 5.73235C6.1471 5.73235 6.29029 5.68165 6.39949 5.58022L11.1723 1.14833C11.3907 0.945504 11.3907 0.616667 11.1723 0.41384Z" fill="#444444"/>
+			</g>
+		</svg>
+
+		<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="plus" class="img">
+				<circle cx="8" cy="8" r="8" fill="#19BB4F"/>
+				<path d="M11.3346 5.75L6.7513 10.7917L4.66797 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</svg>
+
+		<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="minus" class="img">
+				<circle cx="8" cy="8" r="8" fill="#FF5445"/>
+				<path d="M11 5L5 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M5 5L11 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</svg>
+
+		<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="treb" class="img">
+				<circle cx="8" cy="8" r="8" fill="#FEDD2E"/>
+				<rect x="7" y="10" width="2" height="2" rx="1" fill="black"/>
+				<rect x="7" y="4" width="2" height="5" rx="1" fill="black"/>
+			</g>
+		</svg>
+
+
+
+
+
 		
 
 

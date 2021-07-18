@@ -87,8 +87,8 @@ $(".js-limit-new").click(function(){
 $("#limit-content").css("height", $("#limitem1").outerHeight());
 
 $(".js-limit-prev").click(function(){
-  var scTop = $('#limit-calc').offset().top - 100;
-  $("html, body").animate({scrollTop: scTop})
+  // var scTop = $('#limit-calc').offset().top - 100;
+  // $("html, body").animate({scrollTop: scTop})
 
   $("#limitem" + currentQuestNum).css("left", "100%");
   currentQuestNum--;
@@ -110,8 +110,8 @@ $(".js-limit-next").click(function(){
   if ($("#limitem" + currentQuestNum + " input:checked").length == 0) {
     return;
   }
-  var scTop = $('#limit-calc').offset().top - 100;
-  $("html, body").animate({scrollTop: scTop});
+  // var scTop = $('#limit-calc').offset().top - 100;
+  // $("html, body").animate({scrollTop: scTop});
 
   $("#limitem" + currentQuestNum).css("left", "-100%");
   currentQuestNum++;
@@ -143,8 +143,6 @@ $(".js-limit-next").click(function(){
 $(".limit-label").click(function(){
   $("#limit-line").css("width", (currentQuestNum / questCount * 100) + "%");
 });
-
-
 
 $(".limit-label--openCredit").click(function(){
   $("#limit-label--openCredit").show();
