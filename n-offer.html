@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&subset=cyrillic" media="print" onload="this.media='all'">
   
   <link rel='stylesheet' id='brotheme-style-css'  href='https://brobank.ru/wp-content/themes/brotheme/style.css'  media='all' />
-  <link rel="stylesheet" href="css/n-offer.css">
   <link rel="stylesheet" href="css/bank-city.css">
   <link rel="stylesheet" href="css/limit-calc.css">
   <link rel="stylesheet" href="css/new-style.css">
   <link rel="stylesheet" href="css/n-category.css">
+  <link rel="stylesheet" href="css/n-offer.css">
+  
 </head>
 <body>
   <div id="page" class="hfeed site">
@@ -51,12 +52,12 @@
         </div>
       </section>
   
-      <section class="section offer-page-section n-offer">
+      <section class="section">
         <div class="wrapper">
           <div class="page-flex">
             <div class="n-offer-article"> 
-              <div class="n-category-card">
-                <div class="n-category-card-container">
+              <div class="n-category-card n-offer-card">
+                <div class="n-category-card-container n-offer-card-container">
                   <div class="n-category-card-flex">
                     <div class="n-category-card-img"><img src="images/credit_card_alfabank.png" alt=""></div>
                     <div class="n-category-card-table">
@@ -140,16 +141,32 @@
                     <div class="n-category-card-manage">
                       <div class="n-category-card-btns">
                         <a href="" class="n-category-card-btn n-category-card-btn--full">Оформить</a>
-                        <span class="n-category-card-btn js-category-card-calc">Одобрят ли вам</span>
-                        
+                        <a href="#limit-calc" class="n-category-card-btn js-category-card-calc">Одобрят ли вам</a>
+                      </div>
+                      <div class="n-offer-card-ps">
+                        Мы получим вознаграждение от банка если вы оформите продукт через наш сайт. <a href="">Подробнее</a>
                       </div>
                     </div>
+                  </div>
+
+                  <div class="n-offer-card-tabs">
+                    <a href="" class="n-offer-card-tab active">Описание</a>
+                    <a href="" class="n-offer-card-tab">Отзывы: <span>128</span></a>
+                    <a href="" class="n-offer-card-tab">Вопросы: <span>268</span></a>
                   </div>
                 </div>
               </div>
 
+              <div class="n-offer-content">
+                <h2>Кредитная карта Тинькофф Платинум с доставкой на дом</h2>
+                <p>Можно по-разному относиться к банку Tinkoff, однако лучше посмотреть на реальные цифры — более 6-ти миллионов россиян активно пользуются кредитной картой Tinkoff Platinum. Этот факт делает данную карточку самой популярной в России.</p>
+                <div class="n-category-card-video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/A57-py_x1F0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+              </div>
+
               <div class="offer-page__block">
-                <h2>Условия и тарифы</h2>
+                <h3 class="n-offer-h3">Условия и тарифы</h3>
                 <div class="tariffs__block">
                   <table class="tariffs__table">
                                 <tbody><tr>
@@ -183,16 +200,14 @@
                       <td>590 - 1490 рублей в год</td>
                     </tr>
                           </tbody></table>
-                          <div class="f-show-more">Показать еще</div> 
+                          <div class="f-show-more n-offer-show-more">Показать еще</div> 
       
                 </div>
               </div>
 
               <div class="offer-page__block">
                 <div class="n-category-card-more" style="display: block;">
-                  <div class="n-category-card-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A57-py_x1F0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                  </div>
+                  
                   <div class="n-category-card-expert">
                     <div class="n-category-card-expert-top">
                       <h3 class="n-category-card-expert-title">Мнение эксперта</h3>
@@ -241,8 +256,8 @@
                 </div>
               </div>
 
-              <div class="offer-page__block">
-                <h2>Калькулятор лимита</h2>
+              <div class="offer-page__block n-offer-block">
+                <h2 class="n-offer-h2">Калькулятор лимита</h2>
                       <div class="limit" id="limit-calc" data-total="500000">
                   <div class="limit-container">
                     <div class="limit-header">
@@ -654,7 +669,8 @@
                 </div>
               </div>
 
-              <div class="offer-page__block">
+              <div class="offer-page__block n-offer-block">
+                <h2 class="n-offer-h2">Калькулятор платежей</h2>
                 <div class="calculator__container">
                   <div class="calculator__form" data-type="card">
                     <div class="calculator__line calculator__line--full">
@@ -754,7 +770,7 @@
               </div>
 
               <div class="bc-bank-block">
-                <h2>Отзывы: 128</h2>
+                <h2 class="n-offer-h2">Отзывы: 128</h2>
                 <div class="comments">
                   <div class="bank-comments__top bc-comments-top">
                     <div class="bc-comments-rating">
@@ -773,7 +789,7 @@
                     <div class="f-drop bc-f-drop">
                       <div class="f-drop__title">
                         <strong>Сначала старые</strong>
-                        <i class="f-drop__arrow"></i>
+                        <i class="f-drop__arrow2"></i>
                       </div>
                       <div class="f-drop__block">
                         <span class="f-drop__item active">Сначала старые</span>
@@ -844,7 +860,7 @@
                 </div>
               </div>
 
-              <div class="bottom__inner-content bc-bottom-socials">
+              <div class="bc-bottom-socials n-offer-socials">
                 <div class="socials_and_rating article__footer_top">
                   <div class="article__socials flex">
                     <a href="" class="article__socials_item article__socials_item--vk"><i></i><span>286</span></a>
@@ -853,10 +869,14 @@
                     <a href="" class="article__socials_item article__socials_item--mir"><i></i><span>5</span></a>
                   </div>
                 </div>
+                <div class="bottom-plash-bc">
+                  <p>Информация о тарифах и условиях кредитной карты взята из открытых источников. Условия и ставки действуют для головного офиса банка либо центрального представительства банка в России. Пожалуйста, уточняйте актуальную информацию об условиях продукта в офисах Тинькофф Банк, на сайте tinkoff.ru или по телефону 8 800 200-00-00.</p>
+                  <p>Все расчеты являются приблизительными и осуществляются по методикам сервиса Бробанк.ру.</p>
+                </div>
               </div>
             </div>
             
-            <aside class="sidebar">
+            <aside class="sidebar n-offer-sidebar">
               <div class="bc-sidebar__block">
                 <div class="bc-sidebar__top">
                   <div class="bank-img bc-sidebar__img"><img src="images/bank-tinkoff.png" alt=""></div>
@@ -884,15 +904,63 @@
                   <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-faq" alt=""> <span>Вопрос-ответ</span></a></li>
                   <li class="bc-sidebar__list_item"><a href=""><img src="images/svg-icons.svg#bc-contacts" alt=""> <span>Контакты</span></a></li>
                 </ul>
-              </div>        
+              </div>  
+              
+              <div class="n-offer-predl">
+                <strong class="n-offer-predl-title">Предложения партнеров</strong>
+                <div class="n-offer-predl-list">
+                  <a href="" class="n-offer-predl-item">
+                    <img src="images/credit_card_alfabank.png" alt="" class="n-offer-predl-item-img">
+                    <span class="n-offer-predl-item-title">Кредитная карта 100 дней без % Classic</span>
+                    <div class="n-offer-predl-item-meta">
+                      <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                      <span class="f-journal__item_counter f-journal__item_counter--comments">268</span>
+                    </div>
+                  </a>
+                  <a href="" class="n-offer-predl-item">
+                    <img src="images/credit_card_alfabank.png" alt="" class="n-offer-predl-item-img">
+                    <span class="n-offer-predl-item-title">Кредитная карта Просто Ситибанка</span>
+                    <div class="n-offer-predl-item-meta">
+                      <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                      <span class="f-journal__item_counter f-journal__item_counter--comments">268</span>
+                    </div>
+                  </a>
+                  <a href="" class="n-offer-predl-item">
+                    <img src="images/credit_card_sovkombank.png" alt="" class="n-offer-predl-item-img">
+                    <span class="n-offer-predl-item-title">Карта рассрочки Халва Совкомбанк</span>
+                    <div class="n-offer-predl-item-meta">
+                      <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                      <span class="f-journal__item_counter f-journal__item_counter--comments">268</span>
+                    </div>
+                  </a>
+                  <a href="" class="n-offer-predl-item">
+                    <img src="images/credit_card_ubrir_120.png" alt="" class="n-offer-predl-item-img">
+                    <span class="n-offer-predl-item-title">Кредитная карта МТС Деньги Zero</span>
+                    <div class="n-offer-predl-item-meta">
+                      <span class="f-journal__item_counter f-journal__item_counter--views">8682</span>
+                      <span class="f-journal__item_counter f-journal__item_counter--comments">268</span>
+                    </div>
+                  </a>
+                </div>
+                
+              </div>
             </aside> 
           </div>
         </div>
       </section>
     
-      <section class="bottom">
-        <div class="wrapper">
-               
+      <section class="n-offer-link-block">
+        <div class="wrappers">
+          <a href="https://www.tinkoff.ru/" class="n-offer-link" id="offerLink">
+            <div class="n-offer-link-top">
+              <strong>Оформить карту Тинькофф Платинум</strong>
+              <span>Листая вниз, вы перейдете на tinkoff.ru</span>
+            </div>
+            <div class="n-offer-link-img">
+              <img src="images/tink0ff.png" class="desktop" alt="">
+              <img src="images/tink0ff-mob.png" class="mobile-img" alt="">
+            </div>
+          </a>
         </div>
       </section>
     
