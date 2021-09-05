@@ -31,6 +31,24 @@ $(document).ready(function () {
   $(".s-item__top-empty").on("click", function(){
     $("#popupSravnenie").addClass("popup--show")
   });
+  $(".js-popup-close").on("click", function(){
+    $(".popup").removeClass("popup--show");
+  });
+  $(window).scroll(function(){
+    if ($(".sravnenie").length > 0) {
+      if ($(window).scrollTop() > ($(".sravnenie").offset().top + $(".s-item__top").height())) {
+        $(".s-item--fixed").addClass("s-item--fixed--show");
+      } else {
+        $(".s-item--fixed").removeClass("s-item--fixed--show");
+      }
+    }
+
+    if ($(window).scrollTop() > 0) {
+      $(".header-fixed").addClass("header-fixed-scroll");
+    } else {
+      $(".header-fixed").removeClass("header-fixed-scroll");
+    }
+  });
 
 
 });

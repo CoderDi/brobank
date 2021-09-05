@@ -643,6 +643,7 @@
 }
 
 .s-item--fixed {
+  overflow: hidden;
   overflow-x: auto;
 }
 
