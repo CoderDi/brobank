@@ -183,7 +183,6 @@
       margin-top: 20px
       min-height: 100vh
 
-
 .f-drop__arrow2
   position: absolute;
   width: 36px;
@@ -258,6 +257,343 @@
   background: url(../images/svg-icons.svg#mir);
 
 
+.sravnenie
+  min-width: 1170px
+  &-section
+    overflow-x: auto
+  &-tab
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    margin: 0 10px 10px 0
+    background: #FFFFFF;
+    border: 1px solid #E6EAED;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(136, 145, 157, 0.1);
+    border-radius: 4px;
+    height: 40px
+    padding: 0 15px
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #528CAA;
+    cursor: pointer
+    span
+      color: #88919D
+      display: inline-block
+      margin-left: 5px
+    &:hover
+      background: #F5F8FA;
+    &.active
+      background: #528CAA;
+      color: #fff
+      span
+        color: #fff
+
+
+    &s
+      margin: 10px 0 20px
+      display: flex
+      flex-wrap: wrap
+
+.s-item
+  &-card
+    &s
+      display: flex
+      margin: 0 -15px 60px
+      flex-wrap: wrap
+      &-mobile-add
+        display: none
+    &-change
+      display: none
+  &__top
+    width: 25%
+    padding: 0 15px
+    .card__container
+      border: none
+    &-container
+      background: #FFFFFF;
+      border: 1px solid #E6EAED;
+      box-sizing: border-box;
+      border-radius: 4px;
+      box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+    &-empty
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: none
+      &:hover
+        box-shadow: 0px 10px 20px rgba(136, 145, 157, 0.3);
+    
+      &-text
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: #88919D;
+        svg
+          display: block
+          margin-right: 10px
+    .card-btn
+      width: calc(50% - 5px)
+      a
+        height: 40px
+    .card__img
+      margin-bottom: 20px
+    &-remove
+      a
+        background: #fff
+        border: 1px solid #E6EAED;
+        box-sizing: border-box;
+        border-radius: 4px; 
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: #88919D;
+        svg
+          display: block
+          margin-right: 8px
+    &-rating
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      .offer-page__rating
+        padding: 0
+      .f-best__card_review-link
+        margin-bottom: 15px
+        margin-left: 10px
+  &--fixed
+    overflow-x: auto
+    .s-item__wrapper
+      min-width: 1170px 
+  &-fixed
+    &-block
+      display: flex
+      align-items: center
+      &-title
+        display: block
+        margin-left: 15px
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 140%;
+        color: #528CAA;
+  &-block
+    width: calc(25% - 22px)
+  &-line
+    margin-bottom: 40px
+    &-title
+      display: block
+      margin-bottom: 20px
+      font-weight: bold;
+      font-size: 23px;
+      line-height: 140%;
+      color: #000000;
+    &-container
+      position: relative
+      display: flex
+      margin: 0 -15px
+      padding: 14px 0
+      &::before, &::after
+        position: absolute
+        content: ''
+        top: 0
+        left: 15px
+        right: 15px
+        height: 1px
+        background: #E6EAED;
+      &::after
+        top: auto
+        bottom: 0
+    &-video
+      display: flex
+      margin: 0 -15px
+      &-link
+        width: 100%
+        display: block
+        height: 150px
+        overflow: hidden
+        border-radius: 8px;
+        img
+          display: block
+          width: 100%
+          height: 100%
+          object-fit: cover
+    &-item
+      width: 25%
+      padding: 0 15px
+      &-container
+        width: 100%
+        display: flex
+        align-items: center
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        color: #444444;
+        & > img
+          width: 30px
+          height: 30px
+          object-fit: contain
+          margin-right: 10px
+          display: block
+    &-btn
+      width: calc(50% - 5px)
+      &s
+        display: flex
+        justify-content: space-between
+      a
+        height: 40px
+
+.f-best__card_btn 
+  a
+    color: #444444;
+    background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), to(#FFFFFF)), #F5F8FA;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F5F8FA;
+    border: 1px solid #E6EAED;
+    font-weight: normal;
+  &:hover a
+    background: #F5F8FA;
+
+.f-best__card_review-link 
+  display: inline-block;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #528CAA;
+  border-bottom: 1px dashed #528CAA;
+
+.f-show-more 
+  margin-top: 20px
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), to(#FFFFFF)), #F5F8FA;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F5F8FA;
+  border: 1px solid #E6EAED;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #444444;
+  height: 40px;
+  cursor: pointer;
+  color: #444444;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F5F8FA;
+  border: 1px solid #E6EAED;
+  font-weight: normal;
+
+.f-show-more:hover 
+  background: rgb(245, 248, 250);
+
+.popup 
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .1s ease-in-out;
+  -o-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+
+.popup--show 
+  opacity: 1;
+  visibility: visible;
+
+.popup-bg 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  opacity: 0.4;
+
+.popup-content 
+  position: relative;
+
+.popup-close 
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  cursor: pointer;
+  display: flex
+  align-items: center
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #88919D;
+  i
+    width: 15px
+    height: 15px
+    margin-right: 10px
+    flex-shrink: 0
+    background: url(../images/svg-icons.svg#close) no-repeat center
+
+.popup
+  &-sravnenie
+    width: calc(100% - 30px)
+    max-height: calc(100% - 30px)
+    overflow-y: auto
+    max-width: 570px
+    padding: 30px
+    background: #FFFFFF;
+    border-radius: 4px;
+    &-item
+      display: flex
+      align-items: center
+      min-height: 50px
+      padding: 10px 0
+      box-shadow: 0px 1px 0px #E6EAED;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #444444;
+      cursor: pointer
+      &:hover
+        background: #F5F8FA;
+      img
+        display: block
+        width: 48px
+        height: 30px
+        margin-right: 10px
+        flex-shrink: 0
+        object-fit: contain
+
+  &-title
+    display: block
+    margin: 0 0 20px
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 41px;
+    color: #000000;
+
+
+
+
 
 @media screen and (max-width: 1100px)
   .n-offer-card 
@@ -269,7 +605,6 @@
       justify-content: space-between
   .n-offer-sidebar
     margin: 0
-
 
 @media screen and (max-width: 980px)
   .n-offer
@@ -299,6 +634,94 @@
         width: 100%
         display: flex
         justify-content: space-between
+
+
+@media screen and (max-width: 750px)
+  .sravnenie
+    min-width: 0
+    .f-best__card_btns
+      display: block
+  .s-item
+    &-card
+      &s
+        margin: 0 -5px 20px
+        .card-btn
+          width: 100%
+          margin-top: 10px
+        .card__title
+          font-size: 15px
+        &-mobile-add
+          display: flex
+          width: 100%
+      &-change
+        display: flex
+        align-items: center
+        margin-bottom: 5px
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: #88919D;
+        &-text
+          flex-grow: 2
+        &-btn
+          flex-shrink: 0
+          width: 30px
+          height: 20px
+          background: url(../images/svg-icons.svg#s-card-btn) no-repeat center, #FFFFFF;
+          border: 1px solid #E6EAED;
+          background-size: 7px 13px
+          box-sizing: border-box;
+          border-radius: 4px 0px 0px 4px;
+          &-next
+            border-right: none
+            transform: rotate(180deg)
+    &__top
+      width: 50%
+      padding: 0 5px
+      &:nth-child(n)
+        display: block
+      &:nth-child(n+3)
+        display: none
+      &-rating
+        display: block
+        .new-card__rating
+          margin: 0
+        .f-best__card_review-link
+          margin-left: 0
+    &-line
+      margin-bottom: 25px
+      &-container
+        margin: 0 -5px
+        &::before, &::after
+          left: 5px
+          right: 5px
+      &-video
+        margin: 0 -5px
+        &-link
+          height: 86px
+      &-title
+        margin-bottom: 15px
+        font-size: 17px;
+        line-height: 140%;
+      &-item
+        width: calc(50% - 5px)
+        padding: 0 5px
+        &:nth-child(n+3)
+          display: none
+      &-btn
+        width: 100%
+        margin-bottom: 10px
+        &s
+          display: block
+  .popup
+    &-close
+      top: 20px
+      right: 20px
+      span
+        display: none
+    &-title
+      font-size: 18px
+      line-height: 1.4
 
 
 

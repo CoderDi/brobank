@@ -28,5 +28,9 @@ $(document).ready(function () {
     }
   })
 
+  $(".s-item__top-empty").on("click", function(){
+    $("#popupSravnenie").addClass("popup--show")
+  });
+
 
 });
